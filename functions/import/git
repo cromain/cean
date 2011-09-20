@@ -1,0 +1,24 @@
+# Description: Clone a git repository into a local git
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: git
+# Usage: import/git otp http://github.com/erlang/otp.git master
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "import/git package url [branch|tag|revision]" $* || return $bad_use
+_api_import $* || return $bad_use
+
+[ -d $(_pkg_sources) ] && {
+    _info "($pkg_name) updating local repository..."
+    (_pkg_cd_sources
+     _git_isworktreeclean || git stash save
+     git reset --hard HEAD
+     git pull
+     [ -z $3 ] || git checkout $pkg_vsn)
+} || {
+    _info "($pkg_name) creating local repository..."
+    (cd $CEAN_ROOT/src
+     git clone $pkg_url $pkg_name
+     cd $pkg_name
+     git submodule update --init
+     [ -z $3 ] || git checkout $pkg_vsn)
+}

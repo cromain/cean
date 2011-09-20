@@ -1,0 +1,69 @@
+# Light CEAN console theme
+# Provided by Christophe Romain <cromain@process-one.net>
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+# valid colors are: black red green yellow blue magenta cyan white default
+# alias for bold are: Red Green Yellow Blue Magenta Cyan White
+# valid attributes are: none bold faint standout underline blink reverse conceal normal
+
+# colors must be defined that way:
+#   foreground:background:attr
+# example:
+#   red is red text with default background, no attributes
+#   Blue is synonym of blue:default:bold
+#   Yellow:blue:blink is blinking light yellow on blue
+
+# Logging colors
+LOG_USAGE=red
+LOG_ERROR=red
+LOG_WARN=yellow
+LOG_INFO=cyan
+LOG_DEBUG=Blue
+
+# Misc prompt colors
+PR_USER=default
+PR_HOST=default
+PR_PATH=green
+PR_SUCCESS=Green
+PR_ERROR=Red
+PR_PROMPT=yellow
+
+# Git status colors
+PR_NAME=cyan
+PR_BRANCH=Cyan
+PR_REV=Yellow
+PR_CLEAN=Green
+PR_STAGED=Magenta
+PR_DIRTY=Red
+PR_PUNC=yellow
+PR_TEXT=default
+
+# default CEAN prompt uses 3 function than can be overriden:
+# prompt_cean_account: usualy display user@host if not local
+# prompt_cean_path: left part of the prompt
+# prompt_cean_status: right part of the prompt
+#
+# They all are called from PROMPT and RPROMPT variable, that can also be customized
+# see functions/cean/prompt for implementation details
+#
+# Prompt usually takes computed values from the framework (i.e. current git directory status)
+# For keeping values up-to-date we use 3 standard zsh hooks:
+# chpwd_functions
+# preexec_functions
+# precmd_functions
+
+# override default prompt template, removing account and error handlers
+PROMPT="\$(prompt_cean_path)"
+RPROMPT="\$(prompt_cean_status)"
+
+# override default function
+prompt_cean_status() {
+    echo "$pc[text]$(date +%T)$pc[reset]"
+}
+
+# add chpwd hook
+chpwd_functions+="my_precmd_hook"
+my_precmd_hook() {
+    local npkgs=$(ls1 ~/.cean*/pkg/*/*pub | wc -l)
+    echo $npkgs packages
+}

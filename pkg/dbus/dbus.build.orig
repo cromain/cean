@@ -1,0 +1,15 @@
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir
+    [ -d include ] || (mkdir include; cp dbus/include/*hrl include)
+    [ -d src ] || (mkdir src; cp dbus/src/*erl dbus_demo/src/*erl src)
+    [ -d priv ] || (mkdir priv; cp dbus_demo/priv/* priv)
+    [ -d ebin ] || mkdir ebin
+    cd src
+    ceansh erl.compile devel -o ../ebin -I ../include *erl
+    [ $? -eq 0 ] || exit 3
+}
+

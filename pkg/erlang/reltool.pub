@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["kernel","sasl","stdlib","tools","wx"]}.
+{keywords, []}.
+{summary, "Main API of the release management tool."}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/reltool/index.html\">reltool Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

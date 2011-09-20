@@ -1,0 +1,9 @@
+{author, {"Erik Reitsma", "Erik.Reitsma@etm.ericsson.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["inets","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "SOAP implementation"}.
+{abstract, ""}.
+{home, "http://forum.trapexit.org/viewtopic.php?p=21614"}.
+{url, "http://forum.trapexit.org/download.php?id=15"}.

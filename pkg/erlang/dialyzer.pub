@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["compiler","gs","hipe","kernel","stdlib","wx"]}.
+{keywords, []}.
+{summary, "The DIALYZER, a DIscrepany AnaLYZer for ERlang programs"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/dialyzer/index.html\">dialyser Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

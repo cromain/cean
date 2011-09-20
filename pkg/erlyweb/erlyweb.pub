@@ -1,0 +1,11 @@
+{author, {"Yariv Sadan", "yarivvv@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","application"]}.
+{depends, ["compiler","crypto","inets","kernel","mnesia","stdlib","syntax_tools","yaws"]}.
+{keywords, ["erlydb","erlsql","erltl","smerl","web","framework"]}.
+{summary, "The Erlang Twist on Web Framworks"}.
+{abstract, "ErlyWeb is a web development framework for Erlang. "
+ "With ErlyWeb, you can easily build database-driven websites following the "
+ "MVC pattern using a great language. This package includes: erlsql erltl erlydb erlyweb smerl."}.
+{home, "http://erlyweb.org"}.
+{url, "git://github.com/yariv/erlyweb.git"}.

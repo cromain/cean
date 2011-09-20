@@ -1,0 +1,8 @@
+{author, {"Tobbe", "tnt@home.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["gs","kernel","runtime_tools","stdlib"]}.
+{keywords, ["pop","client","server"]}.
+{summary, "A POP3 server/client package"}.
+{abstract, "epop taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

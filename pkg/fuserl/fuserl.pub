@@ -1,0 +1,9 @@
+{author, {"Paul Goo", "paul-goo@mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver","misc"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Erlang bindings for FUSE"}.
+{abstract, "Allows creation of FUSE filesystems written in Erlang."}.
+{home, "http://code.google.com/p/fuserl"}.
+{url, "http://fuserl.googlecode.com/svn/trunk"}.

@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger, Joe Armstrong", "ulf@wiger.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["www","dynamic","internet"]}.
+{summary, "A high level framework for web based community development of web applications The code is released under the Erlang Public License the same license which is used for Erlang OTP"}.
+{abstract, "A high level framework for web based community development of web applications The code is released under the Erlang Public License the same license which is used for Erlang OTP"}.
+{home, "http://erlhive.sourceforge.net"}.
+{url, "https://erlhive.svn.sourceforge.net/svnroot/erlhive"}.

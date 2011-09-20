@@ -1,0 +1,8 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["java"]}.
+{summary, "This is an embryo to a Javascript support library for Erlang and yaws programming"}.
+{abstract, "js taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

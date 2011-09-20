@@ -1,0 +1,9 @@
+{author, {"Tobbe", "tnt@home.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "some very old Erlang code implementing streams"}.
+{abstract, ""}.
+{home, "http://forum.trapexit.org/viewtopic.php?t=6591"}.
+{url, "http://forum.trapexit.org/download.php?id=25"}.

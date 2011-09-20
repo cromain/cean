@@ -1,0 +1,9 @@
+{author, {"Jeff Hodges", "jeff@somethingsimilar.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Recess is a playful, RESTful Erlang web framework"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jmhodges/recess"}.
+{url, "git://github.com/jmhodges/recess.git"}.

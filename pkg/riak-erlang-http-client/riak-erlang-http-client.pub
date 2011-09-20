@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Riak Erlang client using the HTTP interface"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/riak-erlang-http-client"}.
+{url, "git://github.com/basho/riak-erlang-http-client.git"}.

@@ -1,0 +1,9 @@
+{author, {", , Takeru INOUE", "/mailarchive/forum.php?forum_name=kai-users@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["engines","database"]}.
+{summary, "Kai is a distributed key value datastore mainly inspired by Amazon s Dynamo It brings high scalability and availability to your Web sites You can manage variety of contents with Kai as if Dynamo stores shopping carts catalogs and so forth"}.
+{abstract, "Kai is a distributed key value datastore mainly inspired by Amazon s Dynamo It brings high scalability and availability to your Web sites You can manage variety of contents with Kai as if Dynamo stores shopping carts catalogs and so forth"}.
+{home, "http://sourceforge.net/apps/mediawiki/kai/"}.
+{url, "https://kai.svn.sourceforge.net/svnroot/kai"}.

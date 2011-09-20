@@ -1,0 +1,8 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["compiler","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Flexible Local Process Registry"}.
+{abstract, "proc taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

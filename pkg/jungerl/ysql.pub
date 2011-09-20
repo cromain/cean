@@ -1,0 +1,8 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database","application"]}.
+{depends, ["js","kernel","stdlib","odbc"]}.
+{keywords, []}.
+{summary, "Yaws SQL Browser"}.
+{abstract, "ysql taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

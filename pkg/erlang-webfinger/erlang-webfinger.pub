@@ -1,0 +1,9 @@
+{author, {"Tim Fletcher", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang webfinger client"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tim/erlang-webfinger"}.
+{url, "git://github.com/tim/erlang-webfinger.git"}.

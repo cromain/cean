@@ -1,0 +1,8 @@
+{author, {"H&#229;kan Mattsso", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["gs","kernel","runtime_tools","stdlib","wx"]}.
+{keywords, []}.
+{summary, "Event Tracer"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/et/index.html\">et Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

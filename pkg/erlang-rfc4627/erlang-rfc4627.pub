@@ -1,0 +1,9 @@
+{author, {"Tony Garnock-Jones", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang RFC4627 (JSON) codec and JSON-RPC server implementation."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tonyg/erlang-rfc4627"}.
+{url, "git://github.com/tonyg/erlang-rfc4627.git"}.

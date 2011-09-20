@@ -1,0 +1,14 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {1998,09,30}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["math"]}.
+{depends, ["stdlib"]}.
+{keywords, ["fuzzy","logic","control"]}.
+{summary, "Simple Fuzzy Logic Evaluator"}.
+{abstract, 
+ "Implements a simple Fuzzy Logic Evaluator. "
+ "A basic example (Crane Controller) is provided to show how it works.<br><br>"
+ "The evaluator seems to perform roughly like a low-cost 8-bit controller "
+ "when run on a standard workstation.<br><br>"
+ "Example Useage: fuz:eval(fuz_crane, control, [Distance, Angle])."}.
+{home, "http://www.erlang.org/user.html#fuz-1.0"}.
+{url, "http://www.erlang.org/contrib/fuz-1.0.tgz"}.

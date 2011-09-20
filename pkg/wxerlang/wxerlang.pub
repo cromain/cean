@@ -1,0 +1,9 @@
+{author, {"Matsola Persson, Dan Gudmundsson, Matthew Harrison, mats cronqvist", "dgud@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["gui","graphic"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "wxErlang is an Erlang binding to the C++ GUI library wxWidgets."}.
+{abstract, ""}.
+{home, "http://apps.sourceforge.net/mediawiki/wxerlang/"}.
+{url, "https://wxerlang.svn.sourceforge.net/svnroot/wxerlang/"}.

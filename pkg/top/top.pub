@@ -1,0 +1,13 @@
+{author,{"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org", {1999,04,23}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["stdlib"]}.
+{keywords, ["process", "information"]}.
+{summary, "TOP display information about processes"}.
+{abstract,"somewhat similar to Unix top. This programs displays "
+ "information about the running Erlang processes in you system. "
+ "The output can be customized in various way to be sorted on "
+ "for example number of reductions made since last call or change "
+ "in heap size since lats call, etc..."}.
+{home, "http://www.erlang.org/user.html#top-1.0"}.
+{url, "http://www.erlang.org/contrib/top-1.0.tgz"}.

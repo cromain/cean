@@ -1,0 +1,9 @@
+{author, {"catseye", "cpressey@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["lib", "erl", "pdf", "util", "win"]}.
+{summary, "ErlGuten, re-packaged for Windows"}.
+{abstract, "Produce PDF from XML or Erlang programs"}.
+{home, "http://catseye.tc/projects/erlguten_win"}.
+{url, "http://catseye.tc/projects/erlguten_win-2004.0226.zip"}.

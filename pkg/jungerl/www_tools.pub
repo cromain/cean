@@ -1,0 +1,12 @@
+{author, {"Joe Armstrong", "joe@cslab.ericsson.se", {1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","tool"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["html","www","web","page","fetch"]}.
+{summary, "This is Joe Armstrong's www_tools contrib"}.
+{abstract,"WWW tools is a package of tools "
+ "for fetching and manipulating web pages. "
+ "The programs in this package illustrate how to fetch a URL using the "
+ "Erlang socket interface, we show how to tokenise and analysis HTML and "
+ "also provide a simple macro processor for HTML."}.
+{home, "http://jungerl.sourceforge.net"}.

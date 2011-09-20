@@ -1,0 +1,9 @@
+{author, {"Sergei Matusevich", "sergei.matusevich@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A generic SMTP server and client in Erlang that can be extended via callback modules"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/motus/gen_smtp"}.
+{url, "git://github.com/motus/gen_smtp.git"}.

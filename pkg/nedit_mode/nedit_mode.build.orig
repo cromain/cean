@@ -1,0 +1,11 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir
+    mkdir -p priv
+    cp erlang-nedit-mode priv
+}
+

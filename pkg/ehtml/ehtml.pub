@@ -1,0 +1,12 @@
+{author,{"Joe Armstrong", "joe@cslab.ericsson.se", {1998,11,31}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","code"]}.
+{summary, "Extended HTML"}.
+{keywords, ["HTML","macros","document"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract,"This is a macro process which expands extended HTML. "
+ "Extended HTML is normal HTML with embedded Erlang expressions. "
+ "The embedded expressions are evaluated and pasted into the resulting "
+ "document."}.
+{home, "http://www.erlang.org/user.html#ehtml-2.0"}.
+{url, "http://www.erlang.org/contrib/ehtml-2.0.tgz"}.

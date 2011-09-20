@@ -1,0 +1,3 @@
+pkg_init() { : }
+pkg_make() { ./bootstrap }
+pkg_install() { cp rebar $CEAN_ROOT/bin }

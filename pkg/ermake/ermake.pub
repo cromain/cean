@@ -1,0 +1,16 @@
+{author,{"Joe Armstrong", "joe@cslab.ericsson.se", {1998,11,31}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{summary, "Make in Erlang"}.
+{keywords, ["make","topological","sort","transitive","closure"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract,"This is a simple implementation of make in Erlang. "
+ "This version supports "
+ "<ul>"
+ "<li> Macros"
+ "<li> Include files"
+ "<li> suffix rules"
+ "<li> file dependencies"
+ "</ul>"}.
+{home, "http://www.erlang.org/user.html#ermake-2.0"}.
+{url, "http://www.erlang.org/contrib/ermake-2.0.tgz"}.

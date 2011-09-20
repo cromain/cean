@@ -1,0 +1,8 @@
+{author, {"Mats Cronqvist", "mats.cronqvist@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code","tool"]}.
+{depends, ["kernel","runtime_tools","stdlib"]}.
+{keywords, []}.
+{summary, "Profiler"}.
+{abstract, "pan taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

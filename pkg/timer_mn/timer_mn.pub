@@ -1,0 +1,13 @@
+{author,{"Sean Hinde", "shinde@iee.org", {2000,04,05}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["mnesia","stdlib"]}.
+{keywords, ["timer", "mnesia", "ordered_set"]}.
+{summary, "Timer for large numbers of concurrent timers"}.
+{abstract,"This application re-implements the standard timer module to "
+ "work for very large numbers of concurrent timers. "
+ "This implementation uses an mnesia ordered_set table to hold "
+ "the timers, which is much more scaleable than the ordered list "
+ "used in the standard timer module."}.
+{home, "http://www.erlang.org/user.html#timer_mn-1.1"}.
+{url, "http://www.erlang.org/contrib/timer_mn-1.1.tgz"}.

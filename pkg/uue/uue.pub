@@ -1,0 +1,10 @@
+{author, {"Joe Armstrong","joe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{keywords, ["encode","decode"]}.
+{depends, ["kernel","stdlib"]}.
+{summary, "UUencode and uudecode in plain erlang"}.
+{abstract, "UUencode and uudeocde written i plain Erlang. "
+ "This is useful if you want to write portable applications."}.
+{home, "http://www.erlang.org/user.html#uue-1.0"}.
+{url, "http://www.erlang.org/contrib/uue-1.0.tgz"}.

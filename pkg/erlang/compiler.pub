@@ -1,0 +1,8 @@
+{author, {"Bj&#246;rn Gustavsson", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["crypto","hipe","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A byte code compiler for Erlang which produces highly compact code"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/compiler/index.html\">compiler Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

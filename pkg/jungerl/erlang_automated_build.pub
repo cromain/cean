@@ -1,0 +1,17 @@
+{author, {"Gordon Guthrie", "", {2005,12,10}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "automatically download, build, test, analyse and stress erlang application"}.
+{abstract, "erlang_automated_build taken from jungerl project.<br>"
+ "erlang_automated_build is a shell script which will run some or all of:<ul>"
+ "<li> a CVS download of code"
+ "<li> a full compile"
+ "<li> a test suite"
+ "<li> a Dialyzer analysis"
+ "<li> a Tsunami load test"
+ "</ul>"
+ "The results of these are graphed and copied to a location as a web page. "
+ "There is also e-mail notification on fail/success."}.
+{home, "http://jungerl.sourceforge.net"}.

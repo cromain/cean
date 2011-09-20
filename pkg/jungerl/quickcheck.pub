@@ -1,0 +1,8 @@
+{author, {"John Hughes", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["test"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "program testing tool presented by John Hughes at EUC03"}.
+{abstract, "quickcheck taken from jungerl project."}.
+{home, "http://www.math.chalmers.se/~rjmh/ErlangQC"}.

@@ -1,0 +1,9 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Experimental, Django inspired, web-framework"}.
+{abstract, ""}.
+{home, "http://www.tornkvist.org/gitweb?p=mango.git;a=summary"}.
+{url, "git://www.tornkvist.org/mango"}.

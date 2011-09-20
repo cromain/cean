@@ -1,0 +1,9 @@
+{author, {"Torbjörn Törnkvist", "etnt@redhoterlang.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang consumer library for OpenID"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/etnt/eopenid"}.
+{url, "git://github.com/etnt/eopenid.git"}.

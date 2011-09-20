@@ -1,0 +1,9 @@
+{author, {"ytakano", "ytakanoster/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["distributed_computing","system"]}.
+{summary, "Ermdia is a yet another implementation of Kademlia which is one of the algorithm of ditributed hash table DHT in Erlang This software is lightweight fast and easy to understand since an amount of source code is quite small"}.
+{abstract, "Ermdia is a yet another implementation of Kademlia which is one of the algorithm of ditributed hash table DHT in Erlang This software is lightweight fast and easy to understand since an amount of source code is quite small"}.
+{home, "http://ermdia.sourceforge.net"}.
+{url, ":pserver:anonymous@ermdia.cvs.sourceforge.net:/cvsroot/ermdia"}.

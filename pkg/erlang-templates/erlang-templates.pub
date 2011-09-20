@@ -1,0 +1,9 @@
+{author, {"Alex Kropivny", "alex.kropivny@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Boilerplate templates for common Erlang OTP behaviors."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/amtal/erlang-templates"}.
+{url, "git://github.com/amtal/erlang-templates.git"}.

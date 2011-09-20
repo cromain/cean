@@ -1,0 +1,9 @@
+{author, {"Miguel Barreiro Paz, Victor M. Gulias", "enano/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["www","dynamic","internet"]}.
+{summary, "mod_xsl an XSL transformation module for the Inets erlang webserver"}.
+{abstract, "mod_xsl an XSL transformation module for the Inets erlang webserver"}.
+{home, "http://sourceforge.net/projects/modxsl"}.
+{url, "http://switch.dl.sourceforge.net/project/modxsl/modxsl/0.2/mod_xsl-0.2.tar.gz"}.

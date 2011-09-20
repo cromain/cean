@@ -1,0 +1,9 @@
+{author, {"Valentino Volonghi, Jacob Perkins, Eric Cestari", "ecestari@mac.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Synchronous erlang redis client application."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/japerk/erldis"}.
+{url, "git://github.com/japerk/erldis.git"}.

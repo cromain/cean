@@ -1,0 +1,9 @@
+{author, {"Essien Ita Essien", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Asterisk AMI Client library for Erlang."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/essiene/erlami"}.
+{url, "git://github.com/essiene/erlami.git"}.

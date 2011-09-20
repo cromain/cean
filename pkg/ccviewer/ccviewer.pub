@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com",{2000,9,21}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","code"]}.
+{depends, ["kernel","mnesia","sasl","stdlib"]}.
+{keywords, ["html", "http", "source", "browser", "clearcase"]}.
+{summary, "Web-based source code browser"}.
+{abstract, "Implements an web-based source code browser. CCviewer is designed to provide a web-based interface to a ClearCase repository of Erlang source code. It provides hypertext linking of source code, and statics cross-references analysis. With modest changes, it should work against other version control systems."}.
+{home, "http://www.erlang.org/user.html#ccviewer-1.1"}.
+{url, "http://www.erlang.org/contrib/ccviewer-1.1.tgz"}.

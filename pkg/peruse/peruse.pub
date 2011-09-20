@@ -1,0 +1,9 @@
+{author, {"catseye", "cpressey@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["ce","kernel","stdlib"]}.
+{keywords, ["bsdl", "erl", "util"]}.
+{summary, "Views log files interactively on terminal"}.
+{abstract, "A utility for viewing internally-formatted log files (disk_log module) interactively on a terminal."}.
+{home, "http://catseye.tc/projects/peruse"}.
+{url, "http://catseye.tc/projects/peruse-2002.1204.zip"}.

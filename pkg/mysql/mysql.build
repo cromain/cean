@@ -1,0 +1,11 @@
+pkg_init() {
+    mkdir -p ebin include
+    mv src/mysql.hrl include
+    cat > Emakefile << EOF
+{"src/*", [{i, "include"}, {outdir, "ebin"}]}.
+EOF
+    cat > Makefile << EOF
+all:
+	@$ERL -make
+EOF
+}

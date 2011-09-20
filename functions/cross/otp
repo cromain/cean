@@ -1,0 +1,16 @@
+# Description: Build OTP epkg for given arch
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cross/otp darwin-x86
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/otp arch" $* || return $bad_use
+local arch=$1 subpkg
+
+cean/import bootstrap $arch
+_cd_workdir
+tar zxf ~/.cache/cean/bootstraps/${ERLANG_VERSION}_${arch}_full.tar.gz
+(cd lib
+ for subpkg in $(/bin/ls -d *-*); tar zcf $CEAN_ROOT/tmp/$subpkg.tgz $subpkg)
+_rm_workdir
+package/install otp $arch

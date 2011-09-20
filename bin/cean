@@ -1,0 +1,62 @@
+#!/bin/sh
+
+export ZDOTDIR=$HOME/.cean
+fpath=$HOME/.cean/functions
+
+[ "$1" = "force" ] && { force=true; shift; }
+action=$1; shift; args=$*
+ok=1
+
+nodep()
+{
+    echo "missing dependency: $1"
+    ok=0
+}
+
+check_depends()
+{
+    for dep in zsh $(grep -h "# Depends:" $fpath/*/* | sed -e 's/.*: //' | xargs)
+    do
+        which $dep >/dev/null || {
+            if [ "${dep%|*}" = "$dep" ]; then
+                nodep $dep
+            else
+                local success=0
+                for subdep in $(echo $dep | sed -e 'y/|/ /')
+                do
+                    which $subdep >/dev/null && success=1
+                done
+                [ $success -eq 0 ] && nodep $dep
+            fi
+        }
+    done
+    [ $ok -eq 1 ] || {
+        echo "CEAN may not work correctly"
+        echo "launch 'cean force create' if you know what you are doing"
+        exit 1
+    }
+}
+
+#case $(ps -p $$ | grep $$ | sed -e 's/.* //;s/^-//') in
+#bash) ... ;;
+#zsh) ... ;;
+#*) ... ;
+#esac
+
+case $action in
+    create)
+        [ "$force" = "true" ] || check_depends
+        zsh -i $fpath/cean/create $args
+        ;;
+    upgrade)
+        zsh -i $fpath/cean/pull
+        ;;
+    shell)
+        [ -z $1 ] || cd $1
+        [ -f .ceanrc ] || echo "sure ?, this is not a cean working directory, starting anyway..."
+        zsh
+        ;;
+    *)
+        echo "usage: cean create|shell|upgrade"
+        ;;
+esac

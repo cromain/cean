@@ -1,0 +1,10 @@
+{author, {"Robert Virding", "rvirding@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["prolog", "erlog", "inference"]}.
+{summary, "Interpreter for sub-set of Prolog"}.
+{abstract, "Erlog is a Prolog interpreter implemented in Erlang and "
+           "integrated with the Erlang runtime system. It follows Prolog standard."}.
+{home, "https://github.com/rvirding/erlog"}.
+{url, "git://github.com/rvirding/erlog.git"}.

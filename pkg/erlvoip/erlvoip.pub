@@ -1,0 +1,15 @@
+{author, {"Stuart Jackson", "sjackson@simpleenigma.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "Voice over IP services written in Erlang"}.
+{abstract, "ErlVoIP is a collection of Voice Over IP modules that are going to be tired together "
+ "to create a VoIP server written in Erlang. "
+ "The current design for ErlVoIP will include connecting to a SIP provider and using RTP. "
+ "A voicemail system and a way for SIP clients to connect to the VoIP server are also on the design goals. "
+ "In the long run, this project is meant to create a fully functional PBX style telephone switch that "
+ "will be fully distributed and easily expanded without needing to recompile or restart ErlVoIP. "
+ "ErlVoIP is part of the Erlang Internet Framework."}.
+{home, "http://code.google.com/p/erlvoip"}.
+{url, "http://erlvoip.googlecode.com/svn/trunk"}.

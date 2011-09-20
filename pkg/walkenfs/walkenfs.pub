@@ -1,0 +1,11 @@
+{author, {"Paul Goo", "paul-goo@mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["kernel","stdlib","fuserl","fragmentron","schemafinder"]}.
+{keywords, []}.
+{summary, "distributed filesystem written in Erlang"}.
+{abstract, "walkenfs is a distributed filesystem written in Erlang (via fuse), which leverages Erlang's "
+ "built-in distributed multi-master database (Mnesia). The design goal is ease of use given a dynamic set "
+ "of node resources (such as EC2)."}.
+{home, "http://code.google.com/p/walkenfs"}.
+{url, "http://walkenfs.googlecode.com/svn/trunk"}.

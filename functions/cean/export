@@ -1,0 +1,11 @@
+# Description: Export local packages repository to official queue
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: scp tar rsync
+# Usage: cean/export
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/export" $* || return $bad_use
+
+local id=$(sed -e '/"email"/!d;s/.*(.\(.*\).)).*/\1/' ~/.gitconfig)
+(cd pub; tar zcf - bin/$CEAN_HOSTARCH | ssh contrib@${CEAN_SERVER#http://} "mkdir -p $id; tar -C $id -zxf -")
+rsync -av $CEAN_ROOT/pub/bin/ cean@${CEAN_SERVER#http://}:pub/bin/

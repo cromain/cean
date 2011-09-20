@@ -1,0 +1,9 @@
+{author, {"Alisdair Sullivan", "alisdairsullivan@yahoo.ca"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "a generic way to take advantage of erlang otp's application framework"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/talentdeficit/gen_app"}.
+{url, "git://github.com/talentdeficit/gen_app.git"}.

@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool"]}.
+{depends, ["kernel","mnesia","otp_mibs","sasl","snmp","stdlib"]}.
+{keywords, []}.
+{summary, "A monitor which allows inspection of the underlying operating system"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/os_mon/index.html\">os_mon Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

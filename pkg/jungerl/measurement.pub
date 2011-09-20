@@ -1,0 +1,14 @@
+{author, {"Cat's Eye Technologies", "catseye@catseye.mb.ca"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type","math"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Measurement ADT"}.
+{abstract, "<p>This module implements an abstract data type in Erlang which "
+  "represents a <i>measurement</i> taken from the observed world. "
+  "These measurements have, as part of their make-up, both a <i>scalar</i> "
+  "component which determines their magnitude, and a <i>units of "
+  "measurement</i> (<i>UoM</i>) component which determines their "
+  "dimensionality (and may further determine their magnitude within "
+  "that dimensionality.)</p>"}.
+{home, "http://jungerl.sourceforge.net"}.

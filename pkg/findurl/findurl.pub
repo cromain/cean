@@ -1,0 +1,9 @@
+{author, {"Benjamin Kampmann", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "a small regexp helper for finding URLs written in erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ligthyear/findurl"}.
+{url, "git://github.com/ligthyear/findurl.git"}.

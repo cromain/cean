@@ -1,0 +1,9 @@
+{author, {"Tim Watson", "watson.timothy@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang cluster monitoring tools"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/n0gg1n/esmt"}.
+{url, "git://github.com/n0gg1n/esmt.git"}.

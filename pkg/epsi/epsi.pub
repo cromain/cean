@@ -1,0 +1,9 @@
+{author, {"Francesco Feltrinelli", "francescofel/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["www","messageboards","dynamic","communications","other","internet"]}.
+{summary, "EPSI Erlang Publish Subscribe Infrastructure is an Erlang implementation of a distributed infrastructure providing a content based publish subscribe service to its clients"}.
+{abstract, "EPSI Erlang Publish Subscribe Infrastructure is an Erlang implementation of a distributed infrastructure providing a content based publish subscribe service to its clients"}.
+{home, "http://epsi.sourceforge.net"}.
+{url, "git://epsi.git.sourceforge.net/gitroot/epsi/epsi"}.

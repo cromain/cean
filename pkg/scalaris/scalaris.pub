@@ -1,0 +1,9 @@
+{author, {"Florian Schintke", "schintke@zib.de"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database","application"]}.
+{depends, ["common_test","crypto","inets","kernel","log4erl","stdlib","tools","xmlrpc","yaws"]}.
+{keywords, ["tokyocabinet","tc"]}.
+{summary, "Distributed Transactional Key-Value Store"}.
+{abstract, ""}. 
+{home, "http://code.google.com/p/scalaris"}.
+{url, "http://scalaris.googlecode.com/svn/trunk"}.

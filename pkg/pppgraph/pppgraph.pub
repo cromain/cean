@@ -1,0 +1,10 @@
+{author,{"Lars Bjornfot", "bjornfot@erix.ericsson.se", {2000,05,29}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic","net"]}.
+{summary, "Graphic display of PPP statistics"}.
+{keywords, ["pppstats", "graph"]}.
+{depends, ["gs","kernel","stdlib"]}.
+{abstract,"Display receive and transmit rates in byte/s, updated "
+ "every second. Need pppstats(8). Runs on at least Red Hat Linux."}.
+{home, "http://www.erlang.org/user.html#pppgraph-1.0"}.
+{url, "http://www.erlang.org/contrib/pppgraph-1.0.tgz"}.

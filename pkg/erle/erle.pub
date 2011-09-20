@@ -1,0 +1,9 @@
+{author, {"Richard Andresik", "erlemaker/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["development","subversion","appservers","versioncontrol","debuggers"]}.
+{summary, "erle a development environment for erlang"}.
+{abstract, "erle a development environment for erlang"}.
+{home, "http://erle.sourceforge.net"}.
+{url, "https://erle.svn.sourceforge.net/svnroot/erle"}.

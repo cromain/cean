@@ -1,0 +1,9 @@
+{author, {"Harish Mallipeddi", "harish.mallipeddi@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang client for Tokyo Tyrant (speaks Tokyo Tyrant's TCP/IP protocol)."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mallipeddi/tora"}.
+{url, "git://github.com/mallipeddi/tora.git"}.

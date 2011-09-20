@@ -1,0 +1,9 @@
+{author, {"Albert Peschar", "albert@peschar.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang HTTP &quot;comet&quot; server"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/apeschar/cometd"}.
+{url, "git://github.com/apeschar/cometd.git"}.

@@ -1,0 +1,75 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+
+    dstdir=$tmpdir/jungerl_build
+    [ -d $dstdir ] && rm -Rf $dstdir
+    mkdir $dstdir
+    cd $srcdir
+    #cp ../erlang/erts/emulator/obsolete/driver.h support
+    #export OTP_ROOT=`(cd $BINDIR/../..; echo $PWD)`
+    #export CFLAGS="-O2 -I../../../support"
+    make clean
+    make conf
+    [ $? -eq 0 ] || exit 2
+    mkdir -p lib/ucs/priv/db lib/mibs/priv lib/rdbms/mnesia_patches/ebin lib/rdbms/test/ebin
+    (cd lib
+        for pub in $REPDIR/jungerl/*\.pub
+        do
+            pub=$pub:t
+            pub=${pub/.pub/}
+            [ -d $pub/ebin ] || mkdir $pub/ebin
+            (cd $pub; make)
+            [ $? -eq 0 ] || (cd $pub/src; make)
+        done)
+    [ $? -eq 0 ] || exit 3
+    (cd lib
+        for pub in $REPDIR/jungerl/*\.pub
+        do
+            pub=$pub:t
+            pub=${pub/.pub/}
+            cp -r $pub $dstdir
+        done)
+    cd $dstdir
+    find . -name CVS -exec rm -Rf {} \; 2>/dev/null
+    find . -name ".cvsignore" -exec rm {} \; 2>/dev/null
+    find . -name ".empty" -exec rm {} \; 2>/dev/null
+    rm Makefile
+    for app in `/bin/ls -1`
+    do
+        [ -d $app/src ] && {
+            [ ! -d $app/include ] && {
+                [ -d $app/inc ] && mv $app/inc $app/include || mkdir -p $app/include
+                find $app/src -name "*\.hrl" -exec cp {} $app/include \; 2>/dev/null
+            }
+        }
+    done
+}
+
+
+pkg_fetch()
+{
+    [ $# -lt 2 ] && exit
+    srcdir=$1; otp=$2
+
+    url=":pserver:anonymous@jungerl.cvs.sourceforge.net:/cvsroot/jungerl"
+    cd $srcdir
+    [ -d jungerl ] && {
+        (cd jungerl/lib;
+          for lib in *
+          do
+            [ -d $lib/CVS ] && {
+              echo -n updating $lib...
+              cvs -q up $lib
+              [ $? -eq 0 ] && echo ok || echo error
+              sleep 1
+            }
+          done)
+    } || {
+        cvs -d$url login 
+        cvs -z3 -d$url co -P jungerl
+    }
+}
+    

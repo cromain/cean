@@ -1,0 +1,8 @@
+{author, {"Scott Lystig Fritchie", "fritchie@mr.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "UNIX domain socket support"}.
+{abstract, "unixdom taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

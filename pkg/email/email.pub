@@ -1,0 +1,15 @@
+{author,{"Joe Armstrong","joe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","tool"]}.
+{summary, "Send email - parse email - automate email jobs"}.
+{keywords, ["mail","procmail","sendmail"]}.
+{depends, ["kernel","stdlib","uue"]}.
+{abstract, "A number of utilites for manipulating email. The most "
+ "useful is something which might be described as \"send\" and "
+ "\"receive\" in email, with this you can send and receive Erlang "
+ "terms as e-mail messages. "
+ "<br><br>"
+ "These programs are *very* useful for building e-mail servers. "
+ "Read the full docmentation for more details."}.
+{home, "http://www.erlang.org/user.html#email-1.0"}.
+{url, "http://www.erlang.org/contrib/email-1.0.tgz"}.

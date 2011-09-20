@@ -1,0 +1,8 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "generic process registration facility"}.
+{abstract, "proc_reg taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

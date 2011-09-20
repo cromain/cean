@@ -1,0 +1,21 @@
+
+pkg_make()
+{
+    [ $# -eq 3 ] || exit
+    srcdir=$1; tmpdir=$2; pub=$3
+    
+    cd $srcdir
+    cp GNUmakevars.inc GNUmakevars.inc.orig
+    cat GNUmakevars.inc.orig | sed -e "s*:= /usr*:= $ERLDIR*" > GNUmakevars.inc
+    make -f GNUmakefile
+    mkdir -p doc include ebin src/common src/wooper src/examples
+    cp wooper/doc/* doc
+    cp wooper/src/*\.beam ebin
+    cp wooper/examples/*\.beam ebin
+    cp common/*\.beam ebin
+    cp wooper/src/*\.erl src/wooper
+    cp wooper/examples/*\.erl src/examples
+    cp common/*\.erl src/common
+    cp wooper/src/*\.hrl include
+}
+

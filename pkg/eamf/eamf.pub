@@ -1,0 +1,9 @@
+{author, {"Mrinal Wadhwa", "mrinal.wadhwa@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "eAMF provides Action Message Format (AMF) support for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mrinalwadhwa/eamf"}.
+{url, "git://github.com/mrinalwadhwa/eamf.git"}.

@@ -1,0 +1,8 @@
+{author, {"David N. Welton", "davidw@eidetix.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["fd_server","kernel","stdlib"]}.
+{keywords, ["server"]}.
+{summary, "Erlang FTP daemon"}.
+{abstract, "ftpd taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

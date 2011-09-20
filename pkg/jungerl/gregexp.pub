@@ -1,0 +1,9 @@
+{author, {"Pascal Brisset", "pascal.brisset@wanadoo.fr"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["text"]}.
+{depends, ["stdlib"]}.
+{keywords, ["regular","expressions"]}.
+{summary, "This module extends the regexp module in OTP R7B-1 with support for submatches. "
+ "This makes it possible to retrieve several components of a match with a single evaluation of a regexp."}.
+{abstract, "gregexp taken from jungerl project."}. 
+{home, "http://jungerl.sourceforge.net"}.

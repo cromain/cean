@@ -1,0 +1,9 @@
+# Description: Gives some usage statistics
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cean/stats
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/stats" $* || return $bad_use
+
+history | awk '{print $2}' | sort | uniq -c | sort -rn | head

@@ -1,0 +1,8 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@bluetail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["crypto","fd_server","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "This is an implementation of a subset of the SMB protocol"}.
+{abstract, "esmb taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

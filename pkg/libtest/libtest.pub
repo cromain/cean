@@ -1,0 +1,9 @@
+{author, {"Tim Watson", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "General Testing Tools for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/hyperthunk/libtest"}.
+{url, "git://github.com/hyperthunk/libtest.git"}.

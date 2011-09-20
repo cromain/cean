@@ -1,0 +1,15 @@
+{author,{"Hakan Mattsson", "hakan@erix.ericsson.se", {1999,10,19}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{summary, "Brokering and supervision of services"}.
+{keywords, ["service", "broker", "supervision", "protocol", "negotiataion"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract, "Brokering and supervision of services for service "
+ "providers and their users. When either part of the service dies "
+ "or selects to disconnect from the service, the other part is notified "
+ "about this. The service broker may be for many purposes, such as dynamic "
+ "syncronizing of application startup, protocol negotiations, "
+ "inter application supervision, implementation of safe calls etc. "
+ "A man page (as comment in the module) and test program are also supplied."}.
+{home, "http://www.erlang.org/user.html#service_broker-1.0"}.
+{url, "http://www.erlang.org/contrib/service_broker-1.0.tgz"}.

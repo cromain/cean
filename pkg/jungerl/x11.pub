@@ -1,0 +1,8 @@
+{author, {"Tony Rogvall", "tony@bit.hemma.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "New flavour of the ex11"}.
+{abstract, "x11 taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

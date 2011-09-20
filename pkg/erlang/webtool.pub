@@ -1,0 +1,8 @@
+{author, {"Martin Gustafsson, Siri Hansen", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","web","tool"]}.
+{depends, ["inets","kernel","observer","stdlib"]}.
+{keywords, []}.
+{summary, "A tool that simplifying the use of web based Erlang tools"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/webtool/index.html\">webtool Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

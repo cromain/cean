@@ -1,0 +1,11 @@
+{author,{"Hans Nilsson", "hans@erix.ericsson.se", {2001,11,15}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic"]}.
+{depends, ["stdlib"]}.
+{keywords, ["graph","draw"]}.
+{summary, "Interactive graphical graph drawing for programs to display there data"}.
+{abstract, "This is a set of modules to help programs to graphically "
+ "present graphs to a person. The person could rearange the graph "
+ "and the system will keep those positions if the graph is changed by the program."}.
+{home, "http://www.erlang.org/user.html#graph_draw-0.0"}.
+{url, "http://www.erlang.org/contrib/graph_draw-0.0.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"RabbitMQ - messaging that just works", "info@rabbitmq.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Highly available queues for RabbitMQ"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/rabbitmq/rabbitmq-ha"}.
+{url, "git://github.com/rabbitmq/rabbitmq-ha.git"}.

@@ -1,0 +1,8 @@
+{author, {"Jakob Cederlund, H&#229;kan Mattsson", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","net","application"]}.
+{depends, ["crypto","kernel","public_key","stdlib"]}.
+{keywords, []}.
+{summary, "Secure Shell application with sftp and ssh support"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/ssh/index.html\">ssh Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

@@ -1,0 +1,8 @@
+{author, {"Ingela Anderton", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","misc"]}.
+{depends, ["kernel","mnesia","snmp","stdlib"]}.
+{keywords, ["mib"]}.
+{summary, "SNMP management information base for Erlang/OTP nodes"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/otp_mibs/index.html\">otp_mibs Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

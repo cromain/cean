@@ -1,0 +1,9 @@
+{author,{"Daniel Solaz", "dsolaz@sistelcom.com", {2000,03,20}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{summary, "Erlang Nedit mode"}.
+{keywords, ["highlight", "editor", "nedit"]}.
+{depends, []}.
+{abstract, "Erlang syntax highlighting mode for Nedit 5."}.
+{home, "http://www.erlang.org/user.html#nedit_mode-0.9"}.
+{url, "http://www.erlang.org/contrib/nedit_mode-0.9.tgz"}.

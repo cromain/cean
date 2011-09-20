@@ -1,0 +1,12 @@
+{author, {"Geoff Wong, Torbjorn Tornkvist, Mick Dwyer", "dredd@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web"]}.
+{depends, ["kernel"]}.
+{keywords, ["high","availability","cluster","clustering","traffic","distributed","dns"]}.
+{summary, "high availability clustering tool"}.
+{abstract, "Eddie acts as a high availability WAN and LAN clustering tool "
+ "for web servers including Apache It provides load balancing at two levels "
+ "DNS and LAN failover redundancy and admission control to maintain quality "
+ "of service levels"}.
+{home, "http://eddie.sourceforge.net"}.
+{url, ":pserver:anonymous@eddie.cvs.sourceforge.net:/cvsroot/eddie"}.

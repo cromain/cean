@@ -1,0 +1,23 @@
+
+pkg_fetch()
+{
+    [ $# -lt 2 ] && exit
+    srcdir=$1; otp=$2
+
+    cd $srcdir
+    [ -d rbsets-0.1 ] || {
+        mkdir rbsets-0.1
+        cd rbsets-0.1
+        wget -O rbsets.zip "http://forum.trapexit.org/download.php?id=150"
+        unzip rbsets.zip
+        rm rbsets.zip
+        mkdir doc src ebin include priv
+        mv *hrl include
+        mv *erl src
+        mv *txt doc
+        cd ..
+    }
+    [ -e rbsets ] && rm rbsets
+    ln -s rbsets-0.1 rbsets
+}
+    

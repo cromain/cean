@@ -1,0 +1,9 @@
+{author, {"Tristan Sloughter", "tristan.sloughter@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Simple search engine written in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tsloughter/eindexer"}.
+{url, "git://github.com/tsloughter/eindexer.git"}.

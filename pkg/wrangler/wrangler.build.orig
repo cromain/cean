@@ -1,0 +1,22 @@
+
+pkg_fetch()
+{
+    [ $# -lt 2 ] && exit
+    srcdir=$1; otp=$2
+
+    pub=$REPDIR/wrangler/wrangler.pub
+    spec=($(grep "^{sources" $pub | sed 'y/,{}"/    /'))
+    url=${spec[2]}
+    vsn=$(awk 'BEGIN { FS = "\"" }; /^{vsn,/ {print $2}' $pub)
+    archive=$url:t
+    cd $srcdir
+    [ -d distel-wrangler-$vsn ] || {
+        wget -t 10 -T 30 $url
+        tar zxf $archive
+        [ -e wrangler ] && rm wrangler
+        mv ${archive%.t*} wrangler-$vsn
+        ln -s wrangler-$vsn wrangler
+        rm $archive
+    }
+}
+    

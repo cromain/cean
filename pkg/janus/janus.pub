@@ -1,0 +1,9 @@
+{author, {"Cliff Moon", "cliff@leaninto.it"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Messaging server written in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/cliffmoon/janus"}.
+{url, "git://github.com/cliffmoon/janus.git"}.

@@ -1,0 +1,9 @@
+{author, {"Kevin Smith", "kevin@hypotheticalabs.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang wrapper for the fastlz (LZO-like) data compression library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/kevsmith/erlz"}.
+{url, "git://github.com/kevsmith/erlz.git"}.

@@ -1,0 +1,9 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code","meta"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "Erlang/OTP."}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc\">Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.
+{url, "git://github.com/erlang/otp.git"}.

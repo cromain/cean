@@ -1,0 +1,9 @@
+{author, {"Claes Wikstrom", "klacke@hyber.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["binary","file","io","rapid"]}.
+{summary, "An interface to fast FILE I/O"}.
+{abstract, ""}.
+{home, "http://yaws.hyber.org"}.
+{url, "http://yaws.hyber.org/download/bfile-1.2.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"Olivier Boudeville", "olivier.boudeville@online.fr"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["object","oriented"]}.
+{summary, "lightweight layer offering Object-Oriented constructs"}.
+{abstract, "WOOPER is an open source lightweight layer on top of the Erlang language offering constructs dedicated to Object-Oriented Programming"}.
+{home, "http://ceylan.sourceforge.net/main/documentation/wooper"}.
+{url, "http://downloads.sourceforge.net/ceylan/wooper-0.3.tar.bz2"}.

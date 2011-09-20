@@ -1,0 +1,9 @@
+{author, {"Michael Gebetsroither", "gebi@sbox.tugraz.at"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["meta"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "The Jungle of Erlang code"}.
+{abstract, ""}.
+{home, "https://github.com/gebi/jungerl"}.
+{url, "git://github.com/gebi/jungerl.git"}.

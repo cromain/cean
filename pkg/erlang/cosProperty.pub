@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","net"]}.
+{depends, ["kernel","mnesia","orber","stdlib"]}.
+{keywords, ["orb"]}.
+{summary, "Orber OMG Property Service"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/cosProperty/index.html\">cosProperty Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

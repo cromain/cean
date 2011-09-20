@@ -1,0 +1,15 @@
+{author, {"Process-one", "contact@process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["test"]}.
+{depends, ["asn1","crypto","inets","kernel","os_mon","snmp","ssl","stdlib","xmerl"]}.
+{keywords, ["benchmark","performance","stress","load","testing"]}.
+{summary, "A high-performance benchmark tool"}.
+{abstract, "In a few words, Tsung is a distributed load testing tool. "
+ "It is protocol-independent and can currently be used to stress Jabber/XMPP server, "
+ "but also HTTP, SOAP, and postgreSQL servers. Developed as an extensible framework, "
+ "this tools can be used to generate very large realistic benchmarks on a limited number of servers.<br>"
+ "Tsung is a tool that allow to simulate the behaviour of a large number of users "
+ "of a given application. It thus allows to analyze the capability of the stressed "
+ "system under an heavy load, and provide reports to improve the performance and design of the target system."}.
+{home, "http://www.process-one.net/en/projects/tsung"}.
+{url, "http://svn.process-one.net/tsung/trunk"}.

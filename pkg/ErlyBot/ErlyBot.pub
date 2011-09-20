@@ -1,0 +1,9 @@
+{author, {"OJ", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A custom IRC bot written by the troops from #erlang-otp."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/OJ/ErlyBot"}.
+{url, "git://github.com/OJ/ErlyBot.git"}.

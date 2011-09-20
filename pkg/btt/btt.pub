@@ -1,0 +1,11 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist, Claes Wikstrom, Martin Bjorklund", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","application"]}.
+{depends, ["debugger","epop","inets","kernel","mnesia","stdlib","yaws"]}.
+{keywords, ["ticket","tracker","issue","trouble"]}.
+{summary, "the Bluetail Ticket Tracker"}.
+{abstract, "The Bluetail Ticket Tracker (BTT) is a system for creating, "
+ "storing and keeping track of tickets. A ticket describes an issue "
+ "of some sort. It can, for example, be a Trouble Report or a ToDo note."}.
+{home, "http://btt.sourceforge.net"}.
+{url, ":pserver:anonymous@btt.cvs.sourceforge.net:/cvsroot/btt"}.

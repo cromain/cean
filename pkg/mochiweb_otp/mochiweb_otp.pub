@@ -1,0 +1,9 @@
+{author, {"Martin Logan", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A wrapper around mochiweb that makes otp style releases and embedding more straightforward. "}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/martinjlogan/mochiweb_otp"}.
+{url, "git://github.com/martinjlogan/mochiweb_otp.git"}.

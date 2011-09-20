@@ -1,0 +1,9 @@
+{author, {"Dave Fayram", "dave@banksimple.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A project to unify various implementations of the Erlang library gen_leader into a modern, robust single implementation"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/KirinDave/gen_leader_revival"}.
+{url, "git://github.com/KirinDave/gen_leader_revival.git"}.

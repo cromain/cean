@@ -1,0 +1,8 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver","text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Interface to the iconv character set convertion library"}.
+{abstract, "iconv taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

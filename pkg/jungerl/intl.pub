@@ -1,0 +1,8 @@
+{author, {"Tony Rogvall", "tony@bit.hemma.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["kernel","stdlib","syntax_tools"]}.
+{keywords, ["locale"]}.
+{summary, "internationalization localization"}.
+{abstract, "intl taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

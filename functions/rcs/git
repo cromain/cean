@@ -1,0 +1,210 @@
+# Description: Provides GIT repository metadata and management
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: git sed tail
+# Usage: 
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+# Keep git repository status, mainly used by shell prompt
+# largely inspired from http://github.com/jcorbin/zsh-git.git
+
+typeset -gA _git_info; _git_info=()
+
+_git_info_update() {
+    _git_info=()
+    local gitdir="$(git rev-parse --git-dir 2>/dev/null)"
+    [ $? -eq 0 -a -n "$gitdir" ] || return 1
+    _git_info[dir]=$gitdir
+    _git_info[bare]=$(git rev-parse --is-bare-repository)
+    _git_info[work]=$(git rev-parse --is-inside-work-tree)
+}
+
+_git_info_eval() {
+    _git_isgit || return 0
+    while [ -n "$1" ]; do _git_$1 >/dev/null; shift; done
+}
+
+_git_isgit() { [ -n "$_git_info[dir]" ]; }
+
+_git_isworktree() { [ _git_isgit -a "$_git_info[work]" = "true" ]; }
+
+_git_isbare() { [ _git_isgit -a "$_git_info[bare]" = "true" ]; }
+
+_git_isindexclean() {
+    _git_isgit || return 1
+    git diff --quiet --cached 2>/dev/null
+}
+
+_git_isworktreeclean() {
+    _git_isgit || return 1
+    git diff --quiet 2>/dev/null
+}
+
+_git_hasuntracked() {
+    _git_isgit || return 1
+    [ $(git ls-files --others --exclude-standard | wc -l) -gt 0 ]
+}
+
+_git_hasunmerged() {
+    _git_isgit || return 1
+    [ $(git ls-files -u | wc -l) -gt 0 ]
+}
+
+_git_head() {
+    _git_isgit || return 1
+    if [ -z $_git_info[head] ]; then
+        local name; name=$(git symbolic-ref -q HEAD)
+        if [ $? -eq 0 ]; then
+            [[ $name == refs/(heads|tags)/* ]] && name=${name#refs/(heads|tags)/}
+        else
+            name=$(git name-rev --name-only --no-undefined --always HEAD)
+            if [ $? -ne 0 ]; then
+                return 1
+            elif [[ $name == remotes/* ]]; then
+                name=${name#remotes/}
+            fi
+        fi
+        _git_info[head]=$name
+    fi
+    echo $_git_info[head]
+}
+
+_git_branch() {
+    _git_isgit || return 1
+    _git_isbare && return 1
+    if [ -z $_git_info[branch] ]; then
+        local branch; branch=$(git symbolic-ref HEAD 2>/dev/null)
+        [ $? -eq 0 ] && branch=$branch:t || branch=$(git name-rev --name-only --always HEAD)
+        _git_info[branch]=$branch
+    fi
+    echo $_git_info[branch]
+}
+
+_git_name() {
+    _git_isgit || return 1
+    _git_isbare && return 1
+    if [ -z $_git_info[name] ]; then
+        local name; name=$(git config remote.origin.url)
+        [ $? -eq 0 ] && name=${name/.git/} || {
+            local gitdir=$(git rev-parse --git-dir)
+            [[ $gitdir == ".git" ]] && name=$PWD:t || name=$gitdir:h:t
+        }
+        _git_info[name]=$name:t
+    fi
+    echo $_git_info[name]
+}
+
+_git_prefix() {
+    _git_isgit || return 1
+    _git_isbare && return 1
+    [ -z $_git_info[prefix] ] && _git_info[prefix]=${$(git rev-parse --show-prefix)%/}
+    echo $_git_info[prefix]
+}
+
+_git_revision() {
+    _git_isgit || return 1
+    _git_isbare && return 1
+    if [ -n "$1" ]; then
+        git describe --tags $1 2>/dev/null || git describe --always 2>/dev/null || git rev-parse --short $1 2>/dev/null
+        [ $? -ne 0 ] && return 1
+    else
+        if [ -z $_git_info[revision] ]; then
+            _git_info[revision]=$(git describe --tags 2>/dev/null || git describe --always 2>/dev/null)
+            [ $? -ne 0 ] && return 1
+        fi
+        echo $_git_info[revision]
+    fi
+}
+
+_git_tracking_remote() {
+    _git_isgit || return 1
+    _git_isbare && return 1
+    local branch
+    if [ -n "$1" ]; then
+        branch=$1
+    else
+        _git_branch >/dev/null || return 1
+        branch=$_git_info[branch]
+    fi
+    local k="tracking_$branch"
+    if [ -z $_git_info[$k] ]; then
+        _git_info[$k]=$(git config branch.$branch.remote)
+        [ $? -ne 0 ] && return 1
+    fi
+    echo $_git_info[$k]
+}
+
+_git_tracking_merge() {
+    _git_isgit || return 1
+    _git_isbare && return 1
+    _git_branch >/dev/null || return 1
+    local branch; branch=$_git_info[branch]
+    _git_tracking_remote $branch >/dev/null || return 1
+    local remote; remote=$_git_info[tracking_$branch]
+    local k="merging_$branch"
+    if [ -z $_git_info[$k] ]; then
+        local merge; merge=$(git config branch.$branch.merge)
+        [ $? -ne 0 ] && return 1
+        [[ $remote != "." ]] && merge=$remote/$merge:t
+        _git_info[$k]=$merge
+    fi
+    echo $_git_info[$k]
+}
+
+# High level helpers, can be used by cean scripts
+
+_git_svnhead() {
+    _git_isgit || return 1
+    local commit; [ -z $1 ] && commit='HEAD' || commit=$1
+    git show --raw $commit | sed -e '/git-svn-id/!d;s/.*@//;s/ .*//'
+}
+
+_git_rebase_info() {
+    _git_isgit || return 1
+    local dir; dir=$_git_info[dir]
+    [ $? -ne 0 ] && return 1
+    if [ -d $dir/rebase-merge ]; then _git_info[dotest]=$dir/rebase-merge
+      elif [ -d $dir/.dotest-merge ]; then _git_info[dotest]=$dir/.dotest-merge
+      elif [ -d .dotest ]; then _git_info[dotest]=.dotest
+      else return 1
+    fi
+    _git_info[rb_onto]=$(<"$dotest/onto")
+    _git_info[rb_upstream]=$(<"$dotest/upstream")
+    if [ -f "$dotest/orig-head" ]; then _git_info[rb_head]=$(<"$dotest/orig-head")
+      elif [ -f "$dotest/head" ]; then _git_info[rb_head]=$(<"$dotest/head")
+      else _git_info[rb_head]=""
+    fi
+    _git_info[rb_head_name]=$(<"$dotest/head-name")
+}
+
+_git_new_empty_branch_from_tgz() {
+    _git_isgit || return 1
+    [ $# -eq 2 ] || return 2
+    git symbolic-ref HEAD refs/heads/$1
+    rm .git/index
+    git clean -fdx
+    tar zxf $2
+    git add *
+    git commit -m 'Initial commit'
+}
+
+_git_remove_commit() {
+    _git_isgit || return 1
+    git rebase --onto $1~1 $1
+}
+
+_git_last_commit_date() {
+    _git_isgit || return 1
+    echo ${$(git log -1 --pretty=format:"%ai")[1]} | sed -e 's/-/\./;s/-//'
+}
+
+_git_last_revision() {
+    _git_isgit || return 1
+    local revision=$(git tag -l | tail -1)
+    [ -z $revision ] && revision=$(_git_last_commit_date)
+    echo $revision
+}
+
+_git_best_revision() {
+    _git_isgit || return 1
+    _git_revision | sed -e "s/-g[0-9a-f]\{7\}$//;s/^[0-9a-f]\{7\}$/$(_git_last_commit_date)/"
+}

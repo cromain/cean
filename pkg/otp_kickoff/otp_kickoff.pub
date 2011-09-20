@@ -1,0 +1,9 @@
+{author, {"Leandro Silva", "leandrodoze@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Simple generator to kick off Erlang/OTP projects"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/leandrosilva/otp_kickoff"}.
+{url, "git://github.com/leandrosilva/otp_kickoff.git"}.

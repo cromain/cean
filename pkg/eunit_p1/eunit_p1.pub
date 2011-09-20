@@ -1,0 +1,9 @@
+{author, {"Richard Carlsson, Micka&#235l R&#233mond","richardc@it.uu.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["test"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["unit","test"]}.
+{summary, "unit test suite tool"}.
+{abstract, "a Lightweight Unit Testing Framework for Erlang"}.
+{home, "https://support.process-one.net/doc/display/CONTRIBS/EUnit"}.
+{url, "http://svn.process-one.net/contribs/trunk/eunit"}.

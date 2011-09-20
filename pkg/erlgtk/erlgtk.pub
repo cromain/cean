@@ -1,0 +1,9 @@
+{author, {"Bjorn Gustavsson, Patrik Nyblom, Claes Wikstrom, Tony Rogvall", "erlgtk-users@lists.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic"]}.
+{depends, []}.
+{keywords, ["gtk","gnome","desktop"]}.
+{summary, "erlgtk is a GTK+/GNOME binding"}.
+{abstract, "Gtk language binding for Erlang with Glade Gnome support"}.
+{home, "http://erlgtk.sourceforge.net"}.
+{url, ":pserver:anonymous@erlgtk.cvs.sourceforge.net:/cvsroot/erlgtk"}.

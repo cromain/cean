@@ -1,0 +1,10 @@
+{author, {"Christian Sunesson", "chsu79@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver","database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "Second attempt at writing a PostgreSQL frontend. Connects by plain tcp "
+ "and should be able to perform simple SQL commands."}.
+{abstract, "pgsql taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.
+{url, "https://svn.process-one.net/ejabberd-modules/pgsql/trunk"}.

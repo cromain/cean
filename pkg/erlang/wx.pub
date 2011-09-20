@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A port of wxWidgets."}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/wx/index.html\">wx Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

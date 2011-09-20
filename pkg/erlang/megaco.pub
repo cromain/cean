@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","net"]}.
+{depends, ["asn1","debugger","et","kernel","runtime_tools","stdlib"]}.
+{keywords, ["H248","telephony"]}.
+{summary, "The Megaco/H.248 protocol support"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/megaco/index.html\">megaco Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

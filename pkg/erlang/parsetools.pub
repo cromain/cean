@@ -1,0 +1,8 @@
+{author, {"Carl Wilhelm Welin", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["parse"]}.
+{summary, "A set of parsing and lexical analysis tools"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/parsetools/index.html\">parsetools Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

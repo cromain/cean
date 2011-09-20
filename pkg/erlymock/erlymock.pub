@@ -1,0 +1,9 @@
+{author, {"Jason Wagner", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A mocking framework for Erlang."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/nialscorva/erlymock"}.
+{url, "git://github.com/nialscorva/erlymock.git"}.

@@ -1,0 +1,14 @@
+{author,{"Leif Lorentzen", "leif.lorentzen@alcesys.se", {2000,09,18}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic","database"]}.
+{keywords, ["gui","mnesia","ets","database"]}.
+{depends, ["gs","kernel","mnesia","stdlib"]}.
+{summary, "A GUI to mnesia and ets"}.
+{abstract,
+  "This is a Graphical User Interface which make it easy to explore mnesia "
+  "and ets tables. "
+  "With trex you can read, write and search in mnesia/ets tables, dump the "
+  "tables to a file and look at it off-line, log updates to mnesia tables "
+  "for debugging purposes, among other things."}.
+{home, "http://www.erlang.org/user.html#trex-2.6"}.
+{url, "http://www.erlang.org/contrib/trex-2.6.tgz"}.

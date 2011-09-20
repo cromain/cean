@@ -1,0 +1,17 @@
+{author, {"Stuart Jackson", "sjackson@simpleenigma.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["erlmail","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Erlang Internet Framework"}.
+{abstract, "The Erlang Interent Framework is a mangement application that allows "
+ "the control of several other Erlang applications. "
+ "The application that are currently being devloped as part of the eif are:"
+ "<ul>"
+ "<li>ErlDir - a DNS and LDAP server and related modules"
+ "<li>ErlMail - a SMTP, IMAP and POP server and related modules"
+ "<li>ErlVoIP - Voice over IP server and related modules"
+ "<li>ErlWeb - HTTP and FTP servers, Erlang Markup Language and related modules"
+ "</ul>Update to all of these application are posted at http://www.erlsoft.org."}.
+{home, "http://erlsoft.org/modules/eif"}.
+{url, "http://eif.googlecode.com/svn/trunk"}.

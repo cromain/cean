@@ -1,0 +1,9 @@
+{author, {"Jesper Louis Andersen", "jesper.louis.andersen@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang Bittorrent Client"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jlouis/etorrent"}.
+{url, "git://github.com/jlouis/etorrent.git"}.

@@ -1,0 +1,9 @@
+{author, {"David Somers", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Hydrometeor is a long-polling webserver based on a pubsub model, written in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jalada/Hydrometeor"}.
+{url, "git://github.com/jalada/Hydrometeor.git"}.

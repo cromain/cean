@@ -1,0 +1,9 @@
+{author, {"Javier Vázquez, Javier Morán Rúa", "jhon_kevin/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["networking","system"]}.
+{summary, "SERVAL An Erlang client server software to emulate VLANS over Internet SERVAL is a software switch to create VLANS and connect a machine to a different LAN from the one its network card is actually connected"}.
+{abstract, "SERVAL An Erlang client server software to emulate VLANS over Internet SERVAL is a software switch to create VLANS and connect a machine to a different LAN from the one its network card is actually connected"}.
+{home, "http://serval.igalia.com"}.
+{url, ":pserver:anonymous@cvs.igalia.com:/var/publiccvs"}.

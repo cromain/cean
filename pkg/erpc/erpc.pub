@@ -1,0 +1,14 @@
+{author, {"Sean Hinde","shinde@iee.org",{2001,02,07}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{summary, "Remote Procedure Calls without using Erlang distribution"}.
+{keywords, ["rpc","distribution", "gen_fsm"]}.
+{depends, ["kernel","mnesia","sasl","stdlib"]}.
+{abstract, "This provides a socket based multithreaded inter Erlang "
+ "node Remote Procedure Call mechanism which is independent of the "
+ "standard Erlang distribution. It provides some security mechanisms, "
+ "and can optionally be setup to queue calls in the event of a link "
+ "failure and send them sometime later at a predefined rate while "
+ "preserving the order of all commands."}.
+{home, "http://www.erlang.org/user.html#erpc-0.9"}.
+{url, "http://www.erlang.org/contrib/erpc-0.9.tgz"}.

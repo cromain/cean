@@ -1,0 +1,11 @@
+{author,{"Gordon Beaton", "gordon+es@erix.ericsson.se", {2001,08,03}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{summary, "A network sniffer for Erlang traffic"}.
+{keywords, ["tcpdump", "libpcap", "erlang", "traffic", "network", "snoop"]}.
+{depends, []}.
+{abstract, "Erlsnoop is a simple network sniffer that can identify "
+ "and display the contents of Erlang messages passing on "
+ "the network, in a manner similar to tcpdump."}.
+{home, "http://www.erlang.org/user.html#erlsnoop-1.0"}.
+{url, "http://www.erlang.org/contrib/erlsnoop-1.0.tgz"}.

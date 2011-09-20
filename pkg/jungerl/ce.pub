@@ -1,0 +1,8 @@
+{author, {"Cat's Eye Technologies", "catseye@catseye.mb.ca"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","mnesia","stdlib"]}.
+{keywords, []}.
+{summary, "miscellaneous Erlang/OTP programming support library"}.
+{abstract, "ce taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

@@ -1,0 +1,2 @@
+pkg_init() { mkdir include; cp src/ibrowse.hrl include }
+pkg_config() { : }

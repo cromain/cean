@@ -1,0 +1,12 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir/egeoip
+    make
+    [ $? -eq 0 ] || exit 3
+    tar --exclude .svn -cf - doc ebin include src | tar -C .. -xf -
+}
+

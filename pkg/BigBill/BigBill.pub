@@ -1,0 +1,9 @@
+{author, {"Carl Wright", "wright@servicelevel.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A massively concurrent PDF generation platform using NGerlguten in an Erlang/OTP environment"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/CarlWright/BigBill"}.
+{url, "git://github.com/CarlWright/BigBill.git"}.

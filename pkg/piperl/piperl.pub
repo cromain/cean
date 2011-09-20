@@ -1,0 +1,9 @@
+{author, {"Howard Yeh", "hayeah@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "a reliable distributed piping system in erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/hayeah/piperl"}.
+{url, "git://github.com/hayeah/piperl.git"}.

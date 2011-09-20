@@ -1,0 +1,9 @@
+{author, {"catseye", "cpressey@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["bsdl","erl","util"]}.
+{summary, "Subversion binding for Erlang"}.
+{abstract, ""}.
+{home, "http://catseye.tc/projects/subverlsion"}.
+{url, "http://catseye.tc/projects/subverlsion-2004.0917.zip"}.

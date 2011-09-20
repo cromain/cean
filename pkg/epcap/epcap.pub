@@ -1,0 +1,9 @@
+{author, {"Michael Santos", "michael.santos@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang packet capture interface using pcap"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/msantos/epcap"}.
+{url, "git://github.com/msantos/epcap.git"}.

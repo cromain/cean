@@ -1,0 +1,8 @@
+{author, {"Sebastian Strollo", "seb@erix.ericsson.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Makes it possible to open up privileged ports from Erlang running as non-root"}.
+{abstract, "fd_server taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

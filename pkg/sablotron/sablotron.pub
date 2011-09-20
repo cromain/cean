@@ -1,0 +1,11 @@
+{author,{"Victor M. Gulias","gulias@lfcia.org",{2001,01,20}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver"]}.
+{depends, ["stdlib"]}.
+{keywords, ["XML", "XSL"]}.
+{summary, "Erlang bind for Sablotron, a C++ XSL processor"}.
+{abstract, "This is an adapter for a C++ XSL processor (sablotron) that "
+ "allows Erlang programmers to perform transformations of XML "
+ "data (binary or file) using an XSL stylesheet (binary or file)."}.
+{home, "http://www.erlang.org/user.html#sablotron-1.0"}.
+{url, "http://www.erlang.org/contrib/sablotron-1.0.tgz"}.

@@ -1,0 +1,11 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist","tobbe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["stdlib"]}.
+{keywords, ["macro","expand","parse","transform"]}.
+{summary, "X number of eXpanding macros"}.
+{abstract,"This module uses parse transformations to "
+ "define a couple of useful Erlang macros, e.g unique "
+ "variables within another macro definition."}.
+{home, "http://www.erlang.org/user.html#xx-1.0"}.
+{url, "http://www.erlang.org/contrib/xx-1.0.tgz"}.

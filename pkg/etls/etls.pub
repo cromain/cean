@@ -1,0 +1,9 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["asn1","stdlib"]}.
+{keywords, []}.
+{summary, "Experimental TLS implementation"}.
+{abstract, ""}.
+{home, "http://www.tornkvist.org/gitweb?p=etls.git;a=summary"}.
+{url, "git://www.tornkvist.org/etls"}.

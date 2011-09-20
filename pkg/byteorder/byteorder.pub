@@ -1,0 +1,11 @@
+{author,{"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org", {1999,02,17}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{summary, "Test for MSB/LSB byte order"}.
+{keywords, ["byte", "order", "big", "little", "endian"]}.
+{depends, []}.
+{abstract,"This little program test whether we are running "
+ "on a big-endian/little-endian machine. It makes use of a "
+ "tiny dynamically linked in driver."}.
+{home, "http://www.erlang.org/user.html#byteorder-1.0"}.
+{url, "http://www.erlang.org/contrib/byteorder-1.0.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"catseye", "cpressey@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["compiler","kernel","parsetools","stdlib"]}.
+{keywords, ["bsdl", "erl", "util"]}.
+{summary, "Run Erlang programs as command line utilities"}.
+{abstract, "a system which makes Erlang more attractive for writing shell scripts and similar programs in. It reduces startup time to nearly zero."}.
+{home, "http://catseye.tc/projects/erlaunch"}.
+{url, "http://catseye.tc/projects/erlaunch-2004.0309.zip"}.

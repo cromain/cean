@@ -1,0 +1,10 @@
+{author,{"Joe Armstrong", "joe@cslab.ericsson.se", {2000,11,06}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code","text"]}.
+{summary, "Verifying XML parser"}.
+{keywords, ["xml", "parser"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract,"Yet another XML parser. This is an interface to the "
+ "Edinburgh LT XML toolkit"}.
+{home, "http://www.erlang.org/user.html#xml_lt-2.0"}.
+{url, "http://www.erlang.org/contrib/xml_lt-2.0.tgz"}.

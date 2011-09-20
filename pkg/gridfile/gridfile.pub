@@ -1,0 +1,12 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com", {1999,01,13}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["file","access","database"]}.
+{summary, "Adaptable, Symmetric Multikey File Structure"}.
+{abstract, "Implements efficient storage for multikey access. "
+ "API is similar to ets and dets. Performance is especially good on "
+ "range queries, where the cost is proportional to the number of objects "
+ "found - not on the size of the table."}.
+{home, "http://www.erlang.org/user.html#gridfile-1.0"}.
+{url, "http://www.erlang.org/contrib/gridfile-1.0.tgz"}.

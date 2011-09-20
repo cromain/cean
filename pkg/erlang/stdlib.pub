@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP"]}.
+{depends, ["compiler","crypto","kernel"]}.
+{keywords, []}.
+{summary, "The Erlang standard libraries"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/stdlib/index.html\">stdlib Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

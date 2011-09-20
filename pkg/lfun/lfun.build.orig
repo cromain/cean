@@ -1,0 +1,13 @@
+pkg_fetch()
+{
+    [ $# -lt 2 ] && exit
+    srcdir=$1; otp=$2
+
+    cd $srcdir
+    mkdir lfun-0.1
+    ln -s lfun-0.1 lfun
+    cd lfun
+    mkdir src ebin
+    wget -t 10 -T 30 -O src/lfun.erl "http://forum.trapexit.org/download.php?id=34"
+}
+    

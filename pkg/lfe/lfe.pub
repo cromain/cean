@@ -1,0 +1,9 @@
+{author, {"Robert Virding", "rvirding@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["compiler","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "LFE is a lisp syntax front-end to the Erlang compiler"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/rvirding/lfe"}.
+{url, "git://github.com/rvirding/lfe.git"}.

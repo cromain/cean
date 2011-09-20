@@ -1,0 +1,26 @@
+# Description: Import a standalone erl file
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: curl git
+# Usage: import/erl sha1 http://forum.trapexit.org/download.php?id=37 1.0
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "import/erl package url [revision]" $* || return $bad_use
+_api_import $* || return $bad_use
+
+[ -d $(_pkg_sources) ] && {
+    _info "($pkg_name) updating local repository..."
+    (_pkg_cd_sources
+     curl $pkg_url > $pkg_name.erl
+     git status | grep -q modified && git commit -a -m "automatic update")
+} || {
+    _info "($pkg_name) creating local repository..."
+    mkdir -p $(_pkg_sources)
+    (_pkg_cd_sources
+     git init
+     mkdir src
+     curl $pkg_url > src/$pkg_name.erl
+     git add src/$pkg_name.erl
+     git commit -m "initial commit")
+}
+
+#handle versions, with git tag, using beam_lib:version/1

@@ -1,0 +1,9 @@
+{author, {"Subodh Gairola, Subodh Gairola", "gairo@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.
+{summary, "A stress builder written in erlang"}.
+{abstract, "A stress builder written in erlang"}.
+{home, "http://erload.sourceforge.net"}.
+{url, "http://kent.dl.sourceforge.net/project/erload/erload.zip"}.

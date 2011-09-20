@@ -1,0 +1,14 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {1999,09,06}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database"]}.
+{depends, ["mnesia"]}.
+{keywords, ["mnesia","database","backup"]}.
+{summary, "Simple program for loading mnesia backup files"}.
+{abstract, 
+ "Simple program for loading a mnesia backup file into memory. "
+ "API: view_backup:file(\"Filename\") -> ok. "
+ "The function loads mnesia data into ets tables with the same names as the "
+ "corresp. mnesia tables. Table definitions are put in the table 'SCHEMA'. "
+ "The result may be viewed with e.g. table visualiser or trex."}.
+{home, "http://www.erlang.org/user.html#view_backup-1.0"}.
+{url, "http://www.erlang.org/contrib/view_backup-1.0.tgz"}.

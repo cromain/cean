@@ -1,0 +1,8 @@
+{author, {"Scott Lystig Fritchie", "fritchie@mr.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A reimplementation of UNIX domain socket support"}.
+{abstract, "unixdom_drv taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

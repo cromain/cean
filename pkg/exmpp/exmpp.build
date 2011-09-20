@@ -1,0 +1,25 @@
+pkg_fetch() {
+    import/git $pkg_name $pkg_url $* || return $import_error
+    pkg_vsn=${$(_pkg_cd_sources && pkg_revision)#v}
+}
+pkg_init() { : }
+pkg_config() {
+    local -a conf
+    conf=("--prefix=$PWD/$(_pkg_dist)" $(echo $pkg_cfg))
+    [ -x /opt/local/bin/port ] && conf+=" --with-expat=/opt/local"
+    autoreconf -vif || {
+        tar zxf ~/.cean/pkg/exmpp/configure.tar.gz
+        sed -e "s/__VERSION__/$pkg_vsn/g" configure > configure.new
+        mv configure.new configure
+        chmod +x configure
+    }
+    ./configure $conf
+}
+pkg_install() {
+    local dist=$(_pkg_dist)
+    $MAKE install || return $install_error
+    $MAKE distclean
+    (cd $dist
+     mv exmpp-*/* . ; rmdir $(/bin/ls -d exmpp-*)
+     mv ../c_src . ; mv ../src .)
+}

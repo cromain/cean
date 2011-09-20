@@ -1,0 +1,7 @@
+pkg_init() {
+    mkdir -p ebin
+    cat > Makefile << EOF
+all:
+	@(cd src && $MAKE)
+EOF
+}

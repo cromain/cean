@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["compiler","kernel","stdlib"]}.
+{keywords, ["native","compile","optimized","compiler"]}.
+{summary, "Make a native-compilation of an Erlang module"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/hipe/index.html\">hipe Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

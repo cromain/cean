@@ -1,0 +1,8 @@
+{author, {"Claes Wikstrom", "klacke@kaja.hemma.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver","text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "an erlang interface to the amazing highly portable tty interface slang"}.
+{abstract, "slang taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

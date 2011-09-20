@@ -1,0 +1,9 @@
+{author, {"Christian S", "chsu79@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","server"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.  % please edit
+{summary, "A small http server for erlang."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/noss/iserve"}.
+{url, "git://github.com/noss/iserve.git"}.

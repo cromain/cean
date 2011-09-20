@@ -1,0 +1,19 @@
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir
+    ceansh erl.compile devel -o ebin src/*erl
+    [ $? -eq 0 ] || exit 3
+    ceansh erl.compile devel -o test/ebin test/src/*erl
+    [ $? -eq 0 ] || exit 3
+}
+
+
+pkg_install()
+{
+    cd $1
+    cp -r $2/test .
+}
+

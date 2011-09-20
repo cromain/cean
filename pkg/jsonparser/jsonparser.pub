@@ -1,0 +1,16 @@
+{author, {"Willem de Jong", "w.a.de.jong@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc","text"]}.
+{depends, ["kernel","stdlib","xmerl"]}.
+{keywords, []}.
+{summary, "an efficient parser for json documents with a SAX-like API"}.
+{abstract, "The parser has a SAX-like API. It also has a mechanism to parse input data in blocks "
+ "- if it reaches the end of the input data, it will call a function to provide the next block. "
+ "The combination of these properties results in a parser that can input of arbitrary size, or a stream of data.<br>"
+ "Included is a handler function that translates the SAX events into the same output format produced by mochijson2. "
+ "Looks like this: {struct, [{<<\"key1\">>, <<\"value1\">>}, {<<\"key2\">>, 123}]}.<br>"
+ "The parser consists of just 1 file, with some edoc documentation and a couple of very simple examples "
+ "included. It only works on UTF-8 encoded input (which implies that it can also parse ASCII, of course).<br>"
+ "It can be redistributed under the terms of the GNU Lesser General Public License."}.
+{home, "http://forum.trapexit.org/viewtopic.php?p=44029"}.
+{url, "http://forum.trapexit.org/download.php?id=158"}.

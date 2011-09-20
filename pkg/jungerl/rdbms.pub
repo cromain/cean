@@ -1,0 +1,12 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com"}, {2003,3,24}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database"]}.
+{depends, ["compiler","kernel","mnesia","stdlib"]}.
+{keywords, ["mnesia", "dictionary", "rdbms", "relational"]}.
+{summary, "A relational database management layer on top of mnesia"}.
+{abstract, "rdbms taken from jungerl project.<br>"
+ "Adds relational constraints checking to mnesia. "
+ "Also included is a modular data import tool.<br>"
+ "This version of RDBMS requires OTP R9 (mnesia-4.1 or later).<br>"
+ "New: safer handling of referential integrity + API improvements."}.
+{home, "http://jungerl.sourceforge.net"}.

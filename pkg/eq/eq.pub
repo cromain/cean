@@ -1,0 +1,9 @@
+{author, {"Justin Camerer", "iamjwc@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "RESTful Erlang Job Queue"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/iamjwc/eq"}.
+{url, "git://github.com/iamjwc/eq.git"}.

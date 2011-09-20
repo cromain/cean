@@ -1,0 +1,8 @@
+{author, {"Tony Rogvall", "tony@bit.hemma.se", {2002,10,10}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver"]}.
+{depends, ["kernel"]}.
+{keywords, ["serial"]}.
+{summary, "A driver for using serial ports on unix & win32"}.
+{abstract, "A loadable module for serial com."}.
+{home, "http://jungerl.sourceforge.net"}.

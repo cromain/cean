@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger", "ulf.wiger@erlang-solutions.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Resolves conflicts in Mnesia after network splits"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/uwiger/unsplit"}.
+{url, "git://github.com/uwiger/unsplit.git"}.

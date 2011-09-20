@@ -1,0 +1,8 @@
+{author, {"Scott Lystig Fritchie", "slfritchie@snookles.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver","net"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{abstract, "spread_drv taken from jungerl project."}.
+{summary, "This driver is for Spread, a reliable multicast library. See <a href=\"http://www.spread.org/\">http://www.spread.org/</a>"}.
+{home, "http://jungerl.sourceforge.net"}.

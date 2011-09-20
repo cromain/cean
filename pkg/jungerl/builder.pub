@@ -1,0 +1,8 @@
+{author, {"Mats Cronqvist, Ulf Wiger", "mats.cronquist@etx.ericsson.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","sasl","stdlib"]}.
+{keywords, []}.
+{summary, "OTP release script builder"}.
+{abstract, "builder taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

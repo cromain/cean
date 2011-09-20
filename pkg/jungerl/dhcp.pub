@@ -1,0 +1,8 @@
+{author, {"Tobbe", "tnt@home.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["fd_server","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "This is a DHCP client implementation"}.
+{abstract, "dhcp taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

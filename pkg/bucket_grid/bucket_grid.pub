@@ -1,0 +1,15 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {2000,01,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{summary, "N-dimensional bucket grid"}.
+{keywords, ["storage", "bucket"]}.
+{depends, ["stdlib"]}.
+{abstract, 
+ "Implements an N-dimensional bucket storage system. "
+ "Neighbouring buckets can be split and merged in any dimension, and "
+ "using any Erlang term as split value; "
+ "grid traversal and range matching allow for efficient multikey "
+ "queries. <br><br>The physical representation is implemented via a callback "
+ "interface (see example)."}.
+{home, "http://www.erlang.org/user.html#bucket_grid-1.0"}.
+{url, "http://www.erlang.org/contrib/bucket_grid-1.0.tgz"}.

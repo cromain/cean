@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "because you need another a key/value storage engine"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/bitcask"}.
+{url, "git://github.com/basho/bitcask.git"}.

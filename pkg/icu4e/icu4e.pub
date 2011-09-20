@@ -1,0 +1,9 @@
+{author, {"Bryan Fink", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang NIF wrappers for the ICU"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/beerriot/icu4e"}.
+{url, "git://github.com/beerriot/icu4e.git"}.

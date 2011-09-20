@@ -1,0 +1,9 @@
+{author, {"Micka&#235l R&#233mond, Thierry Mallard","mickael.remond@process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc","net","chat"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["communications","irc","chat"]}.
+{summary, "Erlang written IRC bot and possibly client"}.
+{abstract, ""}.
+{home, "http://manderlbot.sourceforge.net"}.
+{url, ":pserver:anonymous@manderlbot.cvs.sourceforge.net:/cvsroot/manderlbot"}.

@@ -1,0 +1,9 @@
+{author,{"Johan Bevemyr, Tony Garnock-Jones", "tonyg@kcbbs.gen.nz", {1999,11,18}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["erlang","serial"]}.
+{summary, "Serial driver for UNIX"}.
+{abstract, "This is a port program with erlang driver for serial communication."}.
+{home, "http://www.erlang.org/user.html#serial-1.0"}.
+{url, "http://www.erlang.org/contrib/serial-1.0.tgz"}.

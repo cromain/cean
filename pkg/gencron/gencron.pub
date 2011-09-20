@@ -1,0 +1,13 @@
+{author, {"Paul Goo", "paul-goo@mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["cron"]}.
+{summary, "Periodic command execution in Erlang"}.
+{abstract, "gencron provides the gen_cron server for periodic command execution. gen_cron is a very thin "
+ "extension over gen_server, but it was a common pattern in our code worth abstracting "
+ "(non-overlapping periodic execution with a force-now feature); perhaps you will find the same.<br>"
+ "Note this is a library for Erlang development, not a replacement of the OS utility cron.<br>"
+ "genexpire is an example using gencron. It periodically enforces a (per-node) size limit on Mnesia databases."}.
+{home, "http://code.google.com/p/gencron"}.
+{url, "http://gencron.googlecode.com/svn/trunk"}.

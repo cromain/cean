@@ -1,0 +1,9 @@
+{author, {"Kenji Rikitake", "kenji.rikitake@acm.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "sfmt-erlang: SIMD-oriented Fast Mersenne Twister (SFMT) for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jj1bdx/sfmt-erlang"}.
+{url, "git://github.com/jj1bdx/sfmt-erlang.git"}.

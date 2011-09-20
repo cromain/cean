@@ -1,0 +1,30 @@
+# Description: Compile package sources from development directory
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: tar
+# Usage: devel/build ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "devel/build package" $* || return $bad_use
+local package=$1
+local prefix=$CEAN_ROOT/local
+[[ $package == $pkg_name ]] || _pkg_read_spec $package || return $package_error
+
+cd $CEAN_ROOT/src/$pkg_name
+mkdir $(_pkg_dist)
+_info "($pkg_name) local compilation..."
+pkg_config || {
+    _error "($pkg_name) error in pkg_config"
+    return $config_error
+}
+pkg_make || {
+    _error "($pkg_name) error in pkg_make"
+    return $make_error
+}
+_info "($pkg_name) local installation..."
+pkg_install || {
+    _error "($pkg_name) error in pkg_install"
+    return $install_error
+}
+mkdir -p $prefix
+mv $(_pkg_dist) $prefix
+cd $CEAN_ROOT

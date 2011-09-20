@@ -1,0 +1,8 @@
+{author, {"Scott Lystig Fritchie", "slfritchie@snookles.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["jpg"]}.
+{summary, "This driver is for GD, a library for dynamic creation of PNG and JPEG images: line drawing, polygons, text, and lots more"}.
+{abstract, "gd1_drv taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

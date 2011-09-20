@@ -1,0 +1,12 @@
+{author,{"Vladimir Sekissov", "svg@surnet.ru", {2001,09,21}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","code"]}.
+{depends, ["compiler","inets","kernel","stdlib"]}.
+{keywords, ["web", "publishing", "template", "dynamic content", "html", "xml", "template engine"]}.
+{summary, "Web template processing system"}.
+{abstract, "STL as `Simple Template Language' is a clone of Bruce R. Lewis's "
+ "BRL (http://brl.sourceforge.net) implemented in Erlang. It deals with "
+ "template processing and has most capabilities which user expects from "
+ "web template engines."}.
+{home, "http://www.erlang.org/user.html#stl-1.0"}.
+{url, "http://www.erlang.org/contrib/stl-1.0.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"Tony Garnock-Jones", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang SMTP and POP3 server code."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tonyg/erlang-smtp"}.
+{url, "git://github.com/tonyg/erlang-smtp.git"}.

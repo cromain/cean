@@ -1,0 +1,8 @@
+{author, {"Joe Armstrong", "joe@cslab.ericsson.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","server"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Joe Armstrong's pico (http server) and wiki code"}.
+{abstract, "pico taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

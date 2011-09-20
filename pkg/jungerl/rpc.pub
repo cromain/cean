@@ -1,0 +1,13 @@
+{author, {"Tony Rogvall, Scott Fritchie, Jim Larson, Martin Bjorklund", "tony@bluetail.com"},{2000,8,15}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["ONC/RPC", "stub generator", "XDR", "RPC", "portmapper"]}.
+{summary, "SUN ONC/RPC for erlang"}.
+{abstract, "rpc taken from jungerl project.<br>"
+ "This is a stub generator for the ONC/RPC protocol. Given a "
+ "protocol specification in the RPC syntax (RFC1831), the stub generator "
+ "will create client-side and server-side code for encoding and decoding "
+ "procedure calls into XDR-encoded network messages. Version 1.1 is rewritten "
+ "for R7 - faster XDR routines which generates less garbage."}.
+{home, "http://jungerl.sourceforge.net"}.

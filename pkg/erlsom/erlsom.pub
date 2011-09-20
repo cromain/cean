@@ -1,0 +1,9 @@
+{author, {"Willem de Jong", "w.a.de.jong@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["xml","formats_and_protocols","data_formats"]}.
+{summary, "XML parsing library."}.
+{abstract, "It supports various modes of operation as an efficient SAX parser as a simple DOM like parser or as a data mapper The data mapper transforms the XML document to Erlang records based on an XML Schema"}.
+{home, "http://erlsom.sourceforge.net"}.
+{url, ":pserver:anonymous@erlsom.cvs.sourceforge.net:/cvsroot/erlsom"}.

@@ -1,0 +1,20 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    yawspub=$REPDIR/yaws/yaws.pub
+    yaws=yaws-`grep "^{vsn" $yawspub | sed -e "y/{}%$/    /" | cut -d'"' -f2`
+    export YAWS=$ERLDIR/lib/$yaws
+    cd $srcdir
+    cp $ERLDIR/lib/$yaws/include/* src
+    cpu=${ARCHDIR##*-}
+    [ "$cpu" == "x86" ] && cpu="i386"
+    [ "${ARCHDIR%%-*}" == "darwin" ] && opts="--host=${cpu}-bsd" || opts=""
+    ./configure $opts
+    [ $? -eq 0 ] || exit 2
+    make
+    [ $? -eq 0 ] || exit 3
+}
+

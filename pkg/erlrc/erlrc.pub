@@ -1,0 +1,13 @@
+{author, {"Paul Goo", "paul-goo@mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["kernel","sasl","stdlib"]}.
+{keywords, []}.
+{summary, "erlang hot code loading framework"}.
+{abstract, "erlrc is designed to make it easy to integrate your OS package manager with erlang's "
+ "hot code loading mechanism. It consists of an extensible boot procedure controlled by a directory, "
+ "and hooks for upgrading and downgrading individual applications (with shell script interface). "
+ "Also includes an automatic appup file generation scheme which incorporates most of the cases "
+ "from the appup cookbook."}.
+{home, "http://code.google.com/p/erlrc"}.
+{url, "http://erlrc.googlecode.com/svn/trunk"}.

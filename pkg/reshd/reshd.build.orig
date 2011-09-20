@@ -1,0 +1,16 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir
+    mkdir -p src ebin
+    ./configure
+    [ $? -eq 0 ] || exit 2
+    make
+    [ $? -eq 0 ] || exit 3
+    cp *\.erl src
+    cp *\.beam ebin
+}
+

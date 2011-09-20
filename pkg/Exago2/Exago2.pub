@@ -1,0 +1,9 @@
+{author, {"Edward Tate", "edward.tate@erlang-solutions.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Exago re-made"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/et4te/Exago2"}.
+{url, "git://github.com/et4te/Exago2.git"}.

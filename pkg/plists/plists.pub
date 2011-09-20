@@ -1,0 +1,9 @@
+{author, {"freeyourmind", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["stdlib"]}.
+{keywords, ["list","parallel"]}.
+{summary, "parallel list operations"}.
+{abstract, "plists is a drop-in replacement for the Erlang module lists, see http://plists.wordpress.com/2007/09/20/introducing-plists-an-erlang-module-for-doing-list-operations-in-parallel/"}.
+{home, "http://code.google.com/p/plists"}.
+{url, "http://plists.googlecode.com/files/plists-1.0.zip"}.

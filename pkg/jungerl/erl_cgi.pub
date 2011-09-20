@@ -1,0 +1,8 @@
+{author, {"Tony Rogvall", "tony@bit.hemma.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["cgi"]}.
+{summary, "a cgi-erlang interface with a lot of nice features, such as esp scripts"}.
+{abstract, "erl_cgi taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

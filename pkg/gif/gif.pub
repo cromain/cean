@@ -1,0 +1,10 @@
+{author, {"Joe Armstrong","joe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["gif","image"]}.
+{summary, "Produce GIF pictures from an Erlang program"}.
+{abstract, "This gif package provides an Erlang interface to the gd libraries for drawing "
+ "gif pictures. Also other graphics file types are supported with some additional configuration."}.
+{home, "http://svn.gna.org/viewcvs/maginot/trunk/gif_drv"}.
+{url, "svn://svn.gna.org/maginot/trunk/gif_drv"}.

@@ -1,0 +1,8 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code","tool"]}.
+{depends, ["inets","kernel","stdlib","tools"]}.
+{keywords, ["package","packaging"]}.
+{summary, "Erlang Packet Handler"}.
+{abstract, "erlmerge taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

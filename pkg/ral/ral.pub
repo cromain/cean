@@ -1,0 +1,14 @@
+{author,{"Lon Willett", "Lon.Willett@sse.ie", {2000,01,03}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["math","type"]}.
+{depends, ["stdlib"]}.
+{keywords, ["lists", "arrays", "Okasaki"]}.
+{summary, "Skew-binary random-access lists, ala Chris Okasaki"}.
+{abstract,
+"This is an implementation of skew-binary random-access lists, as "
+"described Chris Okasaki (see reference at start of source). It also "
+"provides many useful supporting functions (mostly clones of the lists "
+"module functions)."
+}.
+{home, "http://www.erlang.org/user.html#ral-1.0"}.
+{url, "http://www.erlang.org/contrib/ral-1.0.tgz"}.

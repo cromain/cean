@@ -1,0 +1,10 @@
+{author, {"Stuart Jackson", "sjackson@simpleenigma.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["kernel","mnesia","stdlib"]}.
+{keywords, ["smtp","pop","imap"]}.
+{summary, "erlmail is a complete email solution"}.
+{abstract, "erlmail is a complete email solution written in Erlang. It contains (or will contain) full RFC compliant SMTP, IMAP and POP clients and servers written in a modular fashion to allow others to use the modules in their own projects.
+erlmail is part of the Erlang Internet Framework."}.
+{home, "http://erlsoft.org/modules/erlmail"}.
+{url, "http://erlmail.googlecode.com/svn/trunk"}.

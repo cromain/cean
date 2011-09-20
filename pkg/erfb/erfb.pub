@@ -1,0 +1,9 @@
+{author, {"Novamens S.A.", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang RFB Library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/novamens/erfb"}.
+{url, "git://github.com/novamens/erfb.git"}.

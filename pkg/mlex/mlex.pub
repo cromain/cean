@@ -1,0 +1,11 @@
+{author,{"Vladimir Sekissov", "svg@surnet.ru", {2002,10,02}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{summary, "Lexical scanner"}.
+{keywords, ["grammar", "scanner", "analysis", "compiler"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract, "MLex is a simple lexical scanner. "
+ "It supports mostly all frequently used lex regexps, predictive "
+ "operator, long (default) and short regexps."}.
+{home, "http://www.erlang.org/user.html#mlex-1.0"}.
+{url, "http://www.erlang.org/contrib/mlex-1.0.tgz"}.

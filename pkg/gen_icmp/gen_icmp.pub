@@ -1,0 +1,9 @@
+{author, {"Michael Santos", "michael.santos@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang interface to ICMP sockets"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/msantos/gen_icmp"}.
+{url, "git://github.com/msantos/gen_icmp.git"}.

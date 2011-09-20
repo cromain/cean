@@ -1,0 +1,8 @@
+{author, {"Cat's Eye Technologies", "catseye@catseye.mb.ca"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["game"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Erlang Wumpus is an implementation of the classic game of Hunt the Wumpus in Erlang"}.
+{abstract, "wumpus taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

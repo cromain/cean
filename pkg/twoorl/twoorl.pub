@@ -1,0 +1,9 @@
+{author, {"Yariv Sadan", "yarivsblog@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["server","chat"]}.
+{depends, ["erlyweb","kernel","mnesia","stdlib"]}.
+{keywords, []}.
+{summary, "Twoorl is an open source Twitter clone written using ErlyWeb"}.
+{abstract, ""}.
+{home, "http://code.google.com/p/twoorl"}.
+{url, "git://github.com/yariv/twoorl.git"}.

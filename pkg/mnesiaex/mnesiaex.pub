@@ -1,0 +1,13 @@
+{author, {"Paul Goo", "paul-goo@mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database","type"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Storage API extensions for Mnesia"}.
+{abstract, "Mnesia is the Erlang built-in multi-master distributed database. Unfortunately, Mnesia only "
+ "ships with support for two types of data storage (ets and dets) both of which have limitations.<br>"
+ "This project defines a new behaviour mnesia_ext, and patches mnesia to support using modules which "
+ "conform to the behaviour for storage. This allows for arbitrary storage strategies to be incorporated.<br>"
+ "As a (useful!) example tcerl contains an implementation of an ordered_set disk-based mnesia table."}.
+{home, "http://code.google.com/p/mnesiaex"}.
+{url, "http://mnesiaex.googlecode.com/svn/trunk"}.

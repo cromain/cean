@@ -1,0 +1,13 @@
+{author,{"Chris Pressey", "cpressey@catseye.mb.ca", {2001,07,09}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["game"]}.
+{summary, "Classic puzzle game of Sokoban"}.
+{keywords, ["fun", "game", "puzzle", "sokoban"]}.
+{depends, ["gs","kernel","stdlib"]}.
+{abstract,"This is an Erlang implementation of the challenging "
+ "puzzle game of Sokoban, where you must push objects "
+ "towards a goal inside an enclosed space. This version "
+ "uses GS for display; the puzzle screens are borrowed "
+ "from the xsokoban distribution."}.
+{home, "http://www.erlang.org/user.html#esoko-2001.0709"}.
+{url, "http://www.erlang.org/contrib/esoko-2001.0709.tgz"}.

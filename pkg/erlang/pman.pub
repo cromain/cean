@@ -1,0 +1,8 @@
+{author, {"Gunilla Hugosson", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool"]}.
+{depends, ["gs","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A process manager used to inspect the state of an Erlang system"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/pman/index.html\">pman Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

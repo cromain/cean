@@ -1,0 +1,10 @@
+{author, {"Bob Ippolito, Dmitry Demeshchuk", "bob.ippolito@gmail.com"}}.
+{author, {"Mochi Media, Inc.", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Erlang IP Geolocation Module"}.
+{abstract, "Erlang IP Geolocation module, currently supporting the MaxMind GeoLite City Database."}.
+{home, "https://github.com/mochi/egeoip"}.
+{url, "git://github.com/mochi/egeoip.git"}.

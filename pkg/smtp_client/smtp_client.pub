@@ -1,0 +1,13 @@
+{author,{"Michael Bradford", "michael.bradford@t-mobile.uk.net", {2004,01,08}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{summary, "Simple SMTP client using gen_fsm behaviour"}.
+{keywords, ["smtp", "client", "gen_fsm"]}.
+{depends, ["crypto","inets","kernel","stdlib"]}.
+{abstract,"A simple SMTP client using gen_fsm behaviour. "
+ "Supports basic SMTP & ESMTP commands, including MD5, plain & login authentication. "
+ "This version fixes a minor bug in v1.0 (see source code for details). "
+ "Also included is email_msg.erl. This very simple module builds a plain text "
+ "email suitable for sending via the smtp client."}.
+{home, "http://svn.gna.org/viewcvs/maginot/trunk/smtp_client"}.
+{url, "svn://svn.gna.org/maginot/trunk/smtp_client"}.

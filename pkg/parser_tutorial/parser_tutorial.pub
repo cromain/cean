@@ -1,0 +1,11 @@
+{author,{"Joe Armstrong","joe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["kernel","parsetools","stdlib"]}.
+{keywords, ["parser","tutorial","yecc","yacc","leex","lex"]}.
+{summary, "An example of the use of yecc and leex"}.
+{abstract, "This is an example of making a parser using the standard tools "
+ "yecc (which is a yacc lookalike) and leex (which is a lex lookalike). "
+ "A parser for a simple language is constructed."}.
+{home, "http://www.erlang.org/user.html#parser_tutorial-1.0"}.
+{url, "http://www.erlang.org/contrib/parser_tutorial-1.0.tgz"}.

@@ -1,0 +1,14 @@
+{author, {"Mats Cronqvist", "mats.cronqvist@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code","tool"]}.
+{depends, ["crypto","gtknode","kernel","runtime_tools","stdlib"]}.
+{keywords, []}.
+{summary, "a set of tools for performance tuning and debugging Erlang code"}.
+{abstract, "Erlang performance realated tools. includes:"
+ "<ul>"
+ "<li> sherk (profiler, similar to MacOS shark)"
+ "<li> gperf (real-time graphical CPU load and memory usage monitor)"
+ "<li> dtop (diplays real-time info about processes, a la unix top)"
+ "</ul>"}.
+{home, "http://code.google.com/p/eper"}.
+{url, "http://eper.googlecode.com/svn/trunk"}.

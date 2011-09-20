@@ -1,0 +1,9 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Experimental object system"}.
+{abstract, ""}.
+{home, "http://www.tornkvist.org/gitweb?p=mobject.git;a=summary"}.
+{url, "git://www.tornkvist.org/mobject"}.

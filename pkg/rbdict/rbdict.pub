@@ -1,0 +1,12 @@
+{author, {"Robert Virding", "rvirding@hotmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Rbdict is a dict compatible dictionary based on Red-Black trees"}.
+{abstract, "It supports the full dict interface and is drop-in compatible with both dict and orddict. "
+ "There is also an alternate implementation, in rbdict1, which is a little slower but is included "
+ "as another example of working on red-black trees. "
+ "These are tricky little bastards so it is helpful to see other implementations."}.
+{home, "http://forum.trapexit.org/viewtopic.php?p=43948"}.
+{url, "http://forum.trapexit.org/download.php?id=149"}.

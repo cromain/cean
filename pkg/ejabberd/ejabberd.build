@@ -1,0 +1,36 @@
+pkg_fetch() {
+    import/git $pkg_name $pkg_url $* || return $import_error
+    pkg_vsn=${$(_pkg_cd_sources && pkg_revision)#v}
+}
+pkg_init() { : }
+pkg_config() {
+    local -a conf
+    conf=("--prefix=$PWD/$(_pkg_dist)" $(echo $pkg_cfg))
+    [ -x /opt/local/bin/port ] && conf+="--with-openssl=/opt/local"
+    [ -x /usr/local/bin/brew ] && conf+="--with-openssl="$(brew info openssl | sed -e '/^\//!d;s/ .*//')
+    (cd src
+     [ -x configure ] || autoreconf -vif
+     ./configure $conf)
+}
+pkg_make() {
+    (cd src; $MAKE ejabberd_debug=true) || return $make_error
+    env hevea -version >/dev/null 2>/dev/null && {
+        (cd doc
+         $MAKE distclean
+         $MAKE all) || return $make_error
+    } || {
+        _warn "(ejabberd) documentation can not be generated"
+    }
+}
+pkg_install() {
+    local dist=$(_pkg_dist)
+    (cd src; $MAKE install) || return $install_error
+    (cd src; $MAKE distclean)
+    (cd $dist
+     mv ../src .
+     mv lib/ejabberd/* . ; rm -Rf lib
+     mkdir priv/cfg ; mv etc/ejabberd/* priv/cfg ; rm -Rf etc
+     mv sbin/* priv/bin ; rm -Rf sbin
+     mv share/doc/ejabberd doc ; rm -Rf share
+     rm -Rf var)
+}

@@ -1,0 +1,9 @@
+{author,{"Joe Armstrong","joe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{keywords, ["publishing","literate","erlang"]}.
+{depends, ["kernel","stdlib"]}.
+{summary, "A system for literate erlang programming"}.
+{abstract, "This is a program for literate Erlang programming."}.
+{home, "http://www.erlang.org/user.html#eweb-1.1"}.
+{url, "http://www.erlang.org/contrib/eweb-1.1.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"ProcessOne", "contact@process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["ejabberd","compiler","crypto","inets","kernel","mnesia","odbc","os_mon","stdlib","syntax_tools","xmlrpc"]}.
+{keywords, ["jabber","xmpp","modules"]}.
+{summary, "Extra modules for jabber/XMPP server"}.
+{abstract, "ejabberd contributions"}.
+{home, "https://forge.process-one.net/browse/ejabberd-modules"}.
+{url, "https://svn.process-one.net/ejabberd-modules"}.

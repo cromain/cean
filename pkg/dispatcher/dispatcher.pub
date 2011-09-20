@@ -1,0 +1,12 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {1999,04,21}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool","code"]}.
+{depends, ["stdlib"]}.
+{keywords, ["process", "gen_server", "dispatch", "worker", "thread"]}.
+{summary, "A generic method for dispatching dynamic worker threads"}.
+{abstract, 
+ "Allows for processes to be dynamically created and 'suspended'. "
+ "The threads themselves believe that they stay up permanently. "
+ "Included is a demo program and a gen_server-compatible behaviour."}.
+{home, "http://www.erlang.org/user.html#dispatcher-1.0"}.
+{url, "http://www.erlang.org/contrib/dispatcher-1.0.tgz"}.

@@ -1,0 +1,21 @@
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+
+    cd $srcdir
+cat > Emakefile << __EOF__
+{"src/erlyweb/*", [debug_info, {outdir, "ebin"}, {i,"../yaws/include"}]}.
+{"src/erlydb/*", [debug_info, {outdir, "ebin"}]}.
+{"src/erlsql/*", [debug_info, {outdir, "ebin"}]}.
+{"src/erltl/*", [debug_info, {outdir, "ebin"}]}.
+{"src/smerl/*", [debug_info, {outdir, "ebin"}]}.
+{"src/erlang-mysql-driver/*", [debug_info, {outdir, "ebin"}]}.
+{"src/erlang-psql-driver/*", [debug_info, {outdir, "ebin"}]}.
+__EOF__
+    ceansh erl.shell -make
+    [ $? -eq 0 ] || exit 3
+    make
+}
+
+

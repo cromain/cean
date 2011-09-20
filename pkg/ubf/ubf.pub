@@ -1,0 +1,15 @@
+{author, {"Joe Armstrong", "joe@cslab.ericsson.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["gs","kernel","parsetools","stdlib"]}.
+{keywords, []}.
+{summary, "language for transporting and describing complex data structures across a network"}.
+{abstract, "While the XML series of languages had the goal of having a human readable format "
+ "the UBF languages take the opposite view and provide a <i>machine friendly</i> format.<br>"
+ "UBF is designed to be easy to implement. As a proof of concept - UBF drivers For Erlang, "
+ "Oz, Java and TCL can be found in the download area. Implementors are welcome to add new languages.<br>"
+ "UBF is designed to be <i>language neutral</i> - UBF(A) defines a language neutral binary "
+ "format for transporting data across a network. UBF(B) is a type system for describing "
+ "client/server interactions which use UBF(A)."}.
+{home, "http://www.sics.se/~joe/ubf/site/home.html"}.
+{url, "http://www.sics.se/~joe/ubf/downloads/ubf-1.12.tgz"}.

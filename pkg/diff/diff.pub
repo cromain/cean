@@ -1,0 +1,11 @@
+{author, {"Joe Armstrong","joe@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool","code"]}.
+{depends, ["stdlib"]}.
+{keywords, ["difference"]}.
+{summary, "Finds the difference between two files"}.
+{abstract, "A diff utilitiy which finds the difference between two files. "
+ "Unlike unix diff, this version of diff compares the parse trees and not "
+ "the src text."}.
+{home, "http://www.erlang.org/user.html#diff-1.0"}.
+{url, "http://www.erlang.org/contrib/diff-1.0.tgz"}.

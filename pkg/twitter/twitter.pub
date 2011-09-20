@@ -1,0 +1,11 @@
+{author, {"Nick Gerakines", "nick@gerakines.net"}}.
+{packager, {"Geoff Cant", "nem@erlang.geek.nz"}}.
+{category, ["net"]}.
+{depends, ["kernel", "stdlib", "inets"]}.
+{keywords, ["twitter"]}.
+{summary, "A twitter API client library"}.
+{abstract,
+ "A library for the twitter.com API for posting and reading tweets and"
+ "user information."}.
+{home, "https://github.com/ngerakines/erlang_twitter"}.
+{url, "git://github.com/ngerakines/erlang_twitter.git"}.

@@ -1,0 +1,9 @@
+{author, {"Andrew Thompson", "andrew@hijacked.us"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang/FreeSWITCH based Automated Contact Distribution system"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/Vagabond/OpenACD"}.
+{url, "git://github.com/Vagabond/OpenACD.git"}.

@@ -1,0 +1,9 @@
+{author, {"Evan Miller", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "The MVC for Erlang hackers in a hurry"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/evanmiller/ChicagoBoss"}.
+{url, "git://github.com/evanmiller/ChicagoBoss.git"}.

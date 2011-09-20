@@ -1,0 +1,9 @@
+{author, {"Eiichi Tsukata", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "WebSocket Server implementation in Erlang. "}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/Etsukata/erlang_websocket_server"}.
+{url, "git://github.com/Etsukata/erlang_websocket_server.git"}.

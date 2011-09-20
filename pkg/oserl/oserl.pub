@@ -1,0 +1,9 @@
+{author, {"Enrique Marcote Peña", "mpquique/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["telephony","communications"]}.
+{summary, "OSERL Open SMPP Erlang Library is an erlang implementation of the Short Message Peer to Peer protocol covering the entire specification version 5 0 Forward and backward compatibilities guidelines were adopted"}.
+{abstract, "OSERL Open SMPP Erlang Library is an erlang implementation of the Short Message Peer to Peer protocol covering the entire specification version 5 0 Forward and backward compatibilities guidelines were adopted"}.
+{home, "http://oserl.sourceforge.net"}.
+{url, "http://mesh.dl.sourceforge.net/project/oserl/oserl-3.2.3/oserl-3.2.3.tgz"}.

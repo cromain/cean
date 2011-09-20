@@ -1,0 +1,27 @@
+# Description: Show package dependencies (recursive)
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: package/depends ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/depends package" $* || return $bad_use
+[[ $1 == $pkg_name ]] || _pkg_read_spec $1 || return $package_error
+
+local lib pub
+local -Ua old new
+new+=($pkg_name)
+new+=($pkg_deps)
+
+echo "declared: ${(o)new}"
+while [ $#old -ne $#new ]
+do
+    old=($new)
+    for lib in $old
+    do
+        pub=$(ls -1d ~/.cean*/pkg/*/${lib}.pub)
+        new+=($(sed -e '/{depends,/!d;y/",/  /;s/.*\[\(.*\)\].*/\1/' $pub))
+    done
+done
+echo "full: ${(o)new}"
+
+# TODO, use erlang xref instead, and sync output with .pub

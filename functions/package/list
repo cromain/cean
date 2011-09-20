@@ -1,0 +1,11 @@
+# Description: List available packages
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: awk sed
+# Usage: package/list
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/list" $* || return $bad_use
+
+ls ~/.cean*/pkg/*/*pub \
+    | xargs awk 'BEGIN { FS = "\"" }; /^{summary,/ {print FILENAME": "$2}' \
+    | sed -e 's/.*\/\(.*\)\.pub/\1/'

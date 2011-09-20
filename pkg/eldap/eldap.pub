@@ -1,0 +1,9 @@
+{author, {"Torbjörn Törnkvist", "etnt@redhoterlang.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang LDAP API"}.
+{abstract, "Fork from jungerl"}.
+{home, "https://github.com/etnt/eldap"}.
+{url, "git://github.com/etnt/eldap.git"}.

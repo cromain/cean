@@ -1,0 +1,9 @@
+{author, {"Nicolas Favre-Felix", "n.favrefelix@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "SHA-1 Hashing function"}.
+{abstract, ""}.
+{home, "http://forum.trapexit.org/viewtopic.php?t=9035"}.
+{url, "http://forum.trapexit.org/download.php?id=37"}.

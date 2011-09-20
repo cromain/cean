@@ -1,0 +1,9 @@
+{author, {"Erlyvideo", "info@erlyvideo.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang RTMP library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/erlyvideo/erlang-rtmp"}.
+{url, "git://github.com/erlyvideo/erlang-rtmp.git"}.

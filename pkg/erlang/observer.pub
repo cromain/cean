@@ -1,0 +1,8 @@
+{author, {"Siri Hansen", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool"]}.
+{depends, ["et","gs","inets","kernel","runtime_tools","stdlib","webtool"]}.
+{keywords, ["trace"]}.
+{summary, "Observer, tools for tracing and investigation of distributed systems"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/observer/index.html\">observer Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

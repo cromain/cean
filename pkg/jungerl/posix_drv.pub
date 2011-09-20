@@ -1,0 +1,8 @@
+{author, {"Scott Lystig Fritchie", "slfritchie@snookles.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Small driver for POSIX functions not normally supported by the Erlang runtime system"}.
+{abstract, "posix_drv taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

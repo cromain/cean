@@ -1,0 +1,9 @@
+{author, {"Thomas Habets", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Like web.py, but for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ThomasHabets/weberl"}.
+{url, "git://github.com/ThomasHabets/weberl.git"}.

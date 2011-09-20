@@ -1,0 +1,10 @@
+{author, {"Bob Ippolito", "bob.ippolito@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["doc"]}.
+{depends, ["crypto","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Erlang library for manipulating Adobe SWF files and related data formats"}.
+{abstract, "eswf is a pure Erlang library for dealing with Adobe SWF files and related data formats. "
+ "Currently, eswf implements a small subset of Flash 8 SWF tags and ActionScript bytecode."}.
+{home, "https://github.com/mochi/eswf"}.
+{url, "git://github.com/mochi/eswf.git"}.

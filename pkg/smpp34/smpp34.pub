@@ -1,0 +1,9 @@
+{author, {"Essien Ita Essien", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An smpp34 library in Erlang. Built on top of smpp34pdu PDU parsing library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/essiene/smpp34"}.
+{url, "git://github.com/essiene/smpp34.git"}.

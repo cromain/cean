@@ -1,0 +1,67 @@
+# Description: Pack given package to a self-extractable release
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: tar dd sed
+# Usage: export/installer ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "export/installer package [arch]" $* || return $bad_use
+_api_export $* || return $package_error
+local dist=$(_pkg_dist) epkg=$(_pkg_epkg $2)
+local reltar=$(_pkg_reltar $2) installer=${epkg/.epkg/.sh}
+local include=$(_pkg_spec)
+include=$include:h/dist
+
+[ -f $reltar ] || export/release $* || {
+    _error "($pkg_name) no release tarball available"
+    return $missing_file
+}
+_info "($pkg_name) building installer script ${installer/$CEAN_ROOT/}..."
+cat > /tmp/$$ << EOF
+#! /bin/sh
+app=$pkg_name
+have () {
+ cmd=\$(which \$1 2>/dev/null)
+ test ! -z "\$cmd" -a -f "\$cmd"
+}
+quit () {
+ echo \$*
+ echo \$app installation failed
+ exit
+}
+test -d \$app && quit "\$app directory already exists"
+have which || quit "which: command not found"
+have tar && tar="tar"
+have gtar && tar="gtar"
+test -z \$tar && quit "no tar or gtar command found"
+: >\$\$.tmp
+\$tar -czf \$\$.tgz \$\$.tmp >/dev/null 2>/dev/null && {
+ rm -f \$\$.tgz \$\$.tmp
+ ext="\$tar -zxf -"
+} || {
+ have gzip && zip="gzip -d"
+ have gunzip && zip="gunzip"
+ test -z \$zip && quit "tar does not unzip, and no gzip or gunzip command found"
+ ext="\$zip -c | \$tar -xf -"
+}
+echo "installing \$app..."
+mkdir \$app
+dd if=\$0 bs=512 skip=X 2>/dev/null | (cd \$app; \$ext)
+test "\$1" = "-bare" && exit
+test -x \$app/bin/postinstall.sh && (cd \$app; bin/postinstall.sh \$*)
+exit
+EOF
+sz=${$(/bin/ls -l /tmp/$$)[5]}
+b1=$((sz/512)); b2=$((sz%512))
+sed -e "s/skip=X/skip=$(($b1+1))/" /tmp/$$ > $installer
+dd if=/dev/zero bs=1 count=$((512-b2)) >> $installer 2>/dev/null
+[ -d $include ] && {
+    _cd_workdir
+    tar -zxf $reltar
+    cp -r $include/* .
+    tar -zcf - . | dd bs=512 >> $installer 2>/dev/null
+    _rm_workdir
+} || {
+    dd if=$reltar bs=512 >> $installer 2>/dev/null
+}
+chmod +x $installer
+rm /tmp/$$

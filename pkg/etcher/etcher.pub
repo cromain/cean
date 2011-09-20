@@ -1,0 +1,9 @@
+{author, {"Rory Byrne", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang implementation of the Django Template Language"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jinsky/etcher"}.
+{url, "git://github.com/jinsky/etcher.git"}.

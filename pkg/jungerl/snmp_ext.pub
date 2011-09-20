@@ -1,0 +1,8 @@
+{author, {"Martin Bj&#246;rklund", "mbj@bluetail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["asn1","kernel","snmp","stdlib"]}.
+{keywords, ["snmp","smux"]}.
+{summary, "This is an implementation of SMUX (RFC1227) for the OTP snmp agent"}.
+{abstract, "snmp_ext taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

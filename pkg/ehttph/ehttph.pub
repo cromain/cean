@@ -1,0 +1,9 @@
+{author, {"JC Sargenton", "jice@igwan.eu"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "an Erlang library for parsing HTTP header values"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jice/ehttph"}.
+{url, "git://github.com/jice/ehttph.git"}.

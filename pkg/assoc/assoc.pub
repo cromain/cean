@@ -1,0 +1,12 @@
+{author, {"Dan Sahlin","dan@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{summary, "Associative arrays"}.
+{keywords, ["associative","array"]}.
+{depends, []}.
+{abstract, "Associative arrays with operations for inserting, finding, "
+ "deleting(including largest and smallest item), combining arrays, "
+ "stepping through (forwards and backwards), converting to and "
+ "from lists, map, fold (left and right). Most operations are O(lg n)."}.
+{home, "http://www.erlang.org/user.html#assoc-1.2"}.
+{url, "http://www.erlang.org/contrib/assoc-1.2.tgz"}.

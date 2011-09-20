@@ -1,0 +1,9 @@
+{author, {"Jean-S&#233bastien P&#233dron","js.pedron@meetic-corp.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver"]}.
+{depends, ["crypto"]}.
+{keywords, ["jabber","xmpp","library"]}.
+{summary, "Erlang jabber/XMPP library"}.
+{abstract, ""}.
+{home, "http://www.process-one.net/en/ejabberd"}.
+{url, "git://git.process-one.net/exmpp/mainline.git"}.

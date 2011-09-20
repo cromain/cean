@@ -1,0 +1,9 @@
+{author, {"Arjan Scherpenisse, Atilla Erdődi, Marc Worrell, Tim Benniks", "arjan@scherpenisse.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "This is the official git repo for Zotonic, the Erlang CMS. It is updated periodically from Zotonic's authoritative Mercurial repository at http://code.google.com/p/zotonic"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/arjan/zotonic"}.
+{url, "git://github.com/arjan/zotonic.git"}.

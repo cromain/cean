@@ -1,0 +1,12 @@
+{author, {"Max Lapshin", "info@erlyvideo.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["kernel","stdlib","tools"]}.
+{keywords, ["rtmp","audio","video"]}.
+{summary, "Erlang Media Server for Flash (RTMP) Audio/Video streaming"}.
+{abstract, "This is pre-beta software. Most probably it simply won't work for you, "
+ "it also might behave in an unexpected way and destroy your hard disk or even poison your cat. "
+ "Under very rare circumstances you might get it partially to work without disastrous side effects. "
+ "You have been warned. Good luck ..."}.
+{home, "https://github.com/erlyvideo/erlyvideo"}.
+{url, "git://github.com/erlyvideo/erlyvideo.git"}.

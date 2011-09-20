@@ -1,0 +1,9 @@
+{author, {"Dave Fayram", "dave@banksimple.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A new revision of Fuzed, the Erlang-based frontend for web apps. Check out the mailing list at http://groups.google.com/group/fuzed"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/KirinDave/fuzed"}.
+{url, "git://github.com/KirinDave/fuzed.git"}.

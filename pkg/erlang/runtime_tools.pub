@@ -1,0 +1,8 @@
+{author, {"Bj&#246;rn Gustavsson, Patrik Nyblo", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Runtime tools, tools to include in a production system"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/runtime_tools/index.html\">runtime_tools Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

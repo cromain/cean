@@ -1,0 +1,9 @@
+{author, {"ProcessOne", "contact@process-one.net"}}.
+{packager, {"Mickaël Rémond", "mickael.remond@process-one.net"}}.
+{category, ["server","application","cache","memcached"]}.
+{depends, ["kernel","stdlib","mnesia"]}.
+{keywords, ["memcache","client","server","memcached","web"]}.
+{summary, "Erlang Memcached Server and Client Library"}.
+{abstract, "OneCached is a clusterable and scalable Memcached implementation."}.
+{home, "https://support.process-one.net/doc/display/ONECACHED"}.
+{url, "https://svn.process-one.net/onecached/trunk"}.

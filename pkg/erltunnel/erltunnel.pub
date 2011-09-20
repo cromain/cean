@@ -1,0 +1,23 @@
+{author, {"Christoph Dornheim", "cd5@gmx.de"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net"]}.
+{depends, ["inets","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "ErlTunnel is an HTTP tunnel client and server written in Erlang for tunneling TCP connections over HTTP"}.
+{abstract, "Erltunnel is an HTTP tunnel with a small set of API functions. "
+ "It is tested using the latest Erlang release on Ubuntu Linux but should run as well on other platforms. "
+ "It is tested in particular to pass the Squid proxy. Remember, however, that whether the tunnel client "
+ "can connect to the tunnel server may depend on the individually defined access rules. "
+ "For example, the HTTP request might be refused because the user-agent header line does not mention "
+ "the right client application the proxy is configured for. In such a situation you have to adjust the code "
+ "that produces the header lines in order to match your specific needs. The Erltunnel code is written "
+ "with focus on simplicity, thus modifying these functions should be straightforward. "
+ "<br>Erltunnel currently provides the following features:"
+ "<ul>"
+ "<li>tunneling any TCP/IP connections over persistent or non-persistent HTTP connections"
+ "<li>tunnel client accessible by SOCKS 4 proxy protocol, i.e. client application must understand SOCKS 4"
+ "<li>tunneling with or without an intermediate proxy"
+ "<li>optional proxy authentication (user, password)"
+ "</ul>"}.
+{home, "http://code.google.com/p/erltunnel"}.
+{url, "http://erltunnel.googlecode.com/svn/trunk"}.

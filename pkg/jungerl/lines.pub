@@ -1,0 +1,26 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Efficient array-of-lines ADT. Allows for append, as well as insert, replace, delete in any position with reasonable access times"}.
+{abstract, "Efficient array of lines"
+ "<p>This module implements an efficient array of lines (e.g. for text editor.) "
+ "It allows for append, as well as insert, replace, delete in any position "
+ "with reasonable access times.</p> "
+ "<p>Rough benchmarking indicates (on a 440MHz Ultra):</p> "
+ "<table><tr>"
+ "<td><b>NoOfLines</b></td>"
+ "<td><b>Append (uSec)</b></td>"
+ "<td><b>Read (uSec)</b></td>"
+ "<td><b>Delete (uSec)</b></td>"
+ "</tr><tr>"
+ "<td>100</td>      <td>9</td>  <td>7</td>   <td>7</td>"
+ "</tr><tr>"
+ "<td>1,000</td>   <td>14</td>  <td>10</td>  <td>11</td>"
+ "</tr><tr>"
+ "<td>10,000</td>  <td>22</td>  <td>13</td>  <td>15</td>"
+ "</tr><tr>"
+ "<td>100,000</td> <td>30</td>  <td>16</td>  <td>18</td>"
+ "</tr></table>"}.
+{home, "http://jungerl.sourceforge.net"}.

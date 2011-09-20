@@ -1,0 +1,58 @@
+# Description: Pack a given package to epkg
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: strip tar gzip zip
+# Usage: export/epkg ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "export/epkg package [arch]" $* || return $bad_use
+_api_export $* || return $bad_use
+local dist=$(_pkg_dist) epkg=$(_pkg_epkg $2) spec=$(_pkg_spec) arch=${2:-$CEAN_HOSTARCH}
+local destepkg=${epkg/$arch/generic}  # assume package is cross-platform
+local buildtar=$CEAN_ROOT/tmp/$dist.tgz
+
+[ -e $epkg ] && {
+    _warn "($pkg_name) package already available in ${epkg/$CEAN_ROOT/}"
+    return $success
+}
+[ -f $buildtar ] && {
+    _info "($pkg_name) generating package ${epkg/$CEAN_ROOT/}..."
+    _cd_workdir
+    local el
+    tar zxf $buildtar
+    # Strip beam and binaries, and define if generic or not
+    (cd $dist; for el in bin lib; [ -d $el ] && { mkdir -p priv; cp -r $el priv; })
+    [ -d $dist/ebin ] && (cd $dist/ebin; echo 'beam_lib:strip_files(filelib:wildcard("*beam")), init:stop().' | erl >/dev/null) || _warn "($pkg_name) no ebin directory"
+    for el in $(/bin/ls -1 $dist/priv/**/*(*N) $dist/priv/**/*\.so(N) | grep "/priv/" | sort -u)
+    do
+        strip -S $el 2>/dev/null && destepkg=$epkg # package is platform specific
+    done
+    [ -e $destepkg ] && {
+        _info "($pkg_name) using available generic package"
+    } || {
+        # Generate main ez and other archives
+        [ -d $dist/src ] && { zip -9qr $dist.src.zip $dist/src >/dev/null; rm -Rf $dist/src; }
+        [ -d $dist/c_src ] && { zip -9qgr $dist.src.zip $dist/c_src >/dev/null; rm -Rf $dist/c_src; }
+        [ -d $dist/include ] && zip -9qgr $dist.src.zip $dist/include >/dev/null
+        [ -d $dist/doc ] && { zip -9qr $dist.doc.zip $dist/doc >/dev/null; rm -Rf $dist/doc; }
+        [ -d $dist/examples ] && { zip -9qgr $dist.doc.zip $dist/examples >/dev/null; rm -Rf $dist/examples; }
+        [ -d $dist/priv ] && { zip -9qr $dist.priv.zip $dist/priv >/dev/null; rm -Rf $dist/priv; }
+        zip -9qr $dist.ez $dist >/dev/null
+        # Generate epkg and fill records
+        mkdir -p $destepkg:h
+        tar cf $destepkg *zip(N) *ez
+        [ -f $destepkg:h/$pkg_name.pub ] || cp $spec $destepkg:h
+        echo "{\"$pkg_vsn\", \"$(date +%Y.%m%d)\", ok}." >> $destepkg:h/$pkg_name.pub
+    }
+    rm $buildtar
+    _rm_workdir
+} || {
+    _error "($pkg_name) no installable binary (/tmp/$dist.tgz)"
+    _info "  can not produce package"
+    return $missing_package
+}
+[ -f $epkg ] || {
+    # Dirty hack to create relative symlink to generic epkg when needed
+    (mkdir -p $epkg:h
+     cd $epkg:h
+     for gen in ../../../generic/${ERLANG_VERSION%[A-D]*}/$pkg_name/*; [ -e $gen:t ] || ln -s $gen $gen:t)
+}

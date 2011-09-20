@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","test"]}.
+{depends, ["compiler","crypto","debugger","inets","kernel","runtime_tools","snmp","ssh","stdlib","test_server","tools","webtool"]}.
+{keywords, []}.
+{summary, "portable application for automated testing."}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/common_test/index.html\">common_test Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

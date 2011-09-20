@@ -1,0 +1,8 @@
+{author, {"Mats Cronqvist", "mats.cronqvist@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","code","tool"]}.
+{depends, ["kernel","os_mon","stdlib"]}.
+{keywords, ["monitor"]}.
+{summary, "framework for loading and monitoring performance measuring code to remote node"}.
+{abstract, "prf taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

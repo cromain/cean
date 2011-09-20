@@ -1,0 +1,8 @@
+{author, {"Gunilla Hugosson", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","graphic"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["interface","gui"]}.
+{summary, "A Graphics System used to write platform independent user interfaces"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/gs/index.html\">gs Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

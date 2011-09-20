@@ -1,0 +1,9 @@
+{author, {"catseye", "cpressey@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["stdlib"]}.
+{keywords, ["bsdl", "erl", "util"]}.
+{summary, "Simple cron-like scheduler"}.
+{abstract, "crone is a simple utility which schedules tasks to be run periodically at given times"}.
+{home, "http://catseye.tc/projects/crone"}.
+{url, "http://catseye.tc/projects/crone-2004.0301.zip"}.

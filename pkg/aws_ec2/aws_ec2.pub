@@ -1,0 +1,9 @@
+{author, {"Russell Brown", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An(other) Erlang AWS EC2 client "}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/russelldb/aws_ec2"}.
+{url, "git://github.com/russelldb/aws_ec2.git"}.

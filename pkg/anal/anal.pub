@@ -1,0 +1,11 @@
+{author, {"Claes Wikstrom","klacke@erix.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["math"]}.
+{summary, "A clever and fast number analyser"}.
+{keywords, ["multiway","tree","number","analysis"]}.
+{depends, ["stdlib"]}.
+{abstract, "This is a fast number analyser which avoids searching the "
+ "multiway tree for each access, rather the previous search work is "
+ "accumulated by means of integer arithmetics"}.
+{home, "http://www.erlang.org/user.html#anal-1.0"}.
+{url, "http://www.erlang.org/contrib/anal-1.0.tgz"}.

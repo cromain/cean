@@ -1,0 +1,12 @@
+{author, {"Dominic Williams, Nicolas Charpentier, Fabrice Nourisson, Jacques Couvreur, Virgile Delecolle", "erlang@dominicwilliams.net"}, {2008,8,22}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code","test"]}.
+{depends, ["compiler","gs","kernel","stdlib"]}.
+{keywords, "XP"}.
+{summary, "development environment for Extreme Programming in Erlang"}.
+{abstract, "ExtremeForge aims to be a tool for ExtremeProgramming (XP) teams, with dedicated support "
+ "for Test Driven Development, Pair Programming, Continuous Integration and more, including in "
+ "an open source and distributed context. ExtremeForge can also be viewed as an Erlang IDE with "
+ "good support for XP practices."}.
+{home, "http://extremeforge.net"}.
+{url, "http://extremeforge.net/extremeforge_2007Q2_1.tar.gz"}.

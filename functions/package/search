@@ -1,0 +1,13 @@
+# Description: Search package against summary or keyword patter matching
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: egrep awk sed
+# Usage: package/search xmpp
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/search expr" $* || return $bad_use
+
+egrep -rH "{(keywords|summary).*$1" ~/.cean*/pkg \
+    | cut -d: -f1 \
+    | sort -u \
+    | xargs awk 'BEGIN { FS = "\"" }; /^{summary,/ {print FILENAME": "$2}' \
+    | sed -e 's/.*\/\(.*\)\.pub/\1/'

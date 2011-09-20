@@ -1,0 +1,9 @@
+{author, {"Todd Lipcon", "todd@lipcon.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "an erlang port that provides an interface to rrdtool (git-svn checkout)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/toddlipcon/erlrrd"}.
+{url, "git://github.com/toddlipcon/erlrrd.git"}.

@@ -1,0 +1,23 @@
+
+pkg_fetch()
+{
+    [ $# -lt 2 ] && exit
+    srcdir=$1; otp=$2
+
+    cd $srcdir
+    [ -d rbdict-0.1 ] || {
+        mkdir rbdict-0.1
+        cd rbdict-0.1
+        wget -O rbdict.zip "http://forum.trapexit.org/download.php?id=149"
+        unzip rbdict.zip
+        rm rbdict.zip
+        mkdir doc src ebin include priv
+        mv *hrl include
+        mv *erl src
+        mv *txt doc
+        cd ..
+    }
+    [ -e rbdict ] && rm rbdict
+    ln -s rbdict-0.1 rbdict
+}
+    

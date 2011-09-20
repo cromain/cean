@@ -1,0 +1,16 @@
+# Description: Imports a CVS repository into a local git
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: cvsps cvs
+# Usage: import/cvs jungerl :pserver:anonymous@jungerl.cvs.sourceforge.net:/cvsroot/jungerl
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "import/cvs package url [revision]" $* || return $bad_use
+_api_import $* || return $bad_use
+
+[ -d $(_pkg_sources) ] && {
+    _info "($pkg_name) updating local repository..."
+    (_pkg_cd_sources && git pull)
+} || {
+    _info "($pkg_name) creating local repository..."
+    git cvsimport -s "-" -d $pkg_url $pkg_name -C $CEAN_ROOT/src/$pkg_name
+}

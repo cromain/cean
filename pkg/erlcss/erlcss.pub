@@ -1,0 +1,9 @@
+{author, {"niahoo", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang CSS parsing tool"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/niahoo/erlcss"}.
+{url, "git://github.com/niahoo/erlcss.git"}.

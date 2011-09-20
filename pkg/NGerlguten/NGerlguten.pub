@@ -1,0 +1,9 @@
+{author, {"Carl Wright", "wright@servicelevel.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Next Generation erlguten -- a PDF generation application in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/CarlWright/NGerlguten"}.
+{url, "git://github.com/CarlWright/NGerlguten.git"}.

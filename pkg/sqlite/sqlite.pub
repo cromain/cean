@@ -1,0 +1,9 @@
+{author, {"Tee Teoh", "tty.erlang@gmail.com"}, {2008,6,8}}.
+{packager, {"Tee Teoh", "tty.erlang@gmail.com"}}.
+{category, ["database","driver"]}.
+{depends, ["stdlib"]}.
+{keywords, ["sql","database","sqlite","driver"]}.
+{summary, "SQLite driver"}.
+{abstract, "Manages a sqlite database."}.
+{home, "https://github.com/ttyerl/sqlite-erlang"}.
+{url, "git://github.com/ttyerl/sqlite-erlang.git"}.

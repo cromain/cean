@@ -1,0 +1,19 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {2000,07,20}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool","misc"]}.
+{summary, "Efficient and scalable read-write locker"}.
+{keywords, ["lock","locker"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract, 
+ "A read-write locker based on a redundant-master-slave concept. "
+ "This locker is generally much faster than global -- more so in large "
+ "networks. Locker nodes are specified as either peers or slaves; one peer "
+ "is made the master locker (automatically, or manually). All lock "
+ "negotiation takes place on the master, and lock info is replicated to all "
+ "the peers (which are standby for the master.) The locker handles both "
+ "shared and exclusive locks, as well as lock promotion (from shared to "
+ "exclusive.) This is a slightly modified version of a locker implementation "
+ "used in the AXD 301 switch. "
+ "Co-author: Asko Husso <asko.husso@etx.ericsson.se>"}.
+{home, "http://www.erlang.org/user.html#locker-1.1"}.
+{url, "http://www.erlang.org/contrib/locker-1.1.tgz"}.

@@ -1,0 +1,12 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist, Joe Armstrong", "tobbe@tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["doc","text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["doc","document","pdf","typography","rendering","docbook"]}.
+{summary, "ERlGuten is a system for high-quality typesetting"}.
+{abstract, "Erlguten is written purely in Erlang and implements microtypographic techniques "
+ "(such as margin kerning, optical alignment of margins, merning and tracking adjustments to text). "
+ "It also contains a PDF rendering library as well as a Docbook Light library. "
+ "Although it is still in development, it is in production use."}.
+{home, "https://github.com/richcarl/erlguten"}.
+{url, "git://github.com/richcarl/erlguten.git"}.

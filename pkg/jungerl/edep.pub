@@ -1,0 +1,8 @@
+{author, {"Tony Rogvall", "tony@bix.hemma.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","stdlib","syntax_tools"]}.
+{keywords, ["dep","depend"]}.
+{summary, "Dependency generator for erlang files"}.
+{abstract, "edep taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

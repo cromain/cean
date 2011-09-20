@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Provides support for XML 1.0"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/xmerl/index.html\">xmerl Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

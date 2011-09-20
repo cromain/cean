@@ -1,0 +1,8 @@
+{author, {"Mikael Karlsson", "mikael.karlsson@creado.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool","text"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Erlspect is a simple tool for automating interactive text based applications"}.
+{abstract, "erlspect taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

@@ -1,0 +1,17 @@
+{author, {"ProcessOne", "contact@process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["server","application","chat"]}.
+{depends, ["asn1","compiler","crypto","inets","kernel","mnesia","odbc","mysql","pgsql","sasl","ssl","stdlib","syntax_tools","tools","os_mon","exmpp","runtime_tools"]}.
+{keywords, ["jabber","xmpp","server","chat","messaging"]}.
+{summary, "Erlang jabber/XMPP server"}.
+{abstract, "ejabberd is a high-performance instant messaging server. "
+ "An instant messaging server allows to transfer presence and status information "
+ "between users connected to serverse and support real-time communications between them.<br>"
+ "ejabberd relies on XMPP (eXtensible Messaging and Presence Protocol) a largely-accepted XML "
+ "protocol standardized by the IETF (The Internet Engineering Task Force). "
+ "The protocol evolution is handled by the XMPP Standards Foundation (XSF), "
+ "whose mission is to create the world's best protocols for instant messaging, presence, "
+ "and other forms of near-real-time communication based on XML."}.
+{home, "http://www.process-one.net/en/ejabberd"}.
+{url, "git://git.process-one.net/ejabberd/mainline.git"}.
+{configure, "--enable-odbc"}.

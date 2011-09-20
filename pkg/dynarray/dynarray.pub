@@ -1,0 +1,13 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {1999,02,11}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{summary, "Expanding array for heap-based storage"}.
+{keywords, ["array","access","data","dynamic"]}.
+{depends, ["kernel"]}.
+{abstract, 
+ "Implements an efficient dynamically expanding array for heap-based storage. "
+ "Performance matches that of ets even on relatively small objects. "
+ "Since it mimics an array, objects are identified via their position "
+ "(integer) in the array."}.
+{home, "http://www.erlang.org/user.html#dynarray-1.0"}.
+{url, "http://www.erlang.org/contrib/dynarray-1.0.tgz"}.

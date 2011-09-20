@@ -1,0 +1,30 @@
+{author,{"Claes Wikstrom", "klacke@bluetail.com", {1999,09,01}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database"]}.
+{summary, "A version of dets that never enters the repair mode"}.
+{keywords, ["dets", "file", "database"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract,"This module xports exactly the same interface "
+ "as the original dets module in erlang 47.4.1 with "
+ "the exceptio that the {ok, Handle} that "
+ "is returned by the open_file/2 function can " 
+ "only be used by the the process that issued the open_file/2 "
+ "<br><br>"
+ "The idea here is to use two dets files instead of one "
+ "All write ops go into one dets file as well as into a log. "
+ "Whenever  ?WRITE_THRESHOLD write ops have been done, the "
+ "log is transfered into the second dets file **while** "
+ "the original dets file is closed. This way we get dets "
+ "files that can be opened for writing at runtime and they will "
+ "never be subject to repair. This means that we can have "
+ "very very large dets files. "
+ "<br><br>"
+ "The time to repair a dets file with say 1.000.000 objects "
+ "in it can be very large, maybe upto 12 hours which typically "
+ "is not acceptable. "
+ "<br><br>"
+ "the downside is that that write ops take more than twice "
+ "the time (in mean) to execute as well the file space "
+ "which is doubled."}.
+{home, "http://www.erlang.org/user.html#safedets-1.0"}.
+{url, "http://www.erlang.org/contrib/safedets-1.0.tgz"}.

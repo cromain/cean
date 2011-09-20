@@ -1,0 +1,43 @@
+# Description: Use mingw32 cross-compiler
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: gcc
+# Usage: cross/win32
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/win32" $* || return $bad_use
+local package=$1
+_error "not implemented yet"
+return $cancel
+
+# example of use
+
+PATH=/usr/i586-mingw32msvc/bin:$PATH
+CC=i586-mingw32msvc-gcc
+LD=i586-mingw32msvc-ld
+AR=i586-mingw32msvc-ar
+RC=i586-mingw32msvc-windres
+ST=i586-mingw32msvc-strip
+
+# exmpp
+$CC -Iinclude -I$CEAN_ROOT/tmp/erl5.8.4/lib/erl_interface-3.7.4/include -I$CEAN_ROOT/erl5.8.4/usr/include -c *c
+$CC -shared -o exmpp_xml_expat.dll exmpp_driver.o exmpp_xml.o exmpp_xml_expat.o ei_md.lib libexpat.dll
+$CC -shared -o exmpp_xml_expat_legacy.dll exmpp_driver.o exmpp_xml.o exmpp_xml_expat_legacy.o ei_md.lib libexpat.dll
+$CC -shared -o exmpp_stringprep.dll exmpp_driver.o exmpp_stringprep.o ei_md.lib
+$CC -shared -o exmpp_tls_openssl.dll exmpp_driver.o exmpp_tls.o exmpp_tls_openssl.o ei_md.lib libeay32.dll ssleay32.dll
+$CC -shared -o exmpp_compress_zlib.dll exmpp_driver.o exmpp_compress_zlib.o ei_md.lib zlib1.dll
+$CC -shared -o exmpp_xml_libxml2.dll exmpp_driver.o exmpp_xml.o exmpp_xml_libxml2.o ei_md.lib libxml2.dll
+$ST *dll
+
+# ejabberd
+i=$CEAN_ROOT/usr/include
+h=$CEAN_ROOT/src/otp/erts/emulator/sys/win32
+e=$CEAN_ROOT/src/otp/lib/erl_interface/include
+c="ejabberd_zlib/ejabberd_zlib_drv.c expat_erl.c mod_irc/iconv_erl.c stringprep/stringprep_drv.c stringprep/uni_data.c stringprep/uni_norm.c tls/sha_drv.c tls/tls_drv.c"
+$CC -I$h -I$i -I$e -c $src -c $c || exit
+$CC -shared -o tls_drv.dll tls_drv.o ssleay32.dll libeay32.dll || exit
+$CC -shared -o sha_drv.dll sha_drv.o libeay32.dll || exit
+$CC -shared -o ejabberd_zlib_drv.dll ejabberd_zlib_drv.o ei_md.lib zlib1.dll || exit
+$CC -shared -o stringprep_drv.dll stringprep_drv.o uni_data.o uni_norm.o ei_md.lib || exit
+$CC -shared -o expat_erl.dll expat_erl.o ei_md.lib libexpat.dll || exit
+$CC -shared -o iconv_erl.dll iconv_erl.o ei_md.lib libiconv2.dll libcharset1.dll libintl3.dll || exit
+$ST *dll

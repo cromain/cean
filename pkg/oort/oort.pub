@@ -1,0 +1,9 @@
+{author, {"ortitz", "mmatalka@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "IRC bot written in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/orbitz/oort"}.
+{url, "git://github.com/orbitz/oort.git"}.

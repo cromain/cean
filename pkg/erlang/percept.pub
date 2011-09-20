@@ -1,0 +1,10 @@
+{author, {"Erlang/OTP team", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool","code"]}.
+{depends, ["inets","kernel","runtime_tools","stdlib"]}.
+{keywords, ["bottleneck"]}.
+{summary, "Percept - erlang concurrency profiling tool"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/percept/index.html\">percept Erlang/OTP Documentation</a><br>"
+ "Note: This package includes Percept and egd. The egd module is an interface for 2d-image "
+ "rendering and is used by Percept to generate dynamic graphs to its web pages."}.
+{home, "http://www.erlang.org"}.

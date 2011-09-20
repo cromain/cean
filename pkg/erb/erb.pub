@@ -1,0 +1,9 @@
+{author, {"Will Boyce", "me@willboyce.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang/OTP IRC Bot Framework"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/wrboyce/erb"}.
+{url, "git://github.com/wrboyce/erb.git"}.

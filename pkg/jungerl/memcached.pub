@@ -1,0 +1,8 @@
+{author, {"David N.Welton", "davidw@dedasys.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["mem","cached"]}.
+{summary, "memcache server"}.
+{abstract, "memcached taken from jungerl project."}. 
+{home, "http://jungerl.sourceforge.net"}.

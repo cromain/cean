@@ -1,0 +1,9 @@
+{author, {"Scott R. Parish", "srp@srparish.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "uri parsing module for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/erlware/uri"}.
+{url, "git://github.com/erlware/uri.git"}.

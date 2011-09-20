@@ -1,0 +1,9 @@
+{author, {"Nick Gerakines", "nick@gerakines.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A libevent based webserver that is somewhat compliant with mochiweb."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ngerakines/mochevent"}.
+{url, "git://github.com/ngerakines/mochevent.git"}.

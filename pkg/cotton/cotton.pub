@@ -1,0 +1,9 @@
+{author, {"0x6e6562","0x6e6562@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "An implementation of the Hessian data binding protocol."}.
+{abstract, ""}.
+{home, "http://code.google.com/p/cotton"}.
+{url, "http://cotton.googlecode.com/files/cotton-0.2.3.tar.gz"}.

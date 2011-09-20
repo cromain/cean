@@ -1,0 +1,11 @@
+{author,{"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org", {1999,01,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{summary, "Great Digital Clock, using IG and the curses library"}.
+{keywords, ["gdc","IG","curses"]}.
+{depends, ["debugger","kernel","stdlib"]}.
+{abstract,"GDC uses the curses library to display a Great Digital Clock. "
+ "GDC is an example which shows how Erlang can be started "
+ "by a C program, communicating over an IG generated interface."}.
+{home, "http://www.erlang.org/user.html#gdc-1.0"}.
+{url, "http://www.erlang.org/contrib/gdc-1.0.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"Bob Ippolito", "bob.ippolito@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web"]}.
+{depends, ["crypto","kernel","mnesia","mochiweb","stdlib","tools"]}.
+{keywords, ["ajax","JSON"]}.
+{summary, "ErlyComet allows to plug in Bayeux compliant Comet functionality in Erlang Web servers"}.
+{abstract, ""}.
+{home, "http://code.google.com/p/erlycomet"}.
+{url, "http://erlycomet.googlecode.com/svn/trunk"}.

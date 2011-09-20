@@ -1,0 +1,8 @@
+{author, {"Luke Gorrie", "luke@member.fsf.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool","application"]}.
+{depends, ["debugger","kernel","msc","slang","stdlib","tools"]}.
+{keywords, []}.
+{summary, "an erlang clone of emacs"}.
+{abstract, "ermacs taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

@@ -1,0 +1,15 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir
+    mkdir -p src include ebin
+    make
+    [ $? -eq 0 ] || exit 3
+    cp *\.erl src
+    cp *\.hrl include
+    cp *\.beam ebin
+}
+

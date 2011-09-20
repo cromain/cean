@@ -1,0 +1,9 @@
+{author,{"Torbj&#246;rn T&#246;rnkvist", "tobbe@tornkvist.org", {1999,01,25}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{summary, "Interface to the Unix syslog facility"}.
+{keywords, ["syslog"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract,"This is a simple interface to the Unix syslog facility."}.
+{home, "http://www.erlang.org/user.html#syslog-1.0"}.
+{url, "http://www.erlang.org/contrib/syslog-1.0.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"Claes Wikstrom", "klacke@hyber.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["syntax","posix","regular","expression"]}.
+{summary, "Standard regexp"}.
+{abstract, ""}.
+{home, "http://yaws.hyber.org"}.
+{url, "http://yaws.hyber.org/download/posregex-1.2.tgz"}.

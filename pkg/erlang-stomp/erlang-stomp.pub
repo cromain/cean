@@ -1,0 +1,9 @@
+{author, {"Bob.sh", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang STOMP"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/bobsh/erlang-stomp"}.
+{url, "git://github.com/bobsh/erlang-stomp.git"}.

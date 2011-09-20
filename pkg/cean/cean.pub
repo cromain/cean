@@ -1,0 +1,8 @@
+{author, {"Christophe Romain", "christophe.romain@process-one.net", {2007,3,24}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["ibrowse","kernel","stdlib"]}.
+{keywords, ["cean","package","packaging"]}.
+{summary, "Comprehensive Erlang Archive Network library"}.
+{abstract, "This library provides CEAN command line utilities, allowing management of erlang packages."}.
+{home, "http://cean.process-one.net"}.

@@ -1,0 +1,13 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {1999,01,13}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{summary, "Platform-independent File system operations"}.
+{keywords, ["file"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract, 
+ "Implements common filesystem operations in a platform-independent way. "
+ "(so far only tested on Solaris...)"
+ "functions: ls(Pattern), find(Dir, Pattern), cwd(), "
+ "verify_dir(Dir), remove_dir(Dir), set_permission(Mode,Filename)."}.
+{home, "http://www.erlang.org/user.html#filesystem-1.0"}.
+{url, "http://www.erlang.org/contrib/filesystem-1.0.tgz"}.

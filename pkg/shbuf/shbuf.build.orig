@@ -1,0 +1,16 @@
+
+pkg_make()
+{
+    [ $# -ge 2 ] || exit
+    srcdir=$1; tmpdir=$2
+    
+    cd $srcdir
+    mkdir -p src ebin priv
+    cd server
+    make
+    [ $? -eq 0 ] || exit 3
+    mv *\.beam ../ebin
+    cd $srcdir
+    cp -r client server src
+}
+

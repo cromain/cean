@@ -1,0 +1,12 @@
+{author,{"Chris Pressey", "cpressey@catseye.mb.ca", {2001,11,01}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["graphic"]}.
+{summary, "Dialog box behaviour for GS"}.
+{keywords, ["gs", "gui", "dialog", "dialogue", "box", "window", "modal", "blocking", "requestor"]}.
+{depends, ["gs","kernel","stdlib"]}.
+{abstract,"A library application providing an extensible behaviour for "
+ "dialog boxes under GS, as well as some common dialogs built "
+ "upon it, including notify, confirm, question, entry, "
+ "list-select, and color-edit dialogs."}.
+{home, "http://www.erlang.org/user.html#gs_dialog-2001.1101"}.
+{url, "http://www.erlang.org/contrib/gs_dialog-2001.1101.tgz"}.

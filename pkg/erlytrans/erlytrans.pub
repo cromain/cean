@@ -1,0 +1,9 @@
+{author, {"Ismael Sow", "ismael.sow@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Simple code for text translation in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ismaelsow/erlytrans"}.
+{url, "git://github.com/ismaelsow/erlytrans.git"}.

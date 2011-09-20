@@ -1,0 +1,11 @@
+# Description: Native build on a remote host through ssh
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: ssh scp
+# Usage: cross/remote ejabberd mac.local
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/remote package host" $* || return $bad_use
+local package=$1 host=$2
+
+ssh $host "~/.cean/bin/cean_call ~/${CEAN_ROOT#$HOME} package/build $package"
+#scp $host pub/...

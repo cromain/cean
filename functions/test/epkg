@@ -1,0 +1,19 @@
+# Description: Test an epkg archive
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: unzip
+# Usage: test/epkg ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "test/epkg package" $* || return $bad_use
+local package=$1
+
+return $cancel
+
+# e=(*.erl) b=(*.beam(N)) eval 'ls ${${e:#(${~${(j:|:)${b:r}}}).erl}:?done}'
+
+nbsrc=$((`unzip -l $dist.src.zip | grep "\.erl" | wc -l`))
+nbbeam=$((`unzip -l $dist.ez | grep "\.beam" | wc -l`))
+nbpriv=$((`unzip -l $dist.priv.zip | grep "\.beam" | wc -l`))
+[ $nbsrc -eq 0 ] && _error $epkg have no sources
+[ $nbbeam -eq 0 ] && _error $epkg compilation failed
+[ $nbsrc -gt $nbbeam ] && _warn $epkg partial compilation

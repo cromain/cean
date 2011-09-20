@@ -1,0 +1,9 @@
+{author, {"lambder", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "yet another but slightly different erlang &lt;-&gt; json encoder/decoder"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/lambder/jsonerl"}.
+{url, "git://github.com/lambder/jsonerl.git"}.

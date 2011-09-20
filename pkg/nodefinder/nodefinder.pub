@@ -1,0 +1,18 @@
+{author, {"Paul Goo", "paul-goo@mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","tool"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Strategies for automatic node discovery in Erlang"}.
+{abstract, "In a dynamic computing environment such as EC2 it is useful to have Erlang nodes "
+ "automatically discover each other. This project contains 3 (+1) strategies for doing so:"
+ "<ul>"
+ "<li>combonodefinder: detects EC2 hostname and dispatches either to ec2nodefinder or nodefinder as appropriate."
+ "<li>nodefinder: multicast UDP based. a node group corresponds to a multicast ip/port combination. multicast is not supported on EC2."
+ "<li>ec2nodefinder: ec2-describe-instances based. a node group corresponds to a security group. only works on EC2."
+ "<li>s3nodefinder: S3 based. a node group corresponds to an S3 bucket. works for WAN discovery."
+ "</ul>"
+ "For LAN setups (EC2 and non-EC2), I recommend combonodefinder.<br>"
+ "For WAN setups (without multicast routing), s3nodefinder is the only choice."}.
+{home, "http://code.google.com/p/nodefinder"}.
+{url, "http://nodefinder.googlecode.com/svn/trunk"}.

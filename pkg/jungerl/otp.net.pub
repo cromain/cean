@@ -1,0 +1,8 @@
+{author, {"Vlad Dumitrescu", "vladdu55@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["driver","net"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "A port of jinterface-1.2.1.1 to C#.NET"}.
+{abstract, "otp.net taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

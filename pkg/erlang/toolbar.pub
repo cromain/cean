@@ -1,0 +1,8 @@
+{author, {"Gunilla Hugosson", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","tool"]}.
+{depends, ["gs","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A tool bar simplifying access to the Erlang tools"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/toolbar/index.html\">toolbar Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

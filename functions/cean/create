@@ -1,0 +1,65 @@
+# Description: Create CEAN working environment
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cean/create [dir] [vsn]
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/create [directory] [erlang_version] [mini|base|full] [arch]" $* || return $bad_use
+local destdir=${1:-$PWD} vsn=${2:-$ERLANG_VERSION} profile=${3:-mini} arch=${4:-$CEAN_HOSTARCH}
+local archive=~/.cache/cean/bootstraps/${vsn}_${arch}_${profile}.tar.gz
+
+if [[ $destdir == $HOME ]]; then
+    _error "can not install a cean working directory in $HOME"
+    _info "  call create from another directory or give work directory as argument"
+    return $internal_error
+fi
+if [ -e $destdir/bin/erl ]; then
+    _error "directory $destdir already contains CEAN bootstrap"
+    _info "  install CEAN bootstrap into an empty directory"
+    return $internal_error
+fi
+if [ -e $destdir/.ceanrc ]; then
+    _error "directory $destdir already contains .ceanrc"
+    _info "  install CEAN bootstrap into an empty directory"
+    return $internal_error
+fi
+[ -d $destdir ] || mkdir -p $destdir
+cd $destdir
+mkdir bin lib test tmp src
+local subdir
+for subdir in pub tools
+    [ -d ../$subdir ] && ln -s ../$subdir || mkdir $subdir
+if [ -f $archive ]; then
+    _info "install CEAN bootstrap from $archive"
+    tar -zxf $archive
+else
+    bootstrap/fetch $vsn || {
+        _error "could not fetch bootstrap"
+        return $network_error
+    }
+    bootstrap/build $vsn || {
+        _error "could not build bootstrap"
+        return $internal_error
+    }
+    bootstrap/install $vsn $PWD $profile || {
+        _error "could not install bootstrap"
+        return $internal_error
+    }
+fi
+
+cat > .ceanrc << END
+ERLANG_VERSION=$vsn
+CEAN_ROOT=\$PWD
+CEAN_SERVER=http://cean.process-one.net
+CEAN_REPOSITORY=/pub/$arch/${vsn%[A-D]*}
+PATH=\$CEAN_ROOT/bin:\$PATH
+PROMPT_THEME=cean
+
+# Add your favorite commands bellow
+# note: find your favorite commands with cean/stats
+# see global aliases in ~/.cean/cfg/aliases
+#alias pkl='package/list'
+#alias pks='package/search'
+#alias ej='map package exmpp ejabberd'
+END
+source .ceanrc

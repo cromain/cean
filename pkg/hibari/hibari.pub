@@ -1,0 +1,9 @@
+{author, {"Hibari Gemini Mobile Techs Inc., Hibari Gemini Mobile Techs Inc., Hibari Admin, Hibari Gemini Mobile Techs Inc., Joseph Wayne Norton, kinoshita/gmt, Makoto Saito, Thomas O'Dowd", "hibari-gmt@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["engines","database"]}.
+{summary, "Hibari is a production ready distributed key value big data store Hibari uses chain replication for strong consistency high availability and durability Hibari has excellent performance especially for read and large value operations"}.
+{abstract, "Hibari is a production ready distributed key value big data store Hibari uses chain replication for strong consistency high availability and durability Hibari has excellent performance especially for read and large value operations"}.
+{home, "http://hibari.sourceforge.net"}.
+{url, "git://hibari.git.sourceforge.net/gitroot/hibari/hibari"}.

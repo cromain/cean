@@ -1,0 +1,10 @@
+{author, {"Ulf Wiger", "ulf.wiger@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Local function available in any module"}.
+{abstract, "This module allows for evaluation of local functions in any "
+ "module as long as there is 'debug_info' present in the corresponding beam file."}.
+{home, "http://forum.trapexit.org/viewtopic.php?t=8790"}.
+{url, "http://forum.trapexit.org/download.php?id=34"}.

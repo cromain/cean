@@ -1,0 +1,13 @@
+{author,{"Ulf Wiger", "ulf.wiger@ericsson.com", {2002,12,30}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["stdlib"]}.
+{keywords, ["process", "dispatch"]}.
+{summary, "A generic method for dispatching dynamic worker threads"}.
+{abstract, 
+ "Allows for processes to be dynamically created and 'suspended'. "
+ "The threads themselves believe that they stay up permanently. "
+ "Mdisp replaces dispatcher-1.0. The two are not compatible. "
+ "Mdisp offers a cleaner interface and better performance."}.
+{home, "http://www.erlang.org/user.html#mdisp-1.0"}.
+{url, "http://www.erlang.org/contrib/mdisp-1.0.tgz"}.

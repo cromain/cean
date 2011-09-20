@@ -1,0 +1,9 @@
+{author, {"ProcessOne", "contact@process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["database","driver"]}.
+{depends, ["crypto","kernel","stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "MySQL native driver"}.
+{abstract, ""}.
+{home, "https://support.process-one.net/doc/display/MESSENGER/Using+ejabberd+with+MySQL+native+driver"}.
+{url, "https://svn.process-one.net/ejabberd-modules/mysql/trunk"}.

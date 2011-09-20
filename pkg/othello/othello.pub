@@ -1,0 +1,11 @@
+{author, {"Magnus Fr&#246;berg","magnus@cslab.ericsson.se",{1998,11,27}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["game"]}.
+{summary, "The Othello game"}.
+{keywords, ["Othello","game"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract, "This is an implementation of the game Othello. "
+ "Take a break, relax your brain, and have some fun trying "
+ "to beat the computer in a game of Othello."}.
+{home, "http://www.erlang.org/user.html#othello-1.0"}.
+{url, "http://www.erlang.org/contrib/othello-1.0.tgz"}.

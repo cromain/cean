@@ -1,0 +1,9 @@
+{author, {"Sergej Jurečko", "sergej.jurecko@wpn.tv"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Record based Erlang driver for MongoDB with gridfs support"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/wpntv/erlmongo"}.
+{url, "git://github.com/wpntv/erlmongo.git"}.

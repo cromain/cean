@@ -1,0 +1,10 @@
+{author,{"Tomas Abrahamsson", "tab@lysator.liu.se", {2001,05,04}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","server"]}.
+{summary, "Remote Erlang shell daemon"}.
+{keywords, ["shell", "telnet", "sh"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract, "Reshd stands for remote Erlang shell daemon. "
+ "It offers a telnet port into an Erlang shell in the Erlang node."}.
+{home, "http://www.erlang.org/user.html#reshd-1.2"}.
+{url, "http://www.erlang.org/contrib/reshd-1.2.tgz"}.

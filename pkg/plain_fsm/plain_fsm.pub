@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger", "ulf.wiger@erlang-solutions.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A behaviour/support library for writing plain Erlang FSMs."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/uwiger/plain_fsm"}.
+{url, "git://github.com/uwiger/plain_fsm.git"}.

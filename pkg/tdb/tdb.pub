@@ -1,0 +1,12 @@
+{author,{"Torbj&#246;rn T&#246;rnkvist", "tobbe@cslab.ericsson.se", {1999,02,04}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["text","tool"]}.
+{keywords, []}.
+{depends, ["debugger","stdlib"]}.
+{summary, "TTY interface to the Erlang dubugger"}.
+{abstract,"If you don't like cluttering your screen with windows, or "
+ "if you do/can not use a window system, then this TTY interface for "
+ "the Erlang debugger may be something for you. With this interface "
+ "you can do almost anything you can do with the X-based interface."}.
+{home, "http://www.erlang.org/user.html#tdb-0.9"}.
+{url, "http://www.erlang.org/contrib/tdb-0.9.tgz"}.

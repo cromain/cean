@@ -1,0 +1,9 @@
+{author, {"Olivier Sambourg", "adamselene/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["development","java"]}.
+{summary, "A plugin for Maven 2 http maven apache org to manage Erlang projects initial setup build unit tests documentation project web site deployment dependencies management dynamic code loading on a remote erlang node and more"}.
+{abstract, "A plugin for Maven 2 http maven apache org to manage Erlang projects initial setup build unit tests documentation project web site deployment dependencies management dynamic code loading on a remote erlang node and more"}.
+{home, "http://maven-erlang.sourceforge.net"}.
+{url, "https://maven-erlang.svn.sourceforge.net/svnroot/maven-erlang/"}.

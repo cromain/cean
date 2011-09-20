@@ -1,0 +1,9 @@
+{author, {"Nick Gerakines", "nick@gerakines.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A simple Facebook Platform API interface in Erlang."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ngerakines/erlang_facebook"}.
+{url, "git://github.com/ngerakines/erlang_facebook.git"}.

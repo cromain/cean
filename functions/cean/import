@@ -1,0 +1,91 @@
+# Description: Import prebuilt binaries into local repository
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: curl rsync
+# Usage: cean/import archive
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/import cache|pub|archive|debian|bootstrap [args]" $* || return $bad_use
+local action=$1; shift
+local srvsh=cean@${CEAN_SERVER#http://}
+
+bootstrap() {
+    local otp=$1 arch=$2 dir=$3
+    (cd $dir
+     rm -Rf lib/*/{examples,src,c_src}
+     export/bootstrap $otp $arch)
+}
+epkg() {
+    local otp=$1 arch=$2 dir=$3
+    [[ ${ERLANG_VERSION%[A-D]*} == ${otp%[A-D]*} ]] || {
+        _error "($pkg_name) can not package for another major erlang version"
+        return $bad_use
+    }
+    pkg_name=${${dir:t}%%-*}; pkg_vsn=${dir#*-}
+    _pkg_spec >/dev/null || {
+        _warn "($pkg_name) no package specification, generating epkg anyway"
+        echo "create package specification for $pkg_name" >> $CEAN_ROOT/TODO
+    }
+    (cd $dir:h; tar zcf $CEAN_ROOT/tmp/$(_pkg_dist).tgz $dir:t)
+}
+
+case $action in
+cache)
+    # sync cache archives from cean server
+    mkdir -p ~/.cache; rsync -av $srvsh:.cache/ ~/.cache/ ;;
+pub)
+    # sync packages repository from cean server
+    rsync -av $srvsh:pub/ $CEAN_ROOT/pub/ ;;
+archive)
+    # imports content of binary archive made from standard erlang installation
+    # this can also work from official windows installation (from C:\Program Files\erlX.X.X\)
+    # archive name MUST be prefixed the same way than bootstraps: e.g. R13B04_linux-x86_erlang
+    # archive containing only one lib MUST extract one directory: e.g. libname-libvsn
+    # usage: cean/import archive /tmp/R13B04_linux-x86_erlang.tar.bz2
+    local archive=$1 otp=${${1:t}%%_*} arch=${${${1:t}#*_}%%_*} lib=${${${${1:t}#*_}#*_}%%.*}
+    local dir
+    _cd_workdir
+    [[ $lib == "erlang" ]] || { mkdir lib; cd lib; }
+    case $archive in
+        *tgz|*tar.gz) tar zxf $archive ;;
+        *tbz2|*tar.bz2) tar jxf $archive ;;
+        *zip) unzip -qq $archive ;;
+    esac
+    [[ $lib == "erlang" ]] || cd -
+    for dir in lib/*; epkg $otp $arch $dir
+    bootstrap $otp $arch .
+    _rm_workdir
+    [[ $lib == "erlang" ]] && lib=otp
+    package/install $lib $arch ;;
+debian)
+    # imports binary archive from debian packages
+    # usage: cean/import debian linux-x86 erlang-base_14.a-dfsg-2
+    local arch=$1 deb=$2 lib=${${2%%-*}%%-*}
+    local mirror="http://ftp.ch.debian.org/debian"
+    local url=$mirror/pool/main/$lib[1]/$lib/${deb}_${arch}.deb
+    local vsn=${${deb##*_}%-dfsg*}
+    local dir
+    [[ $lib == "erlang" ]] && {
+        local -a debvsn=(${(s|.|)vsn})
+        vsn="R$debvsn[1]$debvsn[2]:u$debvsn[3]"
+    }
+    _cd_workdir
+    curl $url > ${deb}_${arch}.deb
+    dpkg-deb -x ${deb}_${arch}.deb .
+    [[ $arch == "i386" ]] && arch="x86"
+    for dir in url/lib/erlang/lib/*; epkg $otp $arch $dir
+    bootstrap $otp $arch url/lib/erlang
+    _rm_workdir
+    [[ $lib == "erlang" ]] && lib=otp
+    package/install $lib $arch ;;
+bootstrap)
+    (cd ~/.cache/cean/bootstraps
+     for archive in mini base full
+     do
+         archive=${ERLANG_VERSION}_${1:-CEAN_HOSTARCH}_${archive}.tar.gz
+         [ -f $archive ] || curl $CEAN_SERVER/pub/bootstraps/$archive > $archive
+     done)
+    ;;
+*)
+    _usage "cean/import cache|pub|archive|debian|bootstrap [args]"
+    return $bad_use ;;
+esac

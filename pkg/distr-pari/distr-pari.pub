@@ -1,0 +1,9 @@
+{author, {"Josh K.", "schmiddy-/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["mathematics","scientific","perl"]}.
+{summary, "Pari Distributed is a mostly Erlang framework that lets you split up trivially parallelizable loops in GP across multiple nodes Its goal is to dynamically manage a list of active nodes and split up work units fairly across remote nodes"}.
+{abstract, "Pari Distributed is a mostly Erlang framework that lets you split up trivially parallelizable loops in GP across multiple nodes Its goal is to dynamically manage a list of active nodes and split up work units fairly across remote nodes"}.
+{home, "http://distr-pari.sourceforge.net"}.
+{url, ":pserver:anonymous@distr-pari.cvs.sourceforge.net:/cvsroot/distr-pari"}.

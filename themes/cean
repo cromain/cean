@@ -1,0 +1,35 @@
+# Default CEAN's console theme
+# Provided by Christophe Romain <cromain@process-one.net>
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+# see cean_light for minimal documentation and examples
+
+# Logging colors
+LOG_USAGE=red
+LOG_ERROR=red
+LOG_WARN=yellow
+LOG_INFO=cyan
+LOG_DEBUG=Blue
+
+# Misc prompt colors
+PR_USER=default
+PR_HOST=default
+PR_PATH=green
+PR_SUCCESS=Green
+PR_ERROR=Red
+PR_PROMPT=yellow
+
+# Git status colors
+PR_NAME=cyan
+PR_BRANCH=Cyan
+PR_REV=Yellow
+PR_CLEAN=Green
+PR_STAGED=Magenta
+PR_DIRTY=Red
+PR_PUNC=yellow
+PR_TEXT=default
+
+# use colors with ls and grep
+ls --color -d . &>/dev/null 2>&1 && alias ls='/bin/ls -FGh --color=auto' || alias ls='/bin/ls -F'
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;33'  # match is Yellow instead of default red

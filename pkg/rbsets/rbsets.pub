@@ -1,0 +1,9 @@
+{author, {"Robert Virding", "rvirding@hotmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "Rbsets is a set as a red black tree"}.
+{abstract, "It supports the full sets interface and is drop-in compatible with both sets and ordsets."}.
+{home, "http://forum.trapexit.org/viewtopic.php?p=43949"}.
+{url, "http://forum.trapexit.org/download.php?id=150"}.

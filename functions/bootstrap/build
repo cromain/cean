@@ -1,0 +1,26 @@
+# Description: Build Erlang bootstrap
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: m4 perl gcc tar gmake|make
+# Usage: bootstrap/build R13B04
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "bootstrap/build otp_version" $* || return $bad_use
+local vsn=$1 otpdir=otp_src_$1
+local lib sources=~/.cache/cean/sources/$otpdir.tar.gz
+
+[ -e $sources ] || return $missing_sources
+[ -d src ] || mkdir src
+cd src
+tar zxf $sources
+cd $otpdir
+mkdir dist
+./configure --prefix=$PWD/dist
+which gmake >/dev/null 2>/dev/null && gmake || make
+cd bootstrap
+for lib in ~/.cean/lib/*
+do
+    lib=$lib:t
+    mkdir -p lib/$lib/ebin
+    bin/erlc +compressed -o lib/$lib/ebin ~/.cean/lib/$lib/src/*erl
+done
+cd ../../..

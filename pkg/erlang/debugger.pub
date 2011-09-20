@@ -1,0 +1,8 @@
+{author, {"Gunilla Arendt", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["compiler","gs","kernel","stdlib","wx"]}.
+{keywords, []}.
+{summary, "A debugger for debugging and testing of Erlang programs"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/debugger/index.html\">debugger Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

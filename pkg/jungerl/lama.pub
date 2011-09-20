@@ -1,0 +1,8 @@
+{author, {"Serge Aleynikov", "serge@hq.idt.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool"]}.
+{depends, ["inets","kernel","runtime_tools","sasl","snmp","stdlib"]}.
+{keywords, []}.
+{summary, "Log and Alarm Management Application (handles alarms, maps them to SNMP traps, logs to syslog)"}.
+{abstract, "lama taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

@@ -1,0 +1,8 @@
+{author, {"Martin Bj&#246;rklund", "mbj@bluetail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["kernel","mnesia","snmp","stdlib"]}.
+{keywords, ["mib"]}.
+{summary, "This is a container application for SNMP mibs"}.
+{abstract, "mibs taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

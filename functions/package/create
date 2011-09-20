@@ -1,0 +1,96 @@
+# Description: Create a package
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: curl sed grep cut
+# Usage: package/create ejabberd http://github.com/processone/ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/create package url" $* || return $bad_use
+local package=$1 url=$2
+local pub=$CEAN_ROOT/pub/pkg/$package/$package.pub
+local author_name author_email summary src_url keywords
+local my_name my_email
+
+[ -f ~/.gitconfig ] && my_name=$(sed -e '/name =/!d;s/.*= //' ~/.gitconfig)
+[ -f ~/.gitconfig ] && my_email=$(sed -e '/email =/!d;s/.*= //' ~/.gitconfig)
+mkdir -p $pub:h
+_pkg_clean_spec
+_cd_workdir
+case $url in
+
+# github
+https://github.com/*)
+    curl -s $url:h > author
+    curl -s $url > project
+    author_name=$(sed -e '/"fn"/!d;s/ *</</;s/<.[^>]*>//g' author)
+    author_email=$(sed -e '/"email"/!d;s/.*(.\(.*\).)).*/\1/' author)
+    author_email=$(echo $author_email | sed -e 's/%\([0-9a-f][0-9a-f]\)/\\\\\x\1/g' | xargs printf | sed -e 's/.*>\(.*\)<.*/\1/')
+    src_url=$(sed -e '/public_clone_url/!d;s/.*git:\(.*\)\.git.*/git:\1\.git/' project)
+    summary=$(grep -A1 repository_description project | sed -e '/text/!d;s/.*value="\(.*\)".*/\1/')
+    cat > $pub << EOF
+{author, {"$author_name", "$author_email"}}.
+{packager, {"$my_name", "$my_email"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "$summary"}.
+{abstract, ""}.  % please edit
+{home, "$url"}.
+{url, "$src_url"}.
+EOF
+    ;;
+
+# trapexit TODO
+#http://forum.trapexit.org/*)
+#    ;;
+
+# sourceforge
+http://sourceforge.net/*)
+    curl -s $url/ > project
+    curl -s $url/develop > devel
+    local user
+    author_name=""
+    for user in $(sed -e '/users/!d;/title=/d;s/.*href="//;s/".*//' devel)
+        author_name+=", "$(curl -s http://sourceforge.net$user | sed -e '/Public/!d;s/<.[^>]*>//g;s/.*: //;s/ $//')
+    author_name=${author_name/, /}
+    author_email=$(sed -e '/users/!d;/title=/d;s/.*href="//;s/".*//;s|/users/||;s|/$||;q' devel)"@users.sourceforge.net"
+    src_url=$(sed '/_browse/!d;/disabled/d;/_hg_/d;/_bzr_/d;s/http:/https:/;s/viewvc/svnroot/;q' devel | cut -d\" -f4)
+    case $src_url in
+        *cvs*) src_url=$(echo $src_url | sed -e 's*https://*:pserver:anonymous@*;s*\.net*\.net:/cvsroot*;s/\/$//') ;;
+        *) : ;;
+    esac
+    summary=$(grep sourceforge_project_description project | cut -d"'" -f2 | sed -e 's/ $//')
+    keywords=$(grep google_hints project | cut -d"'" -f2 | sed -e 's/erlang,//;s/,erlang//')
+    keywords=\"${keywords//,/\",\"}\"
+    keywords=${keywords/\"\"/}
+    url=$(sed -e '/link-external/!d;s/.*>\(.*\)<.*/\1/' project)
+    cat > $pub << EOF
+{author, {"$author_name", "$author_email"}}.
+{packager, {"$my_name", "$my_email"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, [$keywords]}.
+{summary, "$summary"}.
+{abstract, "$summary"}.
+{home, "$url"}.
+{url, "$src_url"}.
+EOF
+    ;;
+
+# default empty pattern
+*)
+    cat > $pub << EOF
+{author, {"", ""}}. % please edit
+{packager, {"$my_name", "$my_email"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, ""}.   % please edit
+{abstract, ""}.  % please edit
+{home, "$url"}.
+{url, "$url"}.
+EOF
+    ;;
+
+esac
+_rm_workdir
+_info "($package) ${pub/$CEAN_ROOT/} spec file created"

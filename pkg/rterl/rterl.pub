@@ -1,0 +1,9 @@
+{author, {"Ryan Crum", "ryan.j.crum@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Simple raytracer implemented in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/thorstadt/rterl"}.
+{url, "git://github.com/thorstadt/rterl.git"}.

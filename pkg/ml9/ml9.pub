@@ -1,0 +1,9 @@
+{author, {"Joe Armstrong", "joe@cslab.ericsson.se"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "simple markup language handling many different types of data in a single unified framework"}.
+{abstract, ""}.
+{home, "http://www.sics.se/~joe/ml9/doc.html"}.
+{url, "http://www.sics.se/~joe/ml9/ml9.tgz"}.

@@ -1,0 +1,9 @@
+{author, {"Mats Cronqvist", "mats.cronqvist@ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["doc","code"]}.
+{depends, ["kernel","stdlib","syntax_tools"]}.
+{keywords, ["doc","document","html","rendering"]}.
+{summary, "Creates a fully hyperlinked web of html pages from erlang source code"}.
+{abstract, ""}.
+{home, "http://code.google.com/p/erl-escobar"}.
+{url, "http://erl-escobar.googlecode.com/svn/trunk"}.

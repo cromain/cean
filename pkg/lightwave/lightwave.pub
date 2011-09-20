@@ -1,0 +1,9 @@
+{author, {"Thomas Habets", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Like google wave, but much dumber and written in erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ThomasHabets/lightwave"}.
+{url, "git://github.com/ThomasHabets/lightwave.git"}.

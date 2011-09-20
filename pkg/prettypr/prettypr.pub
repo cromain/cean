@@ -1,0 +1,10 @@
+{author,{"Richard Carlsson", "richardc@csd.uu.se", {2000,08,30}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["stdlib"]}.
+{keywords, ["pretty", "printing", "text", "formatting"]}.
+{summary, "A generic, flexible pretty printing library"}.
+{abstract, "The prettypr module provides a powerful library of functions "
+ "for flexible, generic and fast pretty printing."}.
+{home, "http://www.erlang.org/user.html#prettypr-1.0"}.
+{url, "http://www.erlang.org/contrib/prettypr-1.0.tgz"}.

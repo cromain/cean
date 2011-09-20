@@ -1,0 +1,9 @@
+{author, {"Witold Baryluk", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Convert any character set into unicode and UTF-8 using pure Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/baryluk/to_unicode"}.
+{url, "git://github.com/baryluk/to_unicode.git"}.

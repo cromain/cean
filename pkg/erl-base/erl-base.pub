@@ -1,0 +1,9 @@
+{author, {"John Kemp", "john@jkemp.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Z-Base-32 encoding for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/frumioj/erl-base"}.
+{url, "git://github.com/frumioj/erl-base.git"}.

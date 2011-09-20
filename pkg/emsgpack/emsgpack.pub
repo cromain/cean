@@ -1,0 +1,9 @@
+{author, {"Martin Scholl", "ms@diskware.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang-based implementation of the msgpack encoding scheme"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/zeitgeist/emsgpack"}.
+{url, "git://github.com/zeitgeist/emsgpack.git"}.

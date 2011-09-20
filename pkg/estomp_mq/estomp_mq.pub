@@ -1,0 +1,9 @@
+{author, {"orbitz", "mmatalka@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang server and client for a message queue using the STOMP protocol"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/orbitz/estomp_mq"}.
+{url, "git://github.com/orbitz/estomp_mq.git"}.

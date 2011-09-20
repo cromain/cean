@@ -1,0 +1,9 @@
+{author, {"Dave Smith", "dizzyd@dizzyd.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang Port Mapper (EPMD) API"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/dizzyd/epmd_api"}.
+{url, "git://github.com/dizzyd/epmd_api.git"}.

@@ -1,0 +1,8 @@
+{author, {"Luke Gorrie", "luke@member.fsf.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["net","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Linux Universal TUN/TAP device driver"}.
+{abstract, "tuntap taken from jungerl project."}.
+{home, "http://jungerl.sourceforge.net"}.

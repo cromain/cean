@@ -1,0 +1,10 @@
+{author,{"Claes Wikstr&#246;m", "klacke@bluetail.com", {1999,10,09}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["type"]}.
+{depends, ["stdlib"]}.
+{keywords, ["queues", "functional", "data", "structure"]}.
+{summary, "Implementation of double ended queues"}.
+{abstract,"This is an implementation of double ended queues, "
+ "as described in 'Purely Functional Data structures' by Chris Okasaki."}.
+{home, "http://www.erlang.org/user.html#deque-1.0"}.
+{url, "http://www.erlang.org/contrib/deque-1.0.tgz"}.

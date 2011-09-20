@@ -1,0 +1,9 @@
+{author, {"Paul J. Davis", "paul.joseph.davis@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang JSON parser."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/davisp/ejson"}.
+{url, "git://github.com/davisp/ejson.git"}.

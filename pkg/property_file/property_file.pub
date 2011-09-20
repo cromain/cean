@@ -1,0 +1,13 @@
+{author,{"Vladimir Sekissov", "svg@surnet.ru", {2003,10,02}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["text","tool"]}.
+{summary, "Configuration file parser"}.
+{keywords, ["grammar", "scanner", "lexical", "analysis", "configuration", "file", "parser"]}.
+{depends, ["kernel","mlex","stdlib"]}.
+{abstract, "This is configuration files parser. "
+ "It is property_lists module compliant and supports "
+ "two popular configuration formats, Apache and C-like, " 
+ "property substitution and file inclusion. It works with Unix, DOS "
+ "and Mac files."}.
+{home, "http://www.erlang.org/user.html#property_file-0.1"}.
+{url, "http://www.erlang.org/contrib/property_file-0.1.tgz"}.

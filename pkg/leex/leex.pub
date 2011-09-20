@@ -1,0 +1,10 @@
+{author, {"Robert Virding", "rvirding@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["leex", "lex", "lexer"]}.
+{summary, "A Lexical Analyser Generator for Erlang"}.
+{abstract, "Leex is a lexical analyzer generator for Erlang. It allows you to "
+           "tokenize a textual input stream so that it can be grammatically "}.
+{home, "https://github.com/rvirding/leex"}.
+{url, "git://github.com/rvirding/leex.git"}.

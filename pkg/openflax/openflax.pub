@@ -1,0 +1,9 @@
+{author, {"catseye", "cpressey@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web"]}.
+{depends, []}.
+{keywords, ["bsdl", "erl", "util", "www"]}.
+{summary, "Experimental web server"}.
+{abstract, "experimental open-source web server, designed with security and simplicity in mind"}.
+{home, "http://catseye.tc/projects/openflax"}.
+{url, "http://catseye.tc/projects/openflax-2004.0919.zip"}.

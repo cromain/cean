@@ -1,0 +1,9 @@
+{author, {"Carlo Cabanilla", "carlo.cabanilla@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang implementation of the syslog server protocol"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/clofresh/esyslog"}.
+{url, "git://github.com/clofresh/esyslog.git"}.

@@ -1,0 +1,9 @@
+{author, {"David Weldon", "dweldon@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "string manipulation library for erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/dweldon/estring"}.
+{url, "git://github.com/dweldon/estring.git"}.

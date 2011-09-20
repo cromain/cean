@@ -1,0 +1,9 @@
+{author, {"Tim Watson", "watson.timothy@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang Term (de)serialization and format translation library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/n0gg1n/lingo"}.
+{url, "git://github.com/n0gg1n/lingo.git"}.

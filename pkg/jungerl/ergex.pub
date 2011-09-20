@@ -1,0 +1,8 @@
+{author, {"Darius Bacon", "darius@accesscom.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["regular","expressions"]}.
+{summary, "Here are two different regular-expression implementations, both are written from scratch. Also included is a simplistic regular-expression parser"}.
+{abstract, "ergex taken from jungerl project."}. 
+{home, "http://jungerl.sourceforge.net"}.

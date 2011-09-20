@@ -1,0 +1,8 @@
+{author, {"Kenneth Lundin, Bertil Karlsson", "otp@erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["Erlang/OTP","net","driver"]}.
+{depends, ["kernel","stdlib","syntax_tools"]}.
+{keywords, []}.
+{summary, "Provides support for Abstract Syntax Notation One"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/asn1/index.html\">asn1 Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

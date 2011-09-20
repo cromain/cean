@@ -1,0 +1,11 @@
+{author, {"Oliver Mason", "o.j.mason@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["code","text"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "An Erlang module to parse YAML files"}.
+{abstract, "This Erlang module can be used to read in YAML data structures and convert them into "
+ "appropriate Erlang elements: lists or mappings. Lists are represented as lists, "
+ "and mappings as tuples of {key, value}"}.
+{home, "http://code.google.com/p/yaml-erlang"}.
+{url, "http://yaml-erlang.googlecode.com/svn/trunk"}.

@@ -1,0 +1,21 @@
+# Description: Pull CEAN files
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: git
+# Usage: cean/pull
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/pull" $* || return $bad_use
+
+for repos in ~/.cean*/.git
+do
+    _info "(cean) pull repository ${repos/.git/}"
+    (cd ${repos/.git/}; git pull)
+done
+
+# Reinit CEAN shell
+_info "(cean) reload internal functions"
+for cfg in ~/.cean*/cfg/*; source $cfg
+for mod in ~/.cean*/functions/*/*; freload ${mod#*functions/}
+_info "(cean) restart environment"
+[ -f .ceanrc ] && source .ceanrc
+cean/init

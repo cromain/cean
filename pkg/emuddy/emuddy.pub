@@ -1,0 +1,9 @@
+{author, {"Michael Truog", "okeuday/@users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["mud","games"]}.
+{summary, "The Erlang MUD Daemon proxY provides a stable front end to preexisting MUDs text based MMORPGs that handles concurrent connections and reduces or eliminates server lag"}.
+{abstract, "The Erlang MUD Daemon proxY provides a stable front end to preexisting MUDs text based MMORPGs that handles concurrent connections and reduces or eliminates server lag"}.
+{home, "http://emuddy.sourceforge.net"}.
+{url, "https://emuddy.svn.sourceforge.net/svnroot/emuddy/"}.

@@ -1,0 +1,13 @@
+{author,{"Peter Andersson", "peppe@erlang.ericsson.se", {1999,10,29}}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["tool","code"]}.
+{summary, "A program that checks validity of external references"}.
+{keywords, ["exref","xref","dependency","depend"]}.
+{depends, ["kernel","stdlib"]}.
+{abstract,"Depcheck is a program for finding incorrect module dependencies. "
+ "Given a source module, it will attempt to locate the dependency modules "
+ "and validate the function calls. The dependency modules are scanned "
+ "syntactically, not parsed. (The source module needs to be compilable "
+ "and is analysed using exref)."}.
+{home, "http://www.erlang.org/user.html#depcheck-1.0"}.
+{url, "http://www.erlang.org/contrib/depcheck-1.0.tgz"}.

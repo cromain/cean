@@ -1,0 +1,9 @@
+{author, {"Chris Anderson", "jchris@apache.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An easy direct Erlang CouchDB library."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jchris/hovercraft"}.
+{url, "git://github.com/jchris/hovercraft.git"}.
