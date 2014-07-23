@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","tool","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A utility used to handle abstract Erlang syntax trees"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/syntax_tools/index.html\">syntax_tools Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

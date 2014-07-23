@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger, Tony Rogvall", "ulf at feuerlabs.com, tony at rogvall.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Key value data base API"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/Feuerlabs/kvdb"}.
+{url, "https://github.com/Feuerlabs/kvdb.git"}.

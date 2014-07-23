@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "IDL compiler"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/ic/index.html\">ic Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

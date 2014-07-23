@@ -1,0 +1,9 @@
+{author, {"Inaka Labs", "info at inakanetworks.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang version of Redis."}.
+{abstract, "Still in its very early stages."}.
+{home, "https://github.com/inaka/edis"}.
+{url, "https://github.com/inaka/edis.git"}.

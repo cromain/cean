@@ -1,0 +1,9 @@
+{author, {"Andreas Stenius", "git at astekk.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A generic tcp listener process adhering to OTP design principles"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/kaos/gen_listener_tcp"}.
+{url, "https://github.com/kaos/gen_listener_tcp.git"}.

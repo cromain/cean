@@ -1,0 +1,27 @@
+{author, {"Claes Wikstrom", "klacke at hyber.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["web","server","application"]}.
+{depends, ["compiler","crypto","inets","kernel","mnesia","ssl","stdlib","tools","xmerl"]}.
+{keywords, ["web","http","server","dynamic","embedded"]}.
+{summary, "YAWS is an ERLANG web server"}.
+{abstract, "YAWS has a wide feature set, it supports:"
+   "<ul>"
+   "<li> HTTP 1.0 and HTTP 1.1"
+   "<li> Static content page delivery"
+   "<li> Dynamic content generation using embedded ERLANG code in the HTML pages"
+   "<li> Common Log Format traffic logs"
+   "<li> Virtual hosting with several servers on the same IP address"
+   "<li> Multiple servers on multiple IP addresses"
+   "<li> HTTP tracing for debugging"
+   "<li> An interactive interpreter environment in the Web server while developing and debugging the web site"
+   "<li> RAM caching of commonly accessed pages"
+   "<li> Full streaming capabilities of both up and down load of dynamically generated pages"
+   "<li> SSL"
+   "<li> Support for WWW-Authenticated pages"
+   "<li> Support API for cookie based sessions"
+   "<li> Application Modules where virtual directory hierarchies can be made"
+   "<li> Embedded mode"
+   "</ul>"}.
+{home, "http://yaws.hyber.org"}.
+{url, "https://github.com/klacke/yaws.git"}.
+{configure, "--disable-pam"}.

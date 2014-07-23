@@ -1,0 +1,9 @@
+{author, {"Ari", "me at ari.io"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A convenience layer to layer erlang apps"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/auser/layers"}.
+{url, "https://github.com/auser/layers.git"}.

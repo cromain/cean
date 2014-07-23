@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", "http://basho.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A logging framework for Erlang/OTP."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/lager"}.
+{url, "https://github.com/basho/lager.git"}.

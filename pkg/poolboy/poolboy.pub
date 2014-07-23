@@ -1,0 +1,9 @@
+{author, {"Devin Torres", "devin@devintorr.es"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A hunky Erlang worker pool factory"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/devinus/poolboy"}.
+{url, "https://github.com/devinus/poolboy.git"}.

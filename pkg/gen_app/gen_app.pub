@@ -1,0 +1,9 @@
+{author, {"Jakob Sievers", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Basic Erlang application template."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/cannedprimates/gen_app"}.
+{url, "https://github.com/cannedprimates/gen_app.git"}.

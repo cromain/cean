@@ -1,0 +1,16 @@
+# Description: Get CEAN files status
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: git
+# Usage: cean/status
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/status" $* || return $bad_use
+
+for repos in ~/.cean*/.git
+do
+    _info "(cean) repository ${repos/.git/}"
+    (cd ${repos/.git/}; git status)
+done
+
+_info "(cean) installed:"
+(cd $CEAN_ROOT/lib; ls -1 | grep "-" | xargs echo)

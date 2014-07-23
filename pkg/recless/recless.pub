@@ -1,0 +1,9 @@
+{author, {"Yariv Sadan", "yarivsblog at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["type"]}.
+{depends, ["stdlib"]}.
+{keywords, []}.
+{summary, "A type inferring Erlang parse transform"}.
+{abstract, "WARNING: RECLESS IS EXPERIMENTAL AND NOT YET FINISHED!!!"}.
+{home, "http://code.google.com/p/recless"}.
+{url, "http://recless.googlecode.com/svn/trunk"}.

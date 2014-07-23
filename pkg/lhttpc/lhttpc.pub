@@ -1,0 +1,9 @@
+{author, {"Erlang Solutions", "http://www.erlang-solutions.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "lhttpc is a lightweight HTTP/1.1 client."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/esl/lhttpc"}.
+{url, "https://github.com/esl/lhttpc.git"}.

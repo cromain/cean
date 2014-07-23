@@ -1,0 +1,8 @@
+{author, {"Gordon Beaton, TT&#246;rnkvist", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","driver","code"]}.
+{depends, []}.
+{keywords, ["driver"]}.
+{summary, "Low level interface to C"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/erl_interface/index.html\">erl_interface Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

@@ -1,0 +1,16 @@
+pkg_fetch() {
+    import/git $pkg_name $pkg_url $* || return $import_error
+    (cd $CEAN_ROOT/src; for lib in otp/lib/*(/); [ -e $lib:t ] || ln -s $lib $lib:t)
+    (cd $CEAN_ROOT/src; [ -e erts ] || ln -s otp/erts/preloaded erts)
+    (cd $CEAN_ROOT/src/otp/erts/preloaded; [ -e vsn.mk ] || ln -s ../vsn.mk)
+    (_pkg_cd_sources && git checkout OTP_${ERLANG_VERSION})
+    pkg_vsn=${$(_pkg_cd_sources && pkg_revision)#OTP_}
+}
+pkg_init() { ./otp_build autoconf; }
+pkg_install() {
+    local dist=$(_pkg_dist)
+    mkdir -p $dist
+    $MAKE install || return $install_error
+    (cd $dist/lib/erlang/lib
+     for lib in *; tar zcf $CEAN_ROOT/tmp/$lib.tgz $lib)
+}

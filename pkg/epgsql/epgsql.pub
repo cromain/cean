@@ -1,0 +1,9 @@
+{author, {"Will Glozer", "wglozer at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["driver","database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "Erlang PostgreSQL Database Client"}.
+{abstract, "Erlang PostgreSQL Database Client with support for PostgreSQL 9.0."}.
+{home, "https://github.com/wg/epgsql"}.
+{url, "https://github.com/wg/epgsql.git"}.

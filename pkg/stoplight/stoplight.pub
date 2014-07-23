@@ -1,0 +1,9 @@
+{author, {"Nate Murray", "nate at natemurray.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "fully distributed mutex server in erlang based on the sigma algorithm"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jashmenn/stoplight"}.
+{url, "https://github.com/jashmenn/stoplight.git"}.

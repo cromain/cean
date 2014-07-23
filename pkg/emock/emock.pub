@@ -1,0 +1,9 @@
+{author, {"Christian", ""}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Quick and useful mocking of OTP gen behaviors"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/noss/emock"}.
+{url, "https://github.com/noss/emock.git"}.

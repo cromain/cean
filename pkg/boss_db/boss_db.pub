@@ -1,0 +1,9 @@
+{author, {"", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "BossDB: a sharded, caching, pooling, evented ORM for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ChicagoBoss/boss_db"}.
+{url, "https://github.com/ChicagoBoss/boss_db.git"}.

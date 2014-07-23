@@ -1,0 +1,9 @@
+{author, {"Jeremy Self", "finder83 at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A small erlang centric cache server loosely based on memcached"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/finder/erl_tempcache"}.
+{url, "https://github.com/finder/erl_tempcache.git"}.

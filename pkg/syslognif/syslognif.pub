@@ -1,0 +1,9 @@
+{author, {"Nick Gerakines", "nick at gerakines.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A small nif to tap into syslog from an Erlang node."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ngerakines/syslognif"}.
+{url, "https://github.com/ngerakines/syslognif.git"}.

@@ -1,0 +1,9 @@
+{author, {"", ""}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang View Server for CouchDB"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mmcdanie/erlview"}.
+{url, "https://github.com/mmcdanie/erlview.git"}.

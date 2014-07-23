@@ -1,0 +1,20 @@
+simple description of functions
+
+bootstrap
+ generate and install bootstrap
+cean
+ manipulate cean working directories, and i/o on /pub repository
+cross
+ handle cross compilation
+devel
+ work with local changes of packages
+export
+ export packages builds into /pub (sources, tarball, packages, installers...)
+import
+ import packages sources into /src
+package
+ handle packages, from fetching to build, and install on current bootstrap
+rcs
+ support rcs for interractive prompt (git svn darcs mercurial monotone...)
+test
+ manage unit tests and packages status

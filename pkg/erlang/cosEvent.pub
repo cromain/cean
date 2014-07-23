@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","net"]}.
+{depends, ["kernel","orber","stdlib"]}.
+{keywords, ["orb"]}.
+{summary, "Orber OMG Event Service"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/cosEvent/index.html\">cosEvent Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

@@ -1,0 +1,9 @@
+{author, {"", ""}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Exo socket library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/Feuerlabs/exo"}.
+{url, "https://github.com/Feuerlabs/exo.git"}.

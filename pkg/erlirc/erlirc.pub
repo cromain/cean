@@ -1,0 +1,10 @@
+{author, {"Geoff Cant", "nem at erlang.geek.nz"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["chat","code"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["irc","library"]}.
+{summary, "IRC library"}.
+{abstract, "ErlIRC is an IRC library for Erlang that contains protocol parsers and generators for "
+    "client-server, server-client and some varieties of server-server connections."}.
+{home, "https://github.com/archaelus/erlirc"}.
+{url, "https://github.com/archaelus/erlirc.git"}.

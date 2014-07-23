@@ -1,0 +1,83 @@
+# Default package building script
+# Should work for most simple packages
+# each function can be overriden on package.build files
+
+ERL=erl
+ERLC=erlc
+which gmake >/dev/null 2>/dev/null && MAKE=gmake || MAKE=make
+
+export ERL ERLC MAKE
+
+pkg_fetch() {
+    case $pkg_url in
+      git:*|*.git) import/git $pkg_name $pkg_url $* || return $import_error ;;
+      svn:*|*/svn.*|*/svn/*|*.svn.*) import/svn $pkg_name $pkg_url $* || return $import_error ;;
+      cvs:*|*/cvs.*|*.cvs.*|:pserver*) import/cvs $pkg_name $pkg_url $* || return $import_error ;;
+      http*tar|http*gz|http*bz2|http*zip) import/archive $pkg_name $pkg_url $* || return $import_error ;;
+      *) _error "($pkg_name) invalid url: $pkg_url"; return $package_error ;;
+    esac
+    # force refresh of pkg_vsn against repository
+    pkg_vsn=${$(_pkg_cd_sources && pkg_revision)#v}
+    [[ "$pkg_vsn" == "" ]] && pkg_vsn=0 || :
+}
+pkg_revision() {
+    [ -f vsn.mk ] && sed -e '/VSN/!d;s/.*=//;s/ //g;q' vsn.mk || {
+        case $pkg_url in
+          *tar|*gz|*bz2|*zip) _git_last_revision ;;
+          *) _git_best_revision ;;
+        esac
+    }
+}
+
+pkg_init() {
+    # Format things a standard way
+    local spec
+    for spec in hrl:include erl:src app:ebin c:c_src h:c_src beam:ebin
+    do
+        local ext=${spec%:*} dir=${spec#*:}
+        mkdir -p $dir
+        local -a files; files=($(find . -name "*\.$ext"))
+        [ $#files -eq 0 ] || for file in $files; mv $file $dir 2>/dev/null >/dev/null
+    done
+    # Generate default Makefile if needed
+    [ -e configure -o -e Makefile ] || {
+        [ -f src/Makefile ] && {
+            cat > Makefile << EOF
+all:
+	@(cd src && $MAKE)
+EOF
+        } || {
+            cat > Makefile << EOF
+all:
+	@$ERL -make
+EOF
+            [ -e Emakefile ] || cat > Emakefile << EOF
+{"src/*", [{i, "include"}, {outdir, "ebin"}]}.
+EOF
+        }
+    }
+}
+pkg_config() {
+    [ -x configure ] && ./configure --prefix=$PWD/$(_pkg_dist) $pkg_cfg || :
+}
+pkg_make() {
+    [ -f Makefile ] && {
+        $MAKE
+    } || {
+        [ -f rebar.config ] && {
+            rebar get-deps
+            rebar compile
+        }
+    }
+}
+pkg_install() {
+    local dist=$(_pkg_dist)
+    mkdir -p $dist
+    if [ -x configure ]; then
+        $MAKE install
+    else
+        local dir
+        for dir in ebin include doc src c_src priv; [ -d $dir ] && mv $dir $dist || :
+    fi
+    [ -d $dist/priv/obj ] && rm -Rf $dist/priv/obj || :
+}

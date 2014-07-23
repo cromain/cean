@@ -1,0 +1,184 @@
+# Description: Global CEAN helpers
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: sed grep
+# Usage: cean/init  (mostly invoqued by cean shell command)
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+# help functions
+help() {
+    if [ -z $1 ]; then
+        _info "available functions:"
+        grep "^# Descr" ~/.cean*/functions/*/* | sed -e 's|.*/\(.[^/]*/.*\):# Description\(.*\)|\1\2|'
+        echo "package: Meta function that fetch/build/install a package"
+        echo "map: Meta function that apply given function on every listed packages"
+        echo "all: Meta function that apply given function on all packages"
+        echo "todo: Displays all CEAN's TODO"
+        echo "help: Displays this text"
+        _info "call 'help module/function' to have usage info of given module/function"
+    else
+        cat ~/.cean*/functions/$1 | head -n4 | sed -e 's/Usage/Usage example/'
+        echo -n "# Usage: "
+        sed -e '/_api_check/!d;s/.*"\(.*\)".*/\1/' ~/.cean*/functions/$1
+    fi
+}
+todo() { grep -r TODO ~/.cean*/{pkg,functions} | grep -v "todo()"; }
+
+# meta functions
+package() {
+    package/fetch $*
+    local epkg=$(_pkg_epkg $2)
+    [ -e $epkg ] && {
+        _warn "($pkg_name) package already available in ${epkg/$CEAN_ROOT/}"
+        return $success
+    }
+    package/build $1 && package/install $1
+}
+map() {
+    _api_check "map function package [pacakge pacakage ...]" $* || return $bad_use
+    local package call=$1; shift
+    for package in $*; $call $package
+}
+all() {
+    _api_check "all function" $* || return $bad_use
+    local pub call=$1
+    for pub in $(grep -r "{url," ~/.cean/pkg/*/*pub | cut -d: -f1 | grep -v "/erlang/"); $call $pub:t:r
+}
+
+# formatting helpers
+_url_encode() {
+    local url=${1#*:}
+    local encoded=$(echo $url | sed 's/ /%20/g;s/!/%21/g;s/"/%22/g;s/#/%23/g;s/\$/%24/g;s/\&/%26/g;s/%/%25/g;s/\*/%2A/g;s/+/%2B/g;s/,/%2C/g;s/~/%7E/g')
+    echo ${1%%:*}:$encoded
+}
+
+# last available Erlang/OTP version
+_latest_otp_vsn() {
+    curl -silent ${ERLANG_MIRROR}.html | grep otp_src | grep readme | head -n1 | sed 's/.*otp_src_\(.*\)\.readme.*/\1/'
+}
+
+# Logging functions
+_usage() { echo "$sc[usage]usage: $*$sc[reset]"; }
+_error() { echo "$sc[error]$*$sc[reset]"; }
+_warn() { echo "$sc[warn]$*$sc[reset]"; }
+_info() { echo "$sc[info]$*$sc[reset]"; }
+_debug() { echo "$sc[debug]$*$sc[reset]"; }
+_ask() { echo -n "$sc[warn]$* ?$sc[reset] (y/n) "; read foo; [[ $foo:l == "y" ]] }
+
+# Return codes
+success=0
+cancel=1
+bad_use=1
+missing_file=2
+missing_package=3
+missing_sources=4
+internal_error=5
+network_error=6
+package_error=7
+fetch_error=8
+init_error=9
+config_error=10
+make_error=11
+install_error=12
+import_error=13
+export_error=14
+repository_error=15
+
+# Workdir helpers
+_cd_workdir() { local tmp=$CEAN_ROOT/tmp/${$(_pkg_dist):-$(date +%H%M%S).$$}; mkdir -p $tmp; cd $tmp; }
+_rm_workdir() { local old=$PWD:t; cd $CEAN_ROOT; rm -Rf tmp/$old; }
+_clean_tmpdir() { rm -Rf $CEAN_ROOT/tmp/*; }
+
+# Functions API helpers
+_api_check() {
+    local -a usage args
+    usage=(${(s| |)1}); args=(${(s| |)1%%\[*})
+    if [ $#usage -eq $#args ]; then
+        [ $# -ne $#args ] && { _usage $usage; return $bad_use; } || :
+    else
+        [ $# -lt $#args ] && { _usage $usage; return $bad_use; } || :
+    fi
+}
+_api_import() {
+    [[ $1 == $pkg_name ]] || _pkg_read_spec $1 || return $package_error
+    [[ $2 == $pkg_url ]] || {
+        _warn "($pkg_name) you provided a different url from package spec"
+        _info "  please check $(_pkg_spec) if it needs update"
+        pkg_url=$2
+    }
+    [[ $1$3 = $pkg_name$pkg_vsn ]] || {
+        [ -z $3 ] || {
+            _warn "($pkg_name) force version to '$3'"
+            pkg_vsn=$3
+        }
+    }
+}
+_api_export() {
+    [[ $1 == $pkg_name ]] || _pkg_read_spec $1 || return $package_error
+}
+
+# Package helpers
+# package helpers generate/use some package related live data
+# global package variables: pkg_name pkg_url pkg_deps pkg_vsn pkg_cfg
+# global package functions: pkg_fetch pkg_revision pkg_init pkg_config pkg_make pkg_install
+
+_pkg_clean_spec() {
+    pkg_name=""
+    pkg_vsn=""
+    pkg_url=""
+    pkg_deps=""
+    pkg_cfg=""
+    pkg_pub=""
+}
+_pkg_read_spec() {
+    local pkg=$1
+    local -a pubs; pubs=($(ls -1d ~/.cean*/pkg/*/$pkg.pub))
+    [ $#pubs -eq 0 ] && {
+        _error "($pkg) not a package"
+        return $missing_package
+    }
+    [ $#pubs -gt 1 ] && {
+        _error "($pkg) multiple definition"
+        return $package_error
+    }
+    local pub=$pubs[1]
+    local instance=$(sed -e '/{instance/!d;s/.* \(.*\)}./\1/' $pub)
+    local master=${pub%/*}
+    source ~/.cean/pkg/.default.build
+    pkg_deps=()
+    [ -z $instance ] || _pkg_read_spec $instance
+    [ -f $master/$master:t.build ] && source $master/$master:t.build
+    [ -f ${pub/.pub/.build} ] && source ${pub/.pub/.build}
+    pkg_name=$pkg
+    pkg_instance=$instance
+    pkg_url=$(_url_encode $(sed -e '/{url,/!d;s/.*"\(.*\)".*/\1/' $pub))
+    pkg_deps=($pkg_deps $(sed -e '/{depends,/!d;y/",/  /;s/.*\[\(.*\)\].*/\1/' $pub))
+    typeset -U pkg_deps  # uniq sort deps
+    pkg_pub=$(sed -e '/{delivery_url,/!d;s/.*"\(.*\)".*/\1/' $pub)
+    pkg_cfg=$(sed -e '/{configure,/!d;s/.*"\(.*\)".*/\1/' $pub)
+    pkg_vsn=${$(_pkg_cd_sources && pkg_revision)#v}
+    [ -z $pkg_vsn ] && for pkg_vsn in $CEAN_ROOT/tmp/${pkg_name}-*(N:t:r); pkg_vsn=${pkg_vsn#*-} # hackish, but helpfull for cean/import bootstrap
+    [[ $pkg_vsn == "" ]] && {
+        pub=$(_pkg_pubspec)
+        [[ $pub == "." ]] && pkg_vsn="0" || pkg_vsn=$(sed '$!d;s/{versions,\[//;s/{"\(.[^"]*\)".*/\1/' $pub)
+    }
+    return $success
+}
+_pkg_cd_sources() { cd $(_pkg_sources) 2>/dev/null }
+_pkg_sources() { [ -z $pkg_name ] || echo $CEAN_ROOT/src/$pkg_name }
+_pkg_bin()     { [ -z $pkg_pub ] && echo $CEAN_ROOT/pub/bin/${1:-$CEAN_HOSTARCH}/${ERLANG_VERSION%[A-D]*}/$pkg_name || echo $CEAN_ROOT/pub/$pkg_pub }
+_pkg_src()     { [ -z $pkg_pub ] && echo $CEAN_ROOT/pub/src/$pkg_name || echo $CEAN_ROOT/pub/$pkg_pub }
+_pkg_epkg()    { [ -z $pkg_name ] || echo $(_pkg_bin $1)/$(_pkg_dist).epkg }
+_pkg_tarball() { [ -z $pkg_name ] || echo $(_pkg_src)/$(_pkg_dist).tgz }
+_pkg_reltar()  { [ -z $pkg_name ] || echo $(_pkg_bin $1)/$(_pkg_dist).rel.tgz }
+_pkg_spec()    { [ -z $pkg_name ] || /bin/ls -1d ~/.cean*/pkg/*/${pkg_name}.pub([1]) }
+_pkg_pubspec() { [ -z $pkg_name ] || /bin/ls -1d $CEAN_ROOT/pub/bin/${1:-$CEAN_HOSTARCH}/${ERLANG_VERSION%[A-D]*}/$pkg_name/$pkg_name.pub(N) }
+_pkg_dist()    { [ -z $pkg_name ] || echo ${pkg_name}-${pkg_vsn} }
+
+# Theme loader and other init stuff
+cean/theme
+
+# Make sure .cache/cean exists
+[ -d ~/.cache/cean ] || mkdir -p ~/.cache/cean
+
+# Make sure we use correct version of OTP sources for packaging
+[ -d src/otp ] && { cd src/otp; git checkout OTP_$ERLANG_VERSION 2>/dev/null; cd $CEAN_ROOT }

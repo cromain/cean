@@ -1,0 +1,9 @@
+{author, {"Steve Vinoski", "vinoski at ieee.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "SHA-224, SHA-256, SHA-384, SHA-512 implemented in Erlang NIFs."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/vinoski/erlsha2"}.
+{url, "https://github.com/vinoski/erlsha2.git"}.

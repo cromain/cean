@@ -1,0 +1,9 @@
+{author, {"Isac Sacchi e Souza", "isacssouza@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Convert fprof to callgring output"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/isacssouza/erlgrind"}.
+{url, "https://github.com/isacssouza/erlgrind.git"}.

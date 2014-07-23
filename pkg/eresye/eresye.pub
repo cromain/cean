@@ -1,0 +1,9 @@
+{author, {"Corrado Santoro", "corrado_santoro at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["code","math"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["ai","scientific"]}.
+{summary, "ERlang Expert SYstem Engine"}.
+{abstract, "It is a library to write expert systems and rule processing engines using the Erlang programming language It allows to create multiple engines each one with its own facts and rules to be processed"}.
+{home, "http://eresye.sourceforge.net"}.
+{url, "svn://svn.code.sf.net/p/eresye/code/trunk"}.

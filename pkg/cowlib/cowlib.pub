@@ -1,0 +1,9 @@
+{author, {"99s Open Source", "contact at ninenines.eu"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Support library for manipulating Web protocols."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/extend/cowlib"}.
+{url, "https://github.com/extend/cowlib.git"}.

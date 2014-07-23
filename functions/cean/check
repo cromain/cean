@@ -1,0 +1,43 @@
+# Description: Check local packages repository and fix issues
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cean/check
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/check" $* || return $bad_use
+local arch package generic real
+
+# Make sur generic packages are made available for all platforms
+cd $CEAN_ROOT/pub/bin
+for package in $(/bin/ls -d generic/${ERLANG_VERSION%[A-D]*}/*)
+do
+    for arch in $(/bin/ls -1 | grep -v generic)
+    do
+        for generic in $package/*
+        do
+            real=${package/generic/$arch}
+            [ -d $real ] || mkdir -p $real
+            [ -e $real/$generic:t ] || (cd $real; ln -s ../../../$generic)
+        done
+    done
+done
+cd $CEAN_ROOT
+
+# Warn about inconsistent packages
+for package in $(find $CEAN_ROOT/pub/bin -type f -name "*epkg" | grep "/${ERLANG_VERSION%[A-D]*}/")
+do
+    _cd_workdir
+    tar xf $package
+    real=$package:t:r
+    nbsrc=$((`unzip -l $real.src.zip 2>/dev/null | grep "\.erl" | wc -l`))
+    nbbeam=$((`unzip -l $real.ez 2>/dev/null | grep "\.beam" | wc -l`))
+    _rm_workdir
+    [ $nbsrc -eq 0 ] && _warn ${package/$CEAN_ROOT/} does not have sources
+    [ $nbbeam -eq 0 ] && _warn ${package/$CEAN_ROOT/} compilation failed || {
+        [ $nbsrc -gt $nbbeam ] && _warn ${package/$CEAN_ROOT/} partial compilation
+    }
+done
+
+# TODO Clean .pub entries
+
+_info "done"

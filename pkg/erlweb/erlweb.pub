@@ -1,0 +1,12 @@
+{author, {"Stuart Jackson", "sjackson at simpleenigma.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["web","server"]}.
+{depends, ["kernel","stdlib","xmerl"]}.
+{keywords, []}.
+{summary, "erlweb is a complete Web Server"}.
+{abstract, "erlweb is a series of Erlang modules that is being developed into a full web server "
+ "with it's own tag based programming language called Erlang Markup Language (ERML). "
+ "At the moment ERML is the only real working component. "
+ "erlweb is part of the Erlang Internet Framework."}.
+{home, "http://erlsoft.org/modules/erlweb"}.
+{url, "http://erlweb.googlecode.com/svn/trunk"}.

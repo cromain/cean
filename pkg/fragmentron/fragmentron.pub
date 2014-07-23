@@ -1,0 +1,14 @@
+{author, {"Paul Goo", "paul-goo at mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["database","net"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Automatically balance mnesia tables (or general erlang processes) in response to node set changes"}.
+{abstract, "Mnesia is Erlang's built-in distributed database. It provides primitives for adding nodes to the "
+ "database set and to manage fragments, but does not prescribe any high-level strategies.<br>"
+ "Fragmentron provides one strategy for automatically distributing data as nodes are added and removed from "
+ "the system. This simplifies Mnesia administration in a dynamic environment, e.g., EC2.<br>"
+ "gen_herd is a generalization of the fragmentron strategy to arbitrary Erlang processes, intended for "
+ "partitioned services that need to be automatically (re)distributed across a computing cluster."}.
+{home, "http://code.google.com/p/fragmentron"}.
+{url, "http://fragmentron.googlecode.com/svn/trunk"}.

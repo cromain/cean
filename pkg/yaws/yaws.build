@@ -1,0 +1,19 @@
+pkg_fetch() {
+    import/git $pkg_name $pkg_url $* || return $import_error
+    pkg_vsn=${$(_pkg_cd_sources && pkg_revision)#yaws-}
+}
+pkg_init() { : }
+pkg_config() { autoconf && ./configure --prefix=$PWD/$(_pkg_dist) $pkg_cfg }
+pkg_install() {
+    local dist=$(_pkg_dist)
+    mkdir -p $dist
+    $MAKE install || return $install_error
+    $MAKE distclean
+    (cd $dist
+     mv ../c_src . ; mv ../src .
+     mv lib/yaws/* . ; mv bin priv ; rm -Rf lib
+     mv etc/yaws priv/cfg ; mv etc/init.d/yaws priv/bin/yaws.init ; rm -Rf etc
+     mv var/yaws/www priv ; rm -Rf var
+     mv share doc ; rm -Rf doc/doc
+     mv examples doc)
+}

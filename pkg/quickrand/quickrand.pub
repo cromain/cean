@@ -1,0 +1,9 @@
+{author, {"Michael Truog", "mjtruog@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Quick Erlang Random Number Generation"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/okeuday/quickrand"}.
+{url, "https://github.com/okeuday/quickrand.git"}.

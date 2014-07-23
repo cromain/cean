@@ -1,0 +1,9 @@
+{author, {"Gun.io Robot", "http://gun.io"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A DNS Service Discovery focused DNS server"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/GunioRobot/dnsxd"}.
+{url, "https://github.com/GunioRobot/dnsxd.git"}.

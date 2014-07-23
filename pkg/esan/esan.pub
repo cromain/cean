@@ -1,0 +1,9 @@
+{author, {"Ngoc Dao", "ngocdaothanh at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang XHTML sanitizer in the white-list style"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ngocdaothanh/esan"}.
+{url, "https://github.com/ngocdaothanh/esan.git"}.

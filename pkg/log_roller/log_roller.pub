@@ -1,0 +1,9 @@
+{author, {"Jacob Vorreuter", "jacob.vorreuter at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A pub/sub modeled, distributed Erlang logging system"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/JacobVorreuter/log_roller"}.
+{url, "https://github.com/JacobVorreuter/log_roller.git"}.

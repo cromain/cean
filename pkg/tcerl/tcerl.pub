@@ -1,0 +1,12 @@
+{author, {"Paul Goo", "paul-goo at mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["database","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["tokyocabinet","tc"]}.
+{summary, "port of tokyocabinet to erlang, an tokyocabinet based erlang term store"}.
+{abstract, "tokyocabinet is a DBM style library which boasts excellent space and time efficiency. "
+ "This project provides a low-level port of tokyocabinet to Erlang via a linked-in driver, "
+ "which supports storage of binaries. It also provides a high level erlang term store interface which "
+ "mimics dets very closely. The erlang term store can serve as an mnesia table via mnesiaex."}. 
+{home, "http://code.google.com/p/tcerl"}.
+{url, "http://tcerl.googlecode.com/svn/trunk"}.

@@ -1,0 +1,9 @@
+{author, {"Gleb Peregud", "gleber.p at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Cloud Computing library for erlang (Amazon EC2, S3, SQS, SimpleDB, Mechanical Turk, ELB)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/gleber/erlcloud"}.
+{url, "https://github.com/gleber/erlcloud.git"}.

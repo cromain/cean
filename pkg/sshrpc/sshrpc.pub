@@ -1,0 +1,9 @@
+{author, {"Kenji Rikitake", "kenji at k2r.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang SSH RPC module (experimental)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jj1bdx/sshrpc"}.
+{url, "https://github.com/jj1bdx/sshrpc.git"}.

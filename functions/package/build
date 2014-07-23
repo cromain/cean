@@ -1,0 +1,46 @@
+# Description: Compile a package
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: git tar
+# Usage: package/build ejabberd linux-x86
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/build package [arch]" $* || return $bad_use
+local package=$1
+local arch=${2:-$CEAN_HOSTARCH}
+[[ $package == $pkg_name ]] || _pkg_read_spec $package || return $package_error
+export/sources $pkg_name || return $missing_sources
+local sources=$(_pkg_tarball)
+local dist=$sources:t:r
+[ -f $sources ] || return $missing_sources
+
+_info "($pkg_name) extracting ${sources/$CEAN_ROOT/}..."
+(cd $CEAN_ROOT/tmp; tar zxf $sources 2>/dev/null)
+cd $CEAN_ROOT/tmp/$sources:t:r || {
+    # this simulates _cd_workdir, and exit if no sources
+    _error "($pkg_name) empty sources"
+    return $missing_sources
+}
+rm .gitignore **/.empty(N) 2>/dev/null
+mkdir -p $dist
+_info "($pkg_name) sources formatting..."
+pkg_init || {
+    _error "($pkg_name) error in pkg_init"
+    return $init_error
+}
+_info "($pkg_name) sources configuration..."
+pkg_config || {
+    _error "($pkg_name) error in pkg_config"
+    return $config_error
+}
+_info "($pkg_name) sources compilation..."
+pkg_make $arch || {
+    _error "($pkg_name) error in pkg_make"
+    return $make_error
+}
+_info "($pkg_name) binary installation..."
+pkg_install || {
+    _error "($pkg_name) error in pkg_install"
+    return $install_error
+}
+tar zcf $CEAN_ROOT/tmp/$dist.tgz $dist
+_rm_workdir

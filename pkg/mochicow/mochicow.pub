@@ -1,0 +1,9 @@
+{author, {"", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "mochiweb adapter for cowboy."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ChicagoBoss/mochicow"}.
+{url, "https://github.com/ChicagoBoss/mochicow.git"}.

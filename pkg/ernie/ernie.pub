@@ -1,0 +1,9 @@
+{author, {"Tom Preston-Werner", "tom at github.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "an Erlang/Ruby BERT-RPC Server."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mojombo/ernie"}.
+{url, "https://github.com/mojombo/ernie.git"}.

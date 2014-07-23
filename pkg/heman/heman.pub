@@ -1,0 +1,9 @@
+{author, {"Nick Gerakines", "nick at gerakines.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Masters of the universe ... of stats"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ngerakines/heman"}.
+{url, "https://github.com/ngerakines/heman.git"}.

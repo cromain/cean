@@ -1,0 +1,9 @@
+{author, {"Jayson Vantuyl", "kagato at souja.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang Benchmark Suite"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jvantuyl/erlbench"}.
+{url, "https://github.com/jvantuyl/erlbench.git"}.

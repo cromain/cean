@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", "http://basho.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Contribute to riak_ensemble development by creating an account on GitHub."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/riak_ensemble"}.
+{url, "https://github.com/basho/riak_ensemble.git"}.

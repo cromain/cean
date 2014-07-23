@@ -1,0 +1,9 @@
+{author, {"Dmitriid","dmitriid at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["inets","kernel","ssl","stdlib","xmerl"]}.
+{keywords, []}.
+{summary, "An offline client for RSDN in Erlang"}.
+{abstract, "Russian Software Developers' Network, RSDN, is one of the largest community portals in RuNet (Russian section of the Internet)."}.
+{home, "http://code.google.com/p/orcas"}.
+{url, "http://orcas.googlecode.com/svn/trunk"}.

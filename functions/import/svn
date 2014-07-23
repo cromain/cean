@@ -1,0 +1,17 @@
+# Description: Imports a SVN repository into a local git
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: import/svn erlydtl http://erlydtl.googlecode.com/svn/trunk
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "import/svn package url [branch|tag|revision]" $* || return $bad_use
+_api_import $* || return $bad_use
+
+[ -d $(_pkg_sources) ] && {
+    _info "($pkg_name) updating local repository..."
+    (_pkg_cd_sources ; git svn rebase)
+} || {
+    _info "($pkg_name) creating local repository..."
+    (cd $CEAN_ROOT/src
+     git svn clone $pkg_url $pkg_name)
+}

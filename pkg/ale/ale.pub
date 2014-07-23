@@ -1,0 +1,9 @@
+{author, {"Tony Rogvall", "tony at rogvall.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Lager trace manager"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tonyrog/ale"}.
+{url, "https://github.com/tonyrog/ale.git"}.

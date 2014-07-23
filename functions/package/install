@@ -1,0 +1,21 @@
+# Description: Install compiled package in local repository (export source and epkg)
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: package/install ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/install package [arch]" $* || return $bad_use
+[[ $1 == $pkg_name ]] || _pkg_read_spec $1 || return $package_error
+local spec=$(_pkg_spec) arch=$2
+local -a specs; specs=($spec:h/(*~$1)\.pub(N))
+
+# standalone .pub are single packages
+# else packages containst several .pub files which are subpackages
+# exception: instance packages are alwayse single package
+[ $#specs -eq 0 -o ! -z $pkg_instance ] && {
+    export/epkg $pkg_name $arch
+} || {
+    local subpkg
+    for subpkg in $specs; export/epkg $subpkg:t:r $arch
+    _pkg_read_spec $1
+}

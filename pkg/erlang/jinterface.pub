@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","driver","code"]}.
+{depends, []}.
+{keywords, []}.
+{summary, "Low level interface to Java"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/jinterface/index.html\">jinterface Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

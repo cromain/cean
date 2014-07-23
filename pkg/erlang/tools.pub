@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","tool","web"]}.
+{depends, ["compiler","inets","kernel","runtime_tools","stdlib","webtool"]}.
+{keywords, []}.
+{summary, "A set of programming tools including a coverage analyzer"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/tools/index.html\">tools Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

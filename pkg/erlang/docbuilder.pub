@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","doc"]}.
+{depends, ["edoc","kernel","stdlib","xmerl"]}.
+{keywords, ["generate","doc","documentation"]}.
+{summary, "provides functionality for generating HTML from XML source code and/or EDoc comments in Erlang source code"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/docbuilder/index.html\">docbuilder Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

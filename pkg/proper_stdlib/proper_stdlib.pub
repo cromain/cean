@@ -1,0 +1,9 @@
+{author, {"", "http://spawngrid.com/"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Standard generators for PropEr"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/spawngrid/proper_stdlib"}.
+{url, "https://github.com/spawngrid/proper_stdlib.git"}.

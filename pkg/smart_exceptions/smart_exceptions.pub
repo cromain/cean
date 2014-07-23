@@ -1,0 +1,9 @@
+{author, {"Thomas Lindgren", ""}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A code transform to improve Erlang exception reporting"}.
+{abstract, "Fork from jungerl"}.
+{home, "https://github.com/thomasl/smart_exceptions"}.
+{url, "https://github.com/thomasl/smart_exceptions.git"}.

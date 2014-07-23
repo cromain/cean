@@ -1,0 +1,9 @@
+{author, {"Tony Rogvall", "tony at rogvall.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["driver","misc"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "Erlang bindings for FUSE"}.
+{abstract, "Allows creation of FUSE filesystems written in Erlang."}.
+{home, "https://github.com/tonyrog/fuserl"}.
+{url, "https://github.com/tonyrog/fuserl.git"}.

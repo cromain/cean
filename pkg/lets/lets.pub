@@ -1,0 +1,9 @@
+{author, {"Joseph Wayne Norton", "norton at alum.mit.edu"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "LevelDB-based Erlang Term Storage."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/norton/lets"}.
+{url, "https://github.com/norton/lets.git"}.

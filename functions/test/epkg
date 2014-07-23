@@ -1,0 +1,21 @@
+# Description: Test an epkg archive
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: unzip
+# Usage: test/epkg ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "test/epkg package [arch]" $* || return $bad_use
+_pkg_read_spec $1
+local epkg=$(_pkg_epkg $2) dist=$(_pkg_dist)
+
+_cd_workdir
+tar xf $epkg
+nbsrc=$((`unzip -l $dist.src.zip 2>/dev/null | grep "\.erl" | wc -l`))
+nbbeam=$((`unzip -l $dist.ez 2>/dev/null | grep "\.beam" | wc -l`))
+nblib=$((`unzip -l $dist.priv.zip 2>/dev/null | grep "\.so" | wc -l`))
+_rm_workdir
+
+[ $nbsrc -eq 0 ] && { _error $epkg have no sources; return $package_error }
+[ $nbbeam -eq 0 ] && { _error $epkg compilation failed; return $package_error }
+[ $nbsrc -gt $nbbeam ] && { _warn $epkg partial compilation; return $package_error }
+return $success

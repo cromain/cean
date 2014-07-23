@@ -1,0 +1,9 @@
+{author, {"ProcessOne, was Magnus Ahltorp", "contact at process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["database","driver"]}.
+{depends, ["crypto","kernel","stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "MySQL native driver"}.
+{abstract, "MySQL for ejabberd "}.
+{home, "https://github.com/processone/mysql"}.
+{url, "https://github.com/processone/mysql.git"}.

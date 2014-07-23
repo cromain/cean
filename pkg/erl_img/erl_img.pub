@@ -1,0 +1,9 @@
+{author, {"Tony Rogvall", "tony at bix.hemma.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang image processing stuff (bmp, gif, jpeg, png, xpm, tiff, mpeg)"}.
+{abstract, "Fork from jungerl"}.
+{home, "https://github.com/emad/erl_img"}.
+{url, "https://github.com/emad/erl_img.git"}.

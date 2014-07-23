@@ -1,0 +1,8 @@
+{author, {"Richard Carlsson", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","doc","code"]}.
+{depends, ["inets","kernel","stdlib","syntax_tools","xmerl"]}.
+{keywords, ["doc"]}.
+{summary, "A utility used to generate documentation out of tags in source files"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/edoc/index.html\">edoc Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

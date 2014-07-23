@@ -1,0 +1,9 @@
+{author, {"David Dossot", "david at dossot.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Rackspace / Open Stack Cloud Files Erlang Client"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ddossot/cferl"}.
+{url, "https://github.com/ddossot/cferl.git"}.

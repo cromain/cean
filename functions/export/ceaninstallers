@@ -1,0 +1,19 @@
+# Description: Generate all CEAN installers
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: export/ceaninstallers
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "export/ceaninstallers" $* || return $bad_use
+local arch
+
+# build CEAN base installers
+map package/fetch ibrowse cean
+for arch in $(/bin/ls -d pub/bin/*/${ERLANG_VERSION%[A-D]*} | cut -d/ -f3 | grep -v generic)
+do
+    package/build ibrowse $arch
+    package/install ibrowse $arch
+    package/build cean $arch
+    package/install cean $arch
+    export/installer cean $arch
+done

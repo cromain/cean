@@ -1,0 +1,9 @@
+{author, {"Kresten Krab Thorup", "krab@trifork.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "lz4 nif"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/krestenkrab/erlang-lz4"}.
+{url, "https://github.com/krestenkrab/erlang-lz4.git"}.

@@ -1,0 +1,9 @@
+{author, {"Eric Cestari", "ecestari at mac.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "redis erlang client library (imported from bitbucket)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/cstar/erldis"}.
+{url, "https://github.com/cstar/erldis.git"}.

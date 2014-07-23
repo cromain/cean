@@ -1,0 +1,9 @@
+{author, {"Mochi Media, Inc.", "http://www.mochimedia.com/"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "MochiKit makes JavaScript suck less"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mochi/mochikit"}.
+{url, "https://github.com/mochi/mochikit.git"}.

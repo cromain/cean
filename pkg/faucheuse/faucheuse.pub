@@ -1,0 +1,9 @@
+{author, {"Astro", "astro at spaceboyz.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Feed Aggregator (Harvester rewrite in Erlang)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/astro/faucheuse"}.
+{url, "https://github.com/astro/faucheuse.git"}.

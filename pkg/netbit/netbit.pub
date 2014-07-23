@@ -1,0 +1,9 @@
+{author, {"Andy Libby", "http://www.xforty.com/"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang code for parsing pcap files"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/alibby/netbit"}.
+{url, "https://github.com/alibby/netbit.git"}.

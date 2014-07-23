@@ -1,0 +1,9 @@
+{author, {"", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Contribute to ejpet development by creating an account on GitHub."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/nmichel/ejpet"}.
+{url, "https://github.com/nmichel/ejpet.git"}.

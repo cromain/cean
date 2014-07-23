@@ -1,0 +1,9 @@
+{author, {"Dmitry Vasiliev", "dima at hlabs.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "ErlPort - connect Erlang to other languages"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/hdima/erlport"}.
+{url, "https://github.com/hdima/erlport.git"}.

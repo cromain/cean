@@ -1,0 +1,20 @@
+# Description: Download or syncronize package source code
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: package/fetch ejabberd v2.1.5
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/fetch package [branch|commit|tag]" $* || return $bad_use
+local package=$1
+_pkg_read_spec $package || return $package_error
+[[ (-n $pkg_instance) && ($pkg_url == ":") ]] && {
+    _info "($package) is instance of $pkg_instance"
+    (cd $CEAN_ROOT/src; [ -e $package ] || ln -s $pkg_instance $package)
+    _pkg_read_spec $pkg_instance || return $package_error
+}
+pkg_fetch $2 || {
+    _error "($package) error in pkg_fetch"
+    return $fetch_error
+}
+[[ $package == $pkg_name ]] || _pkg_read_spec $package
+_info "($package) version set to '$pkg_vsn'"

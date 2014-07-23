@@ -1,0 +1,9 @@
+{author, {"99s Open Source", "contact at ninenines.eu"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Parse transform for type based validation."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/extend/sheriff"}.
+{url, "https://github.com/extend/sheriff.git"}.

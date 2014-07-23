@@ -1,0 +1,9 @@
+{author, {"Tamas Patrovics", "tpatro at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["misc"]}.
+{depends, []}.
+{keywords, ["emacs","intellisense"]}.
+{summary, "Erlang IntelliSense for Emacs"}.
+{abstract, "Erlang IntelliSense for Emacs"}.
+{home, "http://esense.sourceforge.net"}.
+{url, "http://kent.dl.sourceforge.net/project/esense/esense/1.12beta/esense-1.12beta2.tgz"}.

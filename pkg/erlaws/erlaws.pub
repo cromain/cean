@@ -1,0 +1,13 @@
+{author, {"Sascha Matzke", "sascha.matzke at didolo.com"}}.
+{packager, {"Geoff Cant", "nem at erlang.geek.nz"}}.
+{category, ["net"]}.
+{depends, ["crypto","inets","kernel","stdlib","xmerl"]}.
+{keywords, ["amazon", "s3", "aws", "ec2", "sbs", "sqs", "sdb", "web", "services"]}.
+{summary, "An Amazon AWS API client library"}.
+{abstract,
+ "ErlAWS provides access to the Amazon Web Services API from Erlang. It"
+ "provides client code for the Elastic Compute Cloud (EC2), Simple"
+ "Storage Service (S3), Simple Block Service (SBS), Simple Queue Service"
+ "(SQS) and Simple Database (SDB)."}.
+{home, "https://github.com/x6j8x/erlaws"}.
+{url, "https://github.com/x6j8x/erlaws.git"}.

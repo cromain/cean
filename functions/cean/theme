@@ -1,0 +1,198 @@
+# Description: CEAN theme handler (prompt and shell colors)
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cean/theme
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+# Theme uses git metadata, so we keep them up to date
+rcs/git
+typeset -ga chpwd_functions
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+chpwd_functions+='cean_chpwd_hook'
+preexec_functions+='cean_preexec_hook'
+precmd_functions+='cean_precmd_hook'
+
+cean_chpwd_hook() {
+    _git_info_update
+    _git_info_eval name head revision prefix
+}
+
+cean_preexec_hook() {
+    if [[ $2 == git\ * ]] || [[ $2 == *\ git\ * ]]; then
+        _precmd_do_update=1
+    fi
+}
+
+cean_precmd_hook() {
+    local ex=$?
+    psvar=()
+    if [[ $ex -ge 128 ]]; then
+        sig=$signals[$ex-127]
+        psvar[1]="sig${(L)sig}"
+    else
+        psvar[1]="$ex"
+    fi
+    if [ $_precmd_do_update ]; then
+        unset _precmd_do_update
+        _git_info_update
+        _git_info_eval name head revision prefix
+    fi
+}
+
+prompt_cean_path() {
+    local prefix
+    [ -z $ERLANG_VERSION ] || prefix="$pc[name]$ERLANG_VERSION$pc[punc]:"
+    if _git_isgit; then
+        echo -n "$prefix$pc[name]$(_git_name)$pc[punc]:"
+        echo -n "$pc[branch]$(_git_head)$pc[punc]($pc[rev]$(_git_revision)$pc[punc]):"
+        if _git_isworktree; then
+            echo -n "$pc[path]$(_git_prefix)$pc[reset] "
+            local -a dirty
+            _git_hasunmerged && dirty+='!'
+            _git_hasuntracked && dirty+='?'
+            [ $#dirty -gt 0 ] && echo -n "$pc[dirty]${(j::)dirty}"
+            _git_isindexclean || echo -n "$pc[staged]+"
+            _git_isworktreeclean && echo -n "$pc[clean]>" || echo -n "$pc[dirty]>"
+        else
+            echo -n "$pc[text]bare$pc[reset] $pc[clean]>"
+        fi
+    else
+        local subpwd=${PWD#$CEAN_ROOT}
+        if [[ $subpwd == $PWD ]]; then
+            echo -n "$pc[path]%~$pc[reset] $pc[prompt]%#"
+        else
+            echo -n "$prefix$pc[path]$subpwd$pc[reset] $pc[prompt]>"
+        fi
+    fi
+    echo "$pc[reset] "
+}
+
+prompt_cean_status() {
+    _git_isgit || return
+    local head=$(_git_head)
+    local revision=$(_git_revision)
+    local -a commits
+    if _git_rebase_info; then
+        orig_commit=$(_git_revision $_git_info[rb_head])
+        orig_name=$(git name-rev --name-only $_git_info[rb_head])
+        orig="$pc[branch]$orig_name$pc[punc]($pc[rev]$orig_commit$pc[punc])"
+        onto_commit=$(_git_revision $_git_info[rb_onto])
+        onto_name=$(git name-rev --name-only $_git_info[rb_onto])
+        onto="$pc[branch]$onto_name$pc[punc]($pc[rev]$onto_commit$pc[punc])"
+        if [ -n "$_git_info[rb_upstream]" ] && [ $_git_info[rb_upstream] != $_git_info[rb_onto] ]; then
+            upstream_commit=$(_git_revision $_git_info[rb_upstream])
+            upstream_name=$(git name-rev --name-only $_git_info[rb_upstream])
+            upstream="$pc[branch]$upstream_name$pc[punc]($pc[rev]$upstream_commit$pc[punc])"
+            commits+="rebasing $upstream$pc[text]..$orig$pc[text] onto $onto$pc[text]"
+        else
+            commits+="rebasing $onto$pc[text]..$orig$pc[text]"
+        fi
+        local -a revs; revs=($(git rev-list $_git_info[rb_onto]..HEAD))
+        [ $#revs -gt 0 ] && commits+="\n$#revs commits in"
+        [ -f $_git_info[dotest]/message ] && commits+="on $(head -n1 $_git_info[dotest]/message)"
+    elif [ -n "$revision" ]; then
+        commits+="$pc[text]"
+        local track_merge=$(_git_tracking_merge)
+        if [ -n "$track_merge" ]; then
+            if git rev-parse --verify -q $track_merge >/dev/null; then
+                local track_remote=$(_git_tracking_remote)
+                local tracked=$(_git_revision $track_merge)
+                local -a revs; revs=($(git rev-list --reverse $track_merge..HEAD))
+                if [ $#revs -gt 0 ]; then
+                    local base=$(_git_revision $revs[1]~1)
+                    local base_name=$(git name-rev --name-only $base)
+                    local base_short=$(_git_revision $base)
+                    local text="$#revs commit"
+                    [ $#revs -gt 1 ] && text+="s"
+                    text+=" since"
+                    if [[ $base == $tracked ]]; then
+                        text+=" tracked"
+                        tracked=
+                    fi
+                    commits+="$text $pc[branch]$base_name$pc[punc]($pc[rev]$base_short$pc[punc])$pc[text]"
+                fi
+                if [ -n "$tracked" ]; then
+                    local track_name=$track_merge
+                    [[ $track_remote == "." ]] && track_name=$track_name:t
+                    tracked=$(_git_revision $tracked)
+                    commits+="tracking $pc[branch]$track_name$pc[punc]"
+                    [[ $tracked != $revision ]] && commits[$#commits]+="($pc[rev]$tracked$pc[punc])"
+                    commits[$#commits]+="$pc[reset]"
+                fi
+            fi
+        fi
+    fi
+    local gitsvn=$(git rev-parse --verify -q --short git-svn)
+    if [ $? -eq 0 ]; then
+        local gitsvnrev=$(_git_svnhead $gitsvn)
+        if [ -n "$gitsvnrev" ]; then
+            local svninfo=''
+            local -a revs
+            svninfo+="$pc[text]svn$pc[punc]:$pc[rev]r$gitsvnrev"
+            revs=($(git rev-list git-svn..HEAD))
+            if [ $#revs -gt 0 ]; then
+                svninfo+="$pc[punc]@$pc[rev]HEAD~$#revs"
+                svninfo+="$pc[punc]($pc[rev]$gitsvn$pc[punc])"
+            fi
+            commits+="$svninfo$pc[reset]"
+        fi
+    fi
+    [ $#commits -gt 0 ] && echo -n " ${(j: :)commits}"
+}
+
+prompt_cean_account() {
+    [[ $TERM == screen* ]] || echo "$pc[user]%n$pc[punc]@$pc[host]%m$pc[punc]:"
+}
+
+# Theme is defined a 'human readable' way, so we handle that
+
+PROMPT="%(?.. \$pc[punc]-> \$pc[error]exited %1v
+)\$(prompt_cean_account)\$(prompt_cean_path)"
+RPROMPT="\$(prompt_cean_status) "
+
+# At this stage, theme can override all functions/variables defined above
+source ~/.cean/themes/$PROMPT_THEME
+
+coloratom() {
+    local off=$1 atom=$2
+    [[ $atom[1] == [[:upper:]] ]] && off=$(( $off + 60 ))
+    echo $(( $off + $colcode[${(L)atom}] ))
+}
+
+colorword() {
+    local fg=$1 bg=$2 att=$3
+    local -a s
+    [ -n "$fg" ] && s+=$(coloratom 30 $fg)
+    [ -n "$bg" ] && s+=$(coloratom 40 $bg)
+    [ -n "$att" ] && s+=$attcode[$att]
+    echo $'\e['${(j:;:)s}m
+}
+
+colorprompt() {
+    echo "%{"$(colorword $*)"%}"
+}
+
+typeset -A colcode
+colcode=(black 0 red 1 green 2 yellow 3 blue 4 magenta 5 cyan 6 white 7 default 9)
+typeset -A attcode
+attcode=(none 00 bold 01 faint 02 standout 03 underline 04 blink 05 reverse 07 conceal 08 normal 22 \
+         no-standout 23 no-underline 24 no-blink 25 no-reverse 27 no-conceal 28)
+
+# CEAN prompt colors
+typeset -Ag pc
+for colspec in host:$PR_HOST user:$PR_USER path:$PR_PATH ok:$PR_SUCCESS error:$PR_ERROR prompt:$PR_PROMPT \
+               name:$PR_NAME branch:$PR_BRANCH rev:$PR_REV clean:$PR_CLEAN staged:$PR_STAGED dirty:$PR_DIRTY \
+               punc:$PR_PUNC text:$PR_TEXT reset:default:default:none
+do
+    local k=${colspec%%:*} v=${colspec#*:}
+    pc[$k]=$(colorprompt ${(s|:|)v})
+done
+
+# CEAN shell message colors
+typeset -Ag sc 
+for colspec in usage:$LOG_USAGE error:$LOG_ERROR warn:$LOG_WARN info:$LOG_INFO debug:$LOG_DEBUG reset:default:default:none
+do
+    local k=${colspec%%:*} v=${colspec#*:}
+    sc[$k]=$(colorword ${(s|:|)v})
+done

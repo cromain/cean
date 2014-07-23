@@ -1,0 +1,9 @@
+{author, {"Ralf Weinbrecher", "developer at ralfweinbrecher.de"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["net"]}.
+{depends, ["kernel","stdlib","xmerl"]}.
+{keywords, ["xml","xmlrpc"]}.
+{summary, "An HTTP 1.1 compliant XML-RPC library for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/rwbr/exmlrpc"}.
+{url, "https://github.com/rwbr/exmlrpc.git"}.

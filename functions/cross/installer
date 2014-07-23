@@ -1,0 +1,19 @@
+# Description: Build CEAN installer for given arch(s)
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cross/installer darwin-x86
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/installer arch1 [arch2 arch3 ...]" $* || return $bad_use
+local arch pkg
+
+for arch in $*
+do
+    for pkg in ibrowse cean
+    do
+        package/build $pkg
+        package/install $pkg $arch
+    done
+    cross/otp $arch
+    export/installer cean $arch
+done

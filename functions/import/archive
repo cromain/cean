@@ -1,0 +1,64 @@
+# Description: Import tar/zip archive into a local git repository
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: tar git curl gzip bzip2 unzip
+# Usage: import/archive yaws http://yaws.hyber.org/download/yaws-1.88.tar.gz
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "import/archive package url [revision]" $* || return $bad_use
+_api_import $* || return $bad_use
+_cd_workdir
+
+cache() {
+    local cache=~/.cache/cean/sources/$pkg_url:t
+    [ -f $cache ] || { mkdir -p $cache:h; curl $pkg_url > $cache; }
+    echo $cache
+}
+archive() {
+    local archive=$(cache)
+    cat $archive
+}
+
+# Extract archive
+_info "($pkg_name) fetching archive..."
+case $pkg_url in
+    *tgz) archive | tar zxf - ;;
+    *tar.gz) archive | tar zxf - ;;
+    *tbz2) archive | tar jxf - ;;
+    *tar.bz2) archive | tar jxf - ;;
+    *zip) unzip $(cache) ;;
+esac
+
+# Perform some cleaning
+_info "($pkg_name) cleaning..."
+ls -d **/(CVS|.(git|svn|svnignore|cvsignore))(N) | grep -v "^\.$" | xargs rm -Rf
+[[ $(ls -d ${pkg_name}[-_]*(N)) == "." ]] || {
+    maindir=$(ls -d ${pkg_name}[-_]*(N))
+    [ -z $maindir ] || { mv $maindir/* . ; rm -Rf $maindir }
+    [ -h $pkg_name ] && rm $pkg_name  # sometime archive contains dir -> dir-vsn in root
+}
+
+# Create or update local git repository
+[ -d $(_pkg_sources) ] && {
+    _info "($pkg_name) updating local repository..."
+    tar cf - . | tar -C $(_pkg_sources) -xf -
+    (_pkg_cd_sources && git status | grep -q modified && git commit -a -m "automatic update")
+} || {
+    _info "($pkg_name) creating local repository..."
+    mkdir -p $(_pkg_sources)
+    (_pkg_cd_sources && git init)
+    tar cf - . | tar -C $(_pkg_sources) -xf -
+    (_pkg_cd_sources ; git add . ; git commit -a -m "initial commit")
+}
+
+# Tag version if possible
+local url=$pkg_url:t ext
+for ext in gz bz2 tar. tgz tbz2 tar zip; url=${url%.$ext}
+url=${url/$pkg_name/}
+[ -n $url ] && {
+    local vsn=$(echo $url | sed -e 's/^[-_]//')
+    _info "($pkg_name) tagging revision as '$vsn'"
+    (_pkg_cd_sources; git tag -l | grep -q $vsn || git tag $vsn)
+    pkg_vsn=$vsn
+}
+
+_rm_workdir

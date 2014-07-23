@@ -1,0 +1,9 @@
+{author, {"Paul J. Davis", "paul.joseph.davis@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "JSON NIFs for Erlang"}.
+{abstract, "This new version is a hand crafted state machine that does its best to be as quick and efficient as possible while not placing any constraints on the parsed JSON."}.
+{home, "https://github.com/davisp/jiffy"}.
+{url, "https://github.com/davisp/jiffy.git"}.

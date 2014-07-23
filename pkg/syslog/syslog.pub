@@ -1,0 +1,9 @@
+{author, {"Andrew Thompson", "andrew at hijacked.us"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang port driver for interacting with syslog via syslog(3)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/Vagabond/erlang-syslog"}.
+{url, "https://github.com/Vagabond/erlang-syslog.git"}.

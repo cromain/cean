@@ -1,0 +1,9 @@
+{author, {"Yaroslav", "jlarky at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "ADC(Advanced Direct Connect) hub software written using Erlang/OTP"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/JLarky/eadc-hub"}.
+{url, "https://github.com/JLarky/eadc-hub.git"}.

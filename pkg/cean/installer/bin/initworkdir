@@ -1,0 +1,51 @@
+#!/bin/sh
+
+zsh --version 2>/dev/null | grep -q " 4.3" || {
+ echo "Please install zsh 4.3 first"
+ echo "Then run $PWD/init.sh $1"
+ exit 1
+}
+git --version 2>/dev/null | grep -q " 1.7" || {
+ echo "Please install git 1.7 first"
+ echo "Then run $PWD/init.sh $1"
+ exit 1
+}
+[ -d $HOME/.cean ] && {
+    echo "Upgrading CEAN repository..."
+    (cd $HOME/.cean; git pull)
+} || {
+    echo "Cloning CEAN repository in ~/.cean..."
+    git clone git@github.com:cromain/cean.git $HOME/.cean
+}
+
+case `uname -m` in
+    i[3456]86) cpu=x86 ;;
+    i86pc) cpu=x86 ;;
+    armv7*) cpu=armhf ;;
+    arm*l) cpu=armel ;;
+    *) cpu=`uname -p | LANG=C tr [A-Z] [a-z]` ;;
+esac
+echo $os | grep "^win" >/dev/null 2>&1 && {
+    BASEDIR=`cd ..; pwd`
+} || {
+    here=`which "$0"`
+    base=`dirname "$here"`/..
+    BASEDIR=`cd "$base"; pwd`
+}
+cd "$BASEDIR"
+mkdir pub src tmp tools
+export ZDOTDIR=$HOME/.cean
+zsh -i $HOME/.cean/functions/cean/import bootstraps
+echo "ERLANG_VERSION=$ERLANG_VERSION" > .ceanrc
+cat $HOME/.cean/cfg/zenv >> .ceanrc
+cat << EOF
+you should consider adding an alias in your shell (.bashrc, .zshrc or whatever)
+so you quickly create/jump to your working environement(s)
+example:
+alias cean='\$HOME/.cean/bin/cean shell'
+alias ceaninit='\$HOME/.cean/bin/cean create'
+ceaninit /path/to/R13 R13B04
+cean /path/to/workdir
+
+EOF
+$HOME/.cean/bin/cean shell

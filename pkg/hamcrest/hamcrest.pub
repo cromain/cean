@@ -1,0 +1,9 @@
+{author, {"Tim Watson", "http://hyperthunk.wordpress.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang port of Hamcrest"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/hyperthunk/hamcrest-erlang"}.
+{url, "https://github.com/hyperthunk/hamcrest-erlang.git"}.

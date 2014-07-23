@@ -1,0 +1,9 @@
+{author, {"Erlware", "http://www.erlware.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlware Commons is an Erlware project focused on all aspects of reusable Erlang components."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/erlware/erlware_commons"}.
+{url, "https://github.com/erlware/erlware_commons.git"}.

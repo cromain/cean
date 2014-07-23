@@ -1,0 +1,9 @@
+{author, {"Arun Suresh", "arun.suresh@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Adding all thrift erl modules.. so it can be pulled via rebar as a dep"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/xslogic/thrift_erl"}.
+{url, "https://github.com/xslogic/thrift_erl.git"}.

@@ -1,0 +1,6 @@
+pkg_init() { : }
+pkg_install() {
+    local dir dist=$(_pkg_dist)
+    mkdir -p $dist
+    for dir in ebin include src c_src priv; [ -d $dir ] && mv $dir $dist || :
+}

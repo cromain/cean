@@ -1,0 +1,9 @@
+{author, {"Ruslan Babayev", "ruslan at babayev.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Modular, RFC 2616 compliant HTTP/1.1 server and client"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mujaheed/erlang-http"}.
+{url, "https://github.com/mujaheed/erlang-http.git"}.

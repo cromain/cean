@@ -1,0 +1,9 @@
+{author, {"Boundary", "https://boundary.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A Cowboy based Folsom HTTP Wrapper."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/boundary/folsom_cowboy"}.
+{url, "https://github.com/boundary/folsom_cowboy.git"}.

@@ -1,0 +1,9 @@
+{author, {"Corrado Santoro, KatolaZ", "corrado_santoro at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["frontends","database"]}.
+{summary, "abstraction layer for interfacing relational DBMSs"}.
+{abstract, "AMNESIA allows designers to integrate relational databases in Erlang programs using native Erlang types and language constructs"}.
+{home, "http://amnesia.sourceforge.net"}.
+{url, "svn://svn.code.sf.net/p/amnesia/code/trunk"}.

@@ -1,0 +1,9 @@
+{author, {"Elixir", "http://elixir-lang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Elixir is a metaprogrammable, functional language built atop the Erlang VM. It is a dynamic language with hygienic macros that leverages Erlang&#39;s ability to build concurrent, distributed, and fault-tolerant applications with hot code upgrades."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/elixir-lang/elixir"}.
+{url, "https://github.com/elixir-lang/elixir.git"}.

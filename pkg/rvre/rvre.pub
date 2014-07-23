@@ -1,0 +1,13 @@
+{author, {"Robert Virding", "rvirding at gmail.com"}}.
+{packager, {"Geoff Cant", "nem at erlang.geek.nz"}}.
+{category, ["text"]}.
+{depends, ["stdlib"]}.
+{keywords, ["posix", "regex", "regular", "posix"]}.
+{summary, "A POSIX compatibile regex library in pure erlang for binaries and strings"}.
+{abstract,
+ "Robert Virding's pure erlang regular expression library allows"
+ "matching against both strings and binaries as well as support"
+ "submatches. The library is implemented in pure erlang and has no"
+ "external dependancies."}.
+{home, "https://github.com/archaelus/rvre"}.
+{url, "https://github.com/archaelus/rvre.git"}.

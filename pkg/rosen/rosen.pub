@@ -1,0 +1,9 @@
+{author, {"Ari", "me at ari.io"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "The git repos of rosen: http://sourceforge.net/projects/rosen/"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/auser/rosen"}.
+{url, "https://github.com/auser/rosen.git"}.

@@ -1,0 +1,8 @@
+{author, {"Peter H&#246;gfeldt", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["crypt"]}.
+{summary, "Cryptographical support"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/crypto/index.html\">crypto Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

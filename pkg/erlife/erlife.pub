@@ -1,0 +1,9 @@
+{author, {"a5kin", "a5kin at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["visualization","scientific","boardgames","games","simulations","mathematics"]}.
+{summary, "Concurrent version of the Life like cellular automaton written in Erlang Infinite board flexible rules color cells"}.
+{abstract, "Concurrent version of the Life like cellular automaton written in Erlang Infinite board flexible rules color cells"}.
+{home, "http://erlife.sourceforge.net"}.
+{url, "http://garr.dl.sourceforge.net/project/erlife/erlife/erlife-0.2.4/erlife-0.2.4.tar.gz"}.

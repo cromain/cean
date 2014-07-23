@@ -1,0 +1,9 @@
+{author, {"The Apache Software Foundation", "http://www.apache.org/"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "database that uses JSON for documents"}.
+{abstract, ""}.  % please edit
+{home, "http://couchdb.apache.org/"}.
+{url, "git://git.apache.org/couchdb.git"}.

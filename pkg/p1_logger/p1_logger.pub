@@ -1,0 +1,9 @@
+{author, {"ProcessOne", "contact at process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "ProcessOne logger for ejabberd"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/processone/p1_logger"}.
+{url, "https://github.com/processone/p1_logger.git"}.

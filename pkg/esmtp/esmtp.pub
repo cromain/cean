@@ -1,0 +1,9 @@
+{author, {"Geoff Cant", "nem at erlang.geek.nz"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang SMTP library"}.
+{abstract, "esmtp is a simple OTP application providing a way to send emails (and attachments) from erlang systems."}.
+{home, "https://github.com/archaelus/esmtp"}.
+{url, "https://github.com/archaelus/esmtp.git"}.

@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", "http://basho.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A linked-in driver for Erlang to Mozilla&#39;s Spidermonkey Javascript runtime."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/erlang_js"}.
+{url, "https://github.com/basho/erlang_js.git"}.

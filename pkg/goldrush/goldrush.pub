@@ -1,0 +1,9 @@
+{author, {"Pedram Nimreezi", "deadzen@deadzen.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Small, Fast event processing and monitoring for Erlang/OTP applications."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/DeadZen/goldrush"}.
+{url, "https://github.com/DeadZen/goldrush.git"}.

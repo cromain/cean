@@ -1,0 +1,9 @@
+{author, {"Boundary", "https://boundary.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A decentralized, k-ordered id generation service in Erlang."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/boundary/flake"}.
+{url, "https://github.com/boundary/flake.git"}.

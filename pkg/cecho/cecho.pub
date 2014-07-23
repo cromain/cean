@@ -1,0 +1,9 @@
+{author, {"Mazen Harake", "mazen.harake at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An ncurses library for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mazenharake/cecho"}.
+{url, "https://github.com/mazenharake/cecho.git"}.

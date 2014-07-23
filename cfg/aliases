@@ -1,0 +1,37 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+#alias mv='nocorrect mv'       # no spelling correction on mv
+#alias cp='nocorrect cp'       # no spelling correction on cp
+alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+alias lsd='/bin/ls -ld *(-/DN)'    # List only directories and symbolic
+alias lsa='/bin/ls -ld *(-.DN)'    # List only file beginning with "."
+alias lsz='/bin/ls -ld (*.bz2|*.gz|*.tgz|*.zip|*.z)' # List only archives
+alias ls1='/bin/ls -1'
+alias cdr='cd $CEAN_ROOT'
+
+alias -s erl=vim
+alias -s pub=vim
+
+alias -g L="| less"
+alias -g EL='|& less'
+alias -g M="| more"
+alias -g EM="|& more"
+alias -g H="| head"
+alias -g EH='|& head'
+alias -g T="| tail"
+alias -g ET='|& tail'
+alias -g G='| egrep'
+alias -g EG='|& egrep'
+alias -g S='| sort'
+alias -g ES='|& sort'
+
+alias -g BC='| wc -c'
+alias -g LC='| wc -l'
+alias -g WC='| wc'
+alias -g HAVE='| grep -q'
+
+alias -g NERR='2> /dev/null'
+alias -g NOUT='1> /dev/null 2>&1'
+alias -g ERR='2>&1'

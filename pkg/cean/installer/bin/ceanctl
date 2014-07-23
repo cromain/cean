@@ -1,0 +1,148 @@
+#! /bin/sh
+
+usage() {
+    echo "usage: ceanctl command [args]"
+    echo "commands:"
+    echo "      start [host]"
+    echo "      start cluster"
+    echo "      stop [host]"
+    echo "      stop cluster"
+    echo "      shell [host]"
+    echo "      deploy host"
+    echo "      available"
+    echo "      installed"
+    echo "      install package"
+    echo "      uninstall package"
+    echo "      status [host]"
+    echo "      sync [host]"
+    echo "      sync_from host"
+    echo "      ping host"
+    exit
+}
+
+os=`uname -s | LANG=C tr [A-Z] [a-z]`
+case `uname -m` in
+    i[3456]86) cpu=x86 ;;
+    i86pc) cpu=x86 ;;
+    armv7*) cpu=armhf ;;
+    arm*l) cpu=armel ;;
+    *) cpu=`uname -p | LANG=C tr [A-Z] [a-z]` ;;
+esac
+echo $os | grep "^win" >/dev/null 2>&1 && {
+    erl=erl.exe
+    dbg=werl.exe
+    BASEDIR=`cd ..; pwd`
+    ARCHDIR="windows"
+} || {
+    erl=erlexec
+    dbg=erlexec
+    here=`which "$0"`
+    base=`dirname "$here"`/..
+    BASEDIR=`cd "$base"; pwd`
+    ARCHDIR="${os}-${cpu}"
+}
+
+cd "$BASEDIR"
+ERL_MAX_PORTS=1024
+ERL_OPTS="-smp auto +K true"
+. etc/cean.cfg
+
+ROOTDIR=$BASEDIR
+BINDIR=$ROOTDIR/bin
+EMU=beam
+PROGNAME=`echo $0 | sed 's/.*\///'`
+PATH=.:$BINDIR:$PATH
+ERL_INETRC="$BASEDIR/etc/inetrc"
+LD_LIBRARY_PATH="$BASEDIR/usr/lib"
+
+[ "$PORTS_RANGE" = "" ] || {
+    min="inet_dist_listen_min ${PORTS_RANGE%-*}"
+    max="inet_dist_listen_max ${PORTS_RANGE#*-}"
+    opts="$opts -kernel $min $max"
+}
+
+# Apply platform specific action ==================================
+
+TMP="$BASEDIR/tmp"
+[ "$ARCHDIR" = "windows" ] && {
+    cat > "$BINDIR/erl.ini" << EOF
+[erlang]
+Bindir=$BINDIR
+Progname=erl
+Rootdir=$ROOTDIR
+EOF
+}
+[ "$os" = "darwin" ] && {
+    DYLD_LIBRARY_PATH="$LD_LIBRARY_PATH"
+    export DYLD_LIBRARY_PATH
+}
+
+# Start erlang node ===============================================
+
+export ARCHDIR
+export EMU
+export ROOTDIR
+export BINDIR
+export PROGNAME
+export ERL_MAX_PORTS
+export ERL_INETRC
+export LD_LIBRARY_PATH
+export PATH
+export TMP
+
+[ $# -lt 1 ] && usage
+cmd=$1; shift; args=$*
+
+node=`uname -n`
+[ "$node" = "${node%.*}" ] && name=-sname || name=-name
+
+cean="$erl $name ceanctl@$node $opts -noshell -s cean call -- cean@$node"
+cluster="$erl $name ceanctl@$node $opts -noshell -s cean_cluster call -- cean@$node"
+remsh="$dbg $name ceanctl@$node $opts -remsh"
+
+case $cmd in
+    start)
+        case $args in
+            "")
+                export CEAN_SERVER
+                export HTTP_PROXY
+                [ "$ARCHDIR" = "windows" ] && {
+                    # windows seems to not allow starting erl -detached
+                    $erl $name cean@$node $opts
+                } || {
+                    $erl $name cean@$node $opts -noinput -detached
+                } ;;
+            cluster) $cluster start ;;
+            *) $cluster start_nodes $args ;;
+        esac ;;
+    stop)
+        case $args in
+            "") $cean stop ;;
+            cluster) $cluster stop ;;
+            *) $cluster stop_nodes $args ;;
+        esac ;;
+    shell)
+        case $args in
+            "") $remsh cean@$node ;;
+            *) $remsh cean@$1 ;;
+        esac ;;
+    deploy)
+        [ "$ARCHDIR" = "windows" ] && {
+            cat << EOF
+CEAN deployment not supported under Windows
+You must copy the cean directory on $1
+Then you must ensure erlang nodes can see each other
+EOF
+        } || {
+            tar cf - . | ssh cean@$1 "tar xf -"
+        } ;;
+    available) $cean available ;;
+    installed) $cean installed ;;
+    install) $cluster install $1 ;;
+    uninstall) $cluster uninstall $1 ;;
+    status) $cluster status $args ;;
+    sync) $cluster sync $args ;;
+    sync_from) $cluster sync_from $1 ;;
+    ping) $cluster ping_node cean@$1 ;;
+    *) usage ;;
+esac

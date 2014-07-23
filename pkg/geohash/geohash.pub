@@ -1,0 +1,9 @@
+{author, {"Nick Gerakines", "nick at gerakines.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A collection of Erlang utilities to encode and decode geohashes."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ngerakines/erlang_geohash"}.
+{url, "https://github.com/ngerakines/erlang_geohash.git"}.

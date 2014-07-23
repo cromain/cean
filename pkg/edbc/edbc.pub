@@ -1,0 +1,9 @@
+{author, {"Christian S","chsu79 at gmail"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["database"]}.
+{depends, ["stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "Erlang Database Connectivity"}.
+{abstract, "An application for the erlang language to make SQL-database connectivity transparent."}.
+{home, "http://code.google.com/p/edbc"}.
+{url, "http://edbc.googlecode.com/svn/trunk"}.

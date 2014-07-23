@@ -1,0 +1,50 @@
+# Description: Install a package from local (if any) or official cean repository to bootstrap
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: unzip tar curl
+# Usage: cean/install yaws
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/install package [vsn]" $* || return $bad_use
+[[ $1 == $pkg_name ]] || _pkg_read_spec $1
+[ -z $2 ] || pkg_vsn=$2
+local epkg=$(_pkg_epkg) dist=$(_pkg_dist)
+
+# ensure we have requested epkg in local store
+[ -f $epkg ] || {
+    local url=${epkg/$CEAN_ROOT\/pub/$CEAN_SERVER}
+    url=$url:h
+    [[ $pkg_vsn == "0" ]] && {
+        # if we don't have been asked for a given version, we try to
+        # guess the latest available
+        pkg_vsn=$(curl -s http://$url/${pkg_name}.pub | sed '$!d;s/.*"\(.[^"]*\)", ".*/\1/;s/<.*>/0/')
+        [[ $pkg_vsn == "0" ]] && {
+            _error "($pkg_name) could not find any epkg archive"
+            return $missing_package
+        }
+        _info "($pkg_name) latest available version is $pkg_vsn"
+    }
+    epkg=$(_pkg_epkg)
+    dist=$(_pkg_dist)
+    mkdir -p $epkg:h
+    curl -s http://$url/$dist.epkg > $epkg
+    tar tf $epkg >/dev/null 2>/dev/null && {
+        curl -s http://$url/${pkg_name}.pub > $epkg:h/${pkg_name}.pub
+    } || {
+        [ -f $epkg ] && {
+            rm $epkg
+            _error "($pkg_name) corrupted $dist.epkg archive"
+        } || {
+            _error "($pkg_name) missing $dist.epkg archive"
+        }
+        return $missing_package
+    }
+}
+_info "($pkg_name) package available at ${epkg/$CEAN_ROOT/}"
+
+# install package into local bootstrap
+_cd_workdir
+tar -xf $epkg
+unzip -qqo $dist.ez -d $CEAN_ROOT/lib
+[ -f $dist.priv.zip ] && unzip -qqo $dist.priv.zip -d $CEAN_ROOT/lib
+_rm_workdir
+_info "($pkg_name) installed in /lib/$dist"

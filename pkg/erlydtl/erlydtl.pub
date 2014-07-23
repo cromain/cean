@@ -1,0 +1,9 @@
+{author, {"Evan Miller","emmiller at gmail.com"},{2009,1,29}}.
+{packager, {"Evan Miller","emmiller at gmail.com"}}.
+{category, []}.
+{depends, ["compiler","crypto","kernel","stdlib"]}.
+{keywords, "web template django html"}.
+{summary, "Django Template Language"}.
+{abstract, "ErlyDTL implements most of the Django Template Language, compiling template files into standalone Erlang modules."}.
+{home, "https://github.com/evanmiller/erlydtl"}.
+{url, "https://github.com/evanmiller/erlydtl.git"}.

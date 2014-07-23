@@ -1,0 +1,9 @@
+{author, {"Andy Skelton", "skeltoac at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A PHP eval server for Erlang/OTP."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/skeltoac/php_app"}.
+{url, "https://github.com/skeltoac/php_app.git"}.

@@ -1,0 +1,9 @@
+{author, {"andrewtj", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Contribute to base32_erlang development by creating an account on GitHub."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/andrewtj/base32_erlang"}.
+{url, "https://github.com/andrewtj/base32_erlang.git"}.

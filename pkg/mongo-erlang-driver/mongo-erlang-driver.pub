@@ -1,0 +1,9 @@
+{author, {"Elias Torres", "elias at torrez.us"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "erlang driver for mongodb"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/eliast/mongo-erlang-driver"}.
+{url, "https://github.com/eliast/mongo-erlang-driver.git"}.

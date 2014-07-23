@@ -1,0 +1,9 @@
+{author, {"Aleksandar Radulovic", "http://www.a13x.info"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, ""}.
+{abstract, "Generic BERT-RPC server"}.
+{home, "https://github.com/a13x/aberth.git"}.
+{url, "https://github.com/a13x/aberth.git"}.

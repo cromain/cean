@@ -1,0 +1,13 @@
+# Description: Produce 32bit binaries
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: gcc
+# Usage: cross/m32
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/m32" $* || return $bad_use
+local package=$1
+local flags="-m32 -march=pentiumpro"
+_error "not implemented yet"
+return $cancel
+export CFLAGS="-m32"
+export CXXFLAGS="-m32"

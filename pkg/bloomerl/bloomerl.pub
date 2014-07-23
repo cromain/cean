@@ -1,0 +1,11 @@
+{author, {"gray", "graygee at gmail.com", {2007, 10, 3}}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["type"]}.
+{depends, []}.
+{keywords, ["bloomfilter", "bloom", "filter", "digest", "hash"]}.
+{summary, "Bloom filters"}.
+{abstract, "Implements the Bloom filter probabilistic data structure. "
+ "Bloom filters are a space-efficient means to test whether an elements is a "
+ "member of a set."}.
+{home, "http://code.google.com/p/bloomerl"}.
+{url, "http://bloomerl.googlecode.com/svn/trunk"}.

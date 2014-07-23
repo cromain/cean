@@ -1,0 +1,12 @@
+{author, {"Will Glozer", "will at glozer.net", {2006,12,30}}}.
+{packager, {"Will Glozer", "will at glozer.net"}}.
+{category, ["text"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["regexp", "ruby"]}.
+{summary, "Erlang bindings for the Oniguruma regular expressions library"}.
+{abstract, "oregexp allows Erlang programmers to use the Oniguruma regular expressions library. "
+ "Oniguruma supports a number of different regex syntaxes and many single and multi-byte character "
+ "encodings. oregexp exposes the Ruby-style syntax with named groups, POSIX character classes, "
+ "look-ahead and behind, etc."}.
+{home, "http://glozer.net/code.html"}.
+{url, "http://glozer.net/code/oregexp-1.2.tar.gz"}.

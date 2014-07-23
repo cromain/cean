@@ -1,0 +1,9 @@
+{author, {"Nick Fitzgerald", "fitzgen at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Simple example of Operational Transformation in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/fitzgen/erl-ot"}.
+{url, "https://github.com/fitzgen/erl-ot.git"}.

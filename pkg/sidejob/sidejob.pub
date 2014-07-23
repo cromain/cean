@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", "http://basho.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Parallel worker and capacity limiting library for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/sidejob"}.
+{url, "https://github.com/basho/sidejob.git"}.

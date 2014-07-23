@@ -1,0 +1,9 @@
+{author, {"Joe Williams", "williams.joe at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang Memcached Client."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/joewilliams/merle"}.
+{url, "https://github.com/joewilliams/merle.git"}.

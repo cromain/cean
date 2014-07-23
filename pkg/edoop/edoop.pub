@@ -1,0 +1,9 @@
+{author, {"Elias Torres", "elias at torrez.us"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A module for writing Hadoop Streaming jobs using Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/eliast/edoop"}.
+{url, "https://github.com/eliast/edoop.git"}.

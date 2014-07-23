@@ -1,0 +1,9 @@
+{author, {"Soundrop", "http://www.soundrop.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "BSON documents in Erlang, see bsonspec.org"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/soundrop/bson-erlang"}.
+{url, "https://github.com/soundrop/bson-erlang.git"}.

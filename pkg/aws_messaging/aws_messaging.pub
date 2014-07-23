@@ -1,0 +1,9 @@
+{author, {"Mark Fine", "mark.fine at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang client for AWS messaging services Simple Queue Service and Simple Notification Service."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/mfine/aws_messaging"}.
+{url, "https://github.com/mfine/aws_messaging.git"}.

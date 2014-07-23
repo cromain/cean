@@ -1,0 +1,15 @@
+{author, {"mats cronqvist", "masse at cronqvi.st"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["code","tool"]}.
+{depends, ["crypto","gtknode","kernel","runtime_tools","stdlib"]}.
+{keywords, []}.
+{summary, "Erlang performance and debugging tools"}.
+{abstract, "eper is a loose collection of Erlang Performance related tools."
+ "<ul>"
+  "<li> sherk - a profiler, similar to Linux oprofile or MacOs shark"
+  "<li> gperf - a graphical performance monitor; shows CPU, memory and network usage"
+  "<li> dtop  - similar to unix top"
+  "<li> redbug- similar to the OTP dbg application, but safer, better etc."
+ "</ul>"}.
+{home, "https://github.com/massemanet/eper"}.
+{url, "https://github.com/massemanet/eper.git"}.

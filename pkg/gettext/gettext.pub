@@ -1,0 +1,9 @@
+{author, {"Torbjörn Törnkvist", "kruskakli at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang internationalization library."}.
+{abstract, "Fork from jungerl"}.
+{home, "https://github.com/etnt/gettext"}.
+{url, "https://github.com/etnt/gettext.git"}.

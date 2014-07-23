@@ -1,0 +1,5 @@
+pkg_config() {
+    chmod +x bootstrap
+    ./bootstrap
+    ./configure
+}

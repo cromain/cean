@@ -1,0 +1,9 @@
+{author, {"Travelping", "http://www.travelping.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Contribute to gen_socket development by creating an account on GitHub."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/travelping/gen_socket"}.
+{url, "https://github.com/travelping/gen_socket.git"}.

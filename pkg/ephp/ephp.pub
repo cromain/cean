@@ -1,0 +1,9 @@
+{author, {"AltenWald", "http://altenwald.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "PHP Interpreter in pure Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/altenwald/ephp"}.
+{url, "https://github.com/altenwald/ephp.git"}.

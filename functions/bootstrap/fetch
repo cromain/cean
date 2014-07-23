@@ -1,0 +1,11 @@
+# Description: Fetch Erlang sources
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: curl
+# Usage: bootstrap/fetch R13B04
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "bootstrap/fetch otp_version" $* || return $bad_use
+local vsn=$1 archive=otp_src_$1.tar.gz srcdir=~/.cache/cean/sources
+
+[ -d $srcdir ] || mkdir -p $srcdir
+[ -e $srcdir/$archive ] || curl $ERLANG_MIRROR/$archive > $srcdir/$archive

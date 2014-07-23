@@ -1,0 +1,9 @@
+{author, {"Adam Lindberg", "hello at alind.io"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A mocking library for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/eproxus/meck"}.
+{url, "https://github.com/eproxus/meck.git"}.

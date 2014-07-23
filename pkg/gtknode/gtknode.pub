@@ -1,0 +1,10 @@
+{author, {"Mats Cronqvist", "mats.cronqvist at ericsson.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["graphic","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["gtk","gui"]}.
+{summary, "GTK+2 binding for erlang"}.
+{abstract, "the project is aimed at providing a reasonably complete erlang binding for GTK+2. "
+ "it is primarily intended for relatively simple GUI's, and encourages the use of the glade GUI builder."}.
+{home, "http://code.google.com/p/gtknode"}.
+{url, "http://gtknode.googlecode.com/svn/trunk"}.

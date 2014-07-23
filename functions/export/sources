@@ -1,0 +1,42 @@
+# Description: Produce source tarball for given package on current revision
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: tar git gzip
+# Usage: export/sources ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "export/sources package" $* || return $bad_use
+_api_export $* || return $bad_use
+local archive=$(_pkg_tarball) spec=$(_pkg_spec)
+
+# define script for custom source changes before packaging
+local prep=undefined
+[[ ! $pkg_instance == "" ]] && {
+    local instance_spec=$(ls -1d ~/.cean*/pkg/*/${pkg_instance}.pub)
+    [ -x $instance_spec:h/prep_sources.sh ] && prep=$instance_spec:h/prep_sources.sh
+}
+[ -x $spec:h/prep_sources.sh ] && prep=$spec:h/prep_sources.sh
+
+[ -f $archive ] && {
+    _warn "($pkg_name) sources already exported in ${archive/$CEAN_ROOT/}"
+    return $success
+}
+_pkg_cd_sources && {
+    _info "($pkg_name) generating sources ${archive/$CEAN_ROOT/}..."
+    mkdir -p $archive:h
+    git archive --prefix=$archive:t:r/ HEAD | gzip -9 >$archive
+    cd $CEAN_ROOT
+    # clean tarball
+    _cd_workdir
+    tar zxf $archive
+    (cd $(_pkg_dist)
+     rm .gitignore
+     [ -x $prep ] && $prep $pkg_name $pkg_vsn $spec)
+    tar zcf $archive *
+    md5 -q $archive > $archive.md5
+    [ -f $archive.md5 ] || md5sum $archive | awk '{print $1}' > $archive.md5
+    _rm_workdir
+} || {
+    _error "($pkg_name) no sources repository"
+    return $missing_sources
+}
+

@@ -1,0 +1,9 @@
+{author, {"Erlang Solutions", "http://www.erlang-solutions.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Dynamic tracing tests and utilities for Erlang/OTP"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/esl/tracerl"}.
+{url, "https://github.com/esl/tracerl.git"}.

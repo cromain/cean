@@ -1,0 +1,9 @@
+{author, {"Andrew Tunnell-Jones", "andrew at tj.id.au"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang DNS library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/andrewtj/dns_erlang"}.
+{url, "https://github.com/andrewtj/dns_erlang.git"}.

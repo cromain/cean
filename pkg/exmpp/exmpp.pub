@@ -1,0 +1,9 @@
+{author, {"ProcessOne", "contact at process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["driver"]}.
+{depends, ["crypto"]}.
+{keywords, ["jabber","xmpp","library"]}.
+{summary, "Erlang jabber/XMPP library"}.
+{abstract, ""}.
+{home, "https://github.com/processone/exmpp"}.
+{url, "https://github.com/processone/exmpp.git"}.

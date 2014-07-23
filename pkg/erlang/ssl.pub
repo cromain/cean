@@ -1,0 +1,8 @@
+{author, {"Peter H&#246;gfeldt", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","driver","net"]}.
+{depends, ["crypto","kernel","public_key","stdlib"]}.
+{keywords, []}.
+{summary, "An interface to UNIX BSD sockets with Secure Sockets Layer"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/ssl/index.html\">ssl Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

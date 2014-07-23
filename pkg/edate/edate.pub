@@ -1,0 +1,9 @@
+{author, {"David Weldon", "dweldon at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "date manipulation library for erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/dweldon/edate"}.
+{url, "https://github.com/dweldon/edate.git"}.

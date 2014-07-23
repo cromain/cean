@@ -1,0 +1,10 @@
+{author, {"Mochi Media, Inc.", "http://www.mochimedia.com/"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["web","server"]}.
+{depends, ["crypto","inets","kernel","stdlib","xmerl"]}.
+{keywords, []}.
+{summary, "MochiWeb is an Erlang library for building lightweight HTTP servers"}.
+{abstract, "It is used (in conjunction with eswf and egeoip) to power services such as "
+  "MochiBot and MochiAds, which serve dynamically generated SWF content to millions of viewers daily."}.
+{home, "https://github.com/mochi/mochiweb"}.
+{url, "https://github.com/mochi/mochiweb.git"}.

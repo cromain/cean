@@ -1,0 +1,9 @@
+{author, {"ErlyDTL", "erlydtl-users@googlegroups.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An implementation of the Jade templating language in Erlang "}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/erlydtl/jaderl"}.
+{url, "https://github.com/erlydtl/jaderl.git"}.

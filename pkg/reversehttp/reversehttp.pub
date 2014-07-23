@@ -1,0 +1,9 @@
+{author, {"Tony Garnock-Jones", "tonygarnockjones at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A dynamic, ReST-style means of enrolment and participation in an HTTP network; a dynamically-configurable "Remote CGI" service."}.
+{abstract, "Joining the World Wide Web as an HTTP server has been an ad-hoc, manual process. By using the protocol defined here, programs can provide services to the Web just as easily as they request services from the Web."}.
+{home, "http://reversehttp.net"}.
+{url, "https://github.com/tonyg/reversehttp.git"}.

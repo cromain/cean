@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","net","web","tool"]}.
+{depends, ["kernel","mnesia","runtime_tools","ssl","stdlib"]}.
+{keywords, []}.
+{summary, "A set of services such as a Web server and a ftp client"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/inets/index.html\">inets Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

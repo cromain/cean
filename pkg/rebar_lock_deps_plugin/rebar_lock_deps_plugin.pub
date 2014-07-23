@@ -1,0 +1,9 @@
+{author, {"Seth Falcon", "http://userprimary.net/"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Helper scripts to use with rebar"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/seth/rebar_lock_deps_plugin"}.
+{url, "https://github.com/seth/rebar_lock_deps_plugin.git"}.

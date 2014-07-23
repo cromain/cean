@@ -1,0 +1,9 @@
+{author, {"Jayson Vantuyl", "kagato at souja.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Command Line Interface Framework for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jvantuyl/erlctl"}.
+{url, "https://github.com/jvantuyl/erlctl.git"}.

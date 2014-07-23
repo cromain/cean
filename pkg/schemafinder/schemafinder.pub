@@ -1,0 +1,15 @@
+{author, {"Paul Goo", "paul-goo at mineiro.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["tool","database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "automatically maintain a distributed mnesia configuration"}.
+{abstract, "Schemafinder starts up the local Mnesia and joins a schema defined at other nodes as discovered "
+ "by the indicated nodefinder strategy and the indicated schemafinder group. It also provides a mechanism for "
+ "identifying and pruning mnesia nodes that are permanantly out of service. Finally it allows optional "
+ "reuse of the Mnesia directory during shutdown and guards against joining with a stale schema after having "
+ "been removed (which, if not guarded against, leads to undefined behavior).<br>"
+ "Combined these capabilities greatly ease administration and maintenance of Mnesia in a dynamic environment such as EC2."
+ "Unfortunately, schemafinder currently does not assist in recovering from networking partitioning."}.
+{home, "http://code.google.com/p/schemafinder"}.
+{url, "http://schemafinder.googlecode.com/svn/trunk"}.

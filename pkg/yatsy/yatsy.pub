@@ -1,0 +1,12 @@
+{author, {"Torbj&#246;rn T&#246;rnkvist", "tobbe at tornkvist.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["test"]}.
+{depends, ["kernel","stdlib","tools","xmerl","yaws"]}.
+{keywords, []}.
+{summary, "Yet Another Test Server - Yaws compatible"}.
+{abstract, "A test framework for testing Erlang code. "
+ "Yatsy tries to be compatible with the SUITE format of the original "
+ "Erlang/OTP Test Server. It also supports report generation "
+ "in ehtml format to be used together with Yaws."}.
+{home, "http://code.google.com/p/yatsy"}.
+{url, "http://yatsy.googlecode.com/svn/trunk"}.

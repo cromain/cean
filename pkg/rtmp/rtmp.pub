@@ -1,0 +1,9 @@
+{author, {"Gershon Bialer", "gershon.bialer@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "erlang-rtmp - Erlang RTMP library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/gersh/erlang-rtmp"}.
+{url, "https://github.com/gersh/erlang-rtmp.git"}.

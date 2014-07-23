@@ -1,0 +1,169 @@
+# Description: Import prebuilt binaries into local repository
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: curl rsync
+# Usage: cean/import archive
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/import cache|pub|archive|debian|bootstrap|bootstraps [args]" $* || return $bad_use
+local action=$1; shift
+local srvsh=cean@$CEAN_SERVER
+unset pkg_name
+
+bootstrap() {
+    local otp=$1 arch=$2
+    mkdir src tmp
+    rm bin/*(D@)
+    cp erts-*/bin/* bin && rm -Rf erts-*
+    rm bin/*script
+    cp -r $CEAN_ROOT/lib/cean-* lib
+    (cd lib
+     ln -s kernel-* kernel
+     ln -s stdlib-* stdlib)
+cat > bin/erl << END
+#!/bin/sh
+ROOTDIR=\`dirname \$0\`
+ROOTDIR=\`cd \$ROOTDIR/..; pwd\`
+BINDIR=\$ROOTDIR/bin
+EMU=beam
+PROGNAME=\`echo \$0 | sed 's/.*\///'\`
+export EMU
+export ROOTDIR
+export BINDIR
+export PROGNAME
+exec \$BINDIR/erlexec \${1+"\$@"}
+END
+    rm -Rf lib/*/{examples,src,c_src}
+    echo 'beam_lib:strip_files(filelib:wildcard("lib/*/ebin/*beam")), init:stop().' | erl >/dev/null
+    export/bootstrap $otp $arch
+}
+epkg() {
+    local otp=$1 arch=$2 dir=$3
+    [[ ${ERLANG_VERSION%[A-D]*} == ${otp%[A-D]*} ]] || {
+        _error "($pkg_name) can not package for another major erlang version"
+        return $bad_use
+    }
+    pkg_name=${${dir:t}%%-*}; pkg_vsn=${dir#*-}
+    _pkg_spec >/dev/null || {
+        _warn "($pkg_name) no package specification, generating archive anyway"
+        echo "create package specification for $pkg_name" >> $CEAN_ROOT/TODO
+    }
+    (cd $dir:h; tar zcf $CEAN_ROOT/tmp/$(_pkg_dist).tgz $dir:t)
+}
+
+case $action in
+cache)
+    # sync cache archives from cean server
+    mkdir -p ~/.cache; rsync -av $srvsh:.cache/ ~/.cache/ ;;
+pub)
+    # sync packages repository from cean server
+    rsync -av $srvsh:pub/ $CEAN_ROOT/pub/ ;;
+archive)
+    # imports content of binary archive made from standard erlang installation
+    # this can also work from official windows installation (from C:\Program Files\erlX.X.X\)
+    # archive name MUST be prefixed the same way than bootstraps: e.g. R13B04_linux-x86_erlang
+    # archive containing only one lib MUST extract one directory: e.g. libname-libvsn
+    # usage: cean/import archive /tmp/R13B04_linux-x86_erlang.tar.bz2
+    local archive=$1 otp=${${1:t}%%_*} arch=${${${1:t}#*_}%%_*} lib=${${${${1:t}#*_}#*_}%%.*}
+    local dir
+    _cd_workdir
+    [[ $lib == "erlang" ]] || { mkdir lib; cd lib; }
+    case $archive in
+        *tgz|*tar.gz) tar zxf $archive ;;
+        *tbz2|*tar.bz2) tar jxf $archive ;;
+        *zip) unzip -qq $archive ;;
+    esac
+    [[ $lib == "erlang" ]] || cd -
+    for dir in lib/*; epkg $otp $arch $dir
+    bootstrap $otp $arch
+    _rm_workdir
+    [[ $lib == "erlang" ]] && lib=otp
+    package/install $lib $arch ;;
+debian)
+    # imports binary archive from debian packages
+    # usage: cean/import debian amd64 erlang 14.b.4-dfsg-1
+    local arch=$1 lib=$2 vsn=$3 otp
+    local dir deb url="http://ftp.ch.debian.org"
+    case $arch in
+    avr32|sh4|sparc64) url+="/debian-ports/pool-$arch" ;;
+    *) url+="/debian/pool" ;;
+    esac
+    url+="/main/$lib[1]/$lib"
+    _cd_workdir
+    [[ $lib == "erlang" ]] && {
+        local -a otpvsn
+        otp=${vsn%%-*}
+        otpvsn=(${(s|.|)otp})
+        otp="R$otpvsn[1]$otpvsn[2]:u${(l:2::0:)otpvsn[3]}"
+        deb=erlang-base-hipe_${vsn}_${arch}.deb
+        curl -f $url/$deb > $deb || {
+            deb=erlang-base_${vsn}_${arch}.deb
+            curl -f $url/$deb > $deb || return $import_error
+        }
+        dpkg-deb -x $deb .
+        for lib in appmon asn1 common-test corba crypto debugger dev dialyzer diameter docbuilder edoc erl-docgen et \
+                   eunit gs ic inets inviso megaco mnesia observer odbc os-mon parsetools percept pman public-key \
+                   reltool runtime-tools snmp ssh ssl syntax-tools test-server toolbar tools tv typer webtool wx xmerl
+        do
+            deb=erlang-${lib}_${vsn}_${arch}.deb
+            curl -f $url/$deb > $deb
+            dpkg-deb -x $deb .
+        done
+        url=${url/pool-$arch/pool}
+        for lib in examples ic-java jinterface doc src
+        do
+            deb=erlang-${lib}_${vsn}_all.deb
+            curl -f $url/$deb > $deb
+            dpkg-deb -x $deb .
+        done
+        rm -f usr/lib/erlang/lib/*/{doc,info}
+        for lib in usr/share/doc/erlang-doc/lib/*(/); mv $lib/doc usr/lib/erlang/lib/$lib:t
+        # ignore erts and main doc by now
+        # located at usr/share/doc/erlang-doc/doc and usr/share/doc/erlang-doc/erts-*/doc
+        lib=otp
+    } || {
+        otp=$ERLANG_VERSION  # assume user don't do ugly imports
+        deb=${lib}_${vsn}_${arch}.deb
+        curl -f $url/$deb > $deb || return $import_error
+        dpkg-deb -x $deb .
+    }
+    [[ $arch == "i386" ]] && arch="x86"
+    [[ $arch == "amd64" ]] && arch="x86_64"
+    arch=linux-$arch
+    for dir in usr/lib/erlang/lib/*; epkg $otp $arch $dir
+    [[ $lib == "otp" ]] && (cd usr/lib/erlang; bootstrap $otp $arch)
+    _rm_workdir
+    package/install $lib $arch ;;
+bootstrap)
+    # imports binary archive from local bootstrap
+    # usage: cean/import bootstrap [R14B04] [linux-amd64]
+    local otp=${1:-$ERLANG_VERSION} arch=${2:-$CEAN_HOSTARCH}
+    local dir archive=~/.cache/cean/bootstraps/${otp}_${arch}_full.tar.gz
+    [ -e $archive ] && {
+        _cd_workdir
+        tar zxf $archive
+        rm lib/{kernel,stdlib}
+        for dir in lib/*; epkg $otp $arch $dir
+        _rm_workdir
+        package/install otp $arch
+    } || {
+        _error "no bootstrap available for $otp on $arch"
+        _error "  try: cean/import bootstraps $otp $arch"
+        return $import_error
+    }
+    ;;
+bootstraps)
+    # imports bootstraps from CEAN site
+    # usage: cean/import bootstraps [R14B04] [linux-amd64]
+    local otp=${1:-$ERLANG_VERSION} arch=${2:-$CEAN_HOSTARCH}
+    local archive file
+    for archive in mini base full
+    do
+        archive=${otp}_${arch}_${archive}.tar.gz
+        file=~/.cache/cean/bootstraps/$archive
+        [ -f $file ] || curl http://$CEAN_SERVER/bootstraps/$archive > $file
+    done
+    ;;
+*)
+    _usage "cean/import cache|pub|archive|debian|bootstrap|bootstraps [args]"
+    return $bad_use ;;
+esac

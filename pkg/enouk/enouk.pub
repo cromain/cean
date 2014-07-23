@@ -1,0 +1,9 @@
+{author, {"Marcus Nilsson", "enouk at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.
+{summary, "A framework for creating MMO Games or simulations The client written in C and the server in erlang An demo game Atlantis is also provided to show how things are connected Server The server is built in erlang OTP"}.
+{abstract, "A framework for creating MMO Games or simulations The client written in C and the server in erlang An demo game Atlantis is also provided to show how things are connected Server The server is built in erlang OTP"}.
+{home, "http://enouk.sourceforge.net"}.
+{url, "svn://svn.code.sf.net/p/enouk/code/"}.

@@ -1,0 +1,9 @@
+{author, {"Fred Hebert", "mononcqc at ferd.ca"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang task dispatcher based on ETS counters."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ferd/dispcount"}.
+{url, "https://github.com/ferd/dispcount.git"}.

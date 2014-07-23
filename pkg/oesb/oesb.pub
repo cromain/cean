@@ -1,0 +1,9 @@
+{author, {"Leslaw Lopacki", "llopacki at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["development","java","objectbrokering"]}.
+{summary, "Connector for integrating OTP with Enterprise Service Bus All the code is released under LGPL 3 Parts of the code are also released under the Mozilla Public License MPL 1 1 and Erlang Public License the same license which is used for Erlang OTP"}.
+{abstract, "Connector for integrating OTP with Enterprise Service Bus All the code is released under LGPL 3 Parts of the code are also released under the Mozilla Public License MPL 1 1 and Erlang Public License the same license which is used for Erlang OTP"}.
+{home, "http://oesb.wiki.sourceforge.net/main"}.
+{url, "svn://svn.code.sf.net/p/oesb/code/trunk"}.

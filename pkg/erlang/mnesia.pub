@@ -1,0 +1,8 @@
+{author, {"Claes Wikstr&#246;m, Hans Nilsson, H&#229;kan Mattsson", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, []}.
+{summary, "A heavy duty real-time distributed database"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/mnesia/index.html\">mnesia Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

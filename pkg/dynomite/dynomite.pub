@@ -1,0 +1,9 @@
+{author, {"Cliff Moon", "cliff at leaninto.it"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Open source dynamo clone written in Erlang."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/cliffmoon/dynomite"}.
+{url, "https://github.com/cliffmoon/dynomite.git"}.

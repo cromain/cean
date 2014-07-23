@@ -1,0 +1,11 @@
+{author, {"Bjorn Gustavsson, Patrik Nyblom, Dan Gudmundsson, Richard Jones, Raimo Niskanen", "dangud at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["application","graphic"]}.
+{depends, ["kernel","stdlib","tools"]}.
+{keywords, ["multimedia","3dmodeling","graphics"]}.
+{summary, "Wings 3D is an advanced subdivision modeler that is both powerful and easy to use inspired by Nendo and Mirai from Izware"}.
+{abstract, "It is possible to assign materials, vertex color, UV coordinates and textures, "
+           "but there will be improvements in those features before Wings goes 1.0. "
+           "There is no support in Wings for doing animations."}.
+{home, "http://www.wings3d.com"}.
+{url, "https://github.com/dgud/wings.git"}.

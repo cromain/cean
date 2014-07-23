@@ -1,0 +1,20 @@
+#!/bin/sh
+
+cat << EOF
+# The following aliases allows to use cean framework without using zsh shell
+# Please put this into your .bashrc
+
+export ZDOTDIR=\$HOME/.cean
+EOF
+
+# generate global aliases
+for fun in $(sed -e '/^[a-z]*(/!d;s/(.*//' ~/.cean/functions/cean/init)
+do
+    echo "# alias $fun='zsh -i ~/.cean/functions/cean/init $fun'"
+done
+
+# generate functions aliases
+for fun in ~/.cean*/functions/*/*
+do
+    echo "alias $(echo $fun | cut -d/ -f6- | sed -e 's|/|\.|')='zsh -i $fun'"
+done

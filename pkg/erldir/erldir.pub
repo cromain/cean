@@ -1,0 +1,11 @@
+{author, {"Stuart Jackson", "sjackson at simpleenigma.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["kernel","mnesia","stdlib"]}.
+{keywords, []}.
+{summary, "erldir is an open source DNS and LDAP server"}.
+{abstract, "At the moment it is a series of DNS modules that are capabile of "
+ "encoding and decoding DNS packets into Erlang data structures. "
+ "erldir is part of the Erlang Internet Framework."}.
+{home, "http://erlsoft.org/modules/erldir"}.
+{url, "http://erldir.googlecode.com/svn/trunk"}.

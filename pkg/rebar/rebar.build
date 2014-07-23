@@ -1,0 +1,9 @@
+pkg_init() { : }
+pkg_make() { ./bootstrap }
+pkg_install() {
+    local dir dist=$(_pkg_dist)
+    mkdir -p $dist priv/bin
+    cp rebar $CEAN_ROOT/bin  # dirty hack to force rebar install into cean instance
+    mv rebar priv/bin
+    for dir in ebin include src priv; mv $dir $dist
+}

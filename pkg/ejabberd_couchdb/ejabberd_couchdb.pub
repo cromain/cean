@@ -1,0 +1,9 @@
+{author, {"Christopher "tofu" Zorn", "tofu at thetofu.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Couchdb backend for ejabberd"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/twonds/ejabberd_couchdb"}.
+{url, "https://github.com/twonds/ejabberd_couchdb.git"}.

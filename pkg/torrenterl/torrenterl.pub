@@ -1,0 +1,9 @@
+{author, {"Tamas Nagy", "tamas.nagy8313+github at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "BitTorrent client written in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tamasnagy/torrenterl"}.
+{url, "https://github.com/tamasnagy/torrenterl.git"}.

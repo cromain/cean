@@ -1,0 +1,9 @@
+{author, {"Mikael Magnusson", "mikma at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["net"]}.
+{depends, ["crypto","kernel","stdlib","unixdom_drv","xmerl"]}.
+{keywords, ["dbus"]}.
+{summary, "Implementation of the D-Bus protocol in Erlang."}.
+{abstract, ""}.
+{home, "http://dbus-erlang.sourceforge.net"}.
+{url, "svn://svn.code.sf.net/p/dbus-erlang/code/trunk"}.

@@ -1,0 +1,9 @@
+{author, {"Olivier Sambourg", "adamselene at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, ["java","games","rpg"]}.
+{summary, "Turn based MMORPG written in Erlang server side and Java client side using the XMPP protocol for communication Sanctuaire s goal is to maximise the game experience with tactical strategical economical political and social actions and interactions"}.
+{abstract, "Turn based MMORPG written in Erlang server side and Java client side using the XMPP protocol for communication Sanctuaire s goal is to maximise the game experience with tactical strategical economical political and social actions and interactions"}.
+{home, "http://sourceforge.net/projects/sanctuaire/"}.
+{url, "svn://svn.code.sf.net/p/sanctuaire/code"}.

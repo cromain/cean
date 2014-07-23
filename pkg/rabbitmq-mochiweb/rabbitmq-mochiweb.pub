@@ -1,0 +1,9 @@
+{author, {"RabbitMQ - messaging that just works", "info at rabbitmq.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "RabbitMQ Mochiweb Integration"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/rabbitmq/rabbitmq-mochiweb"}.
+{url, "https://github.com/rabbitmq/rabbitmq-mochiweb.git"}.

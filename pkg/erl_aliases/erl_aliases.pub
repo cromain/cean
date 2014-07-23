@@ -1,0 +1,9 @@
+{author, {"Anton Lavrik", "alavrik at piqi.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Define (shorter) aliases for Erlang record and module names"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/alavrik/erl_aliases"}.
+{url, "https://github.com/alavrik/erl_aliases.git"}.

@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger", "ulf at feuerlabs.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A fuzzy logic evaluator in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/uwiger/fuzzy_logic"}.
+{url, "https://github.com/uwiger/fuzzy_logic.git"}.

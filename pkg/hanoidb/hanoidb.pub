@@ -1,0 +1,9 @@
+{author, {"Kresten Krab Thorup", "krab at trifork.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang LSM BTree Storage"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/krestenkrab/hanoidb"}.
+{url, "https://github.com/krestenkrab/hanoidb.git"}.

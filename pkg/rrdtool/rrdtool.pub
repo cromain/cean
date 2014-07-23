@@ -1,0 +1,9 @@
+{author, {"Andrew Thompson", "andrew at hijacked.us"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An erlang interface to rrdtool"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/Vagabond/erlang-rrdtool"}.
+{url, "https://github.com/Vagabond/erlang-rrdtool.git"}.

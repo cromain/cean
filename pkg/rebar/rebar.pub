@@ -1,0 +1,9 @@
+{author, {"Dave Smith", "dizzyd at dizzyd.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A sophisticated build-tool for Erlang projects that follows OTP principles."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/rebar/rebar"}.
+{url, "https://github.com/rebar/rebar.git"}.

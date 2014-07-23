@@ -1,0 +1,9 @@
+{author, {"Joakim Greben&#246;, Romuald du Song", "rdusong at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["net"]}.
+{depends, ["kernel","stdlib","xmerl"]}.
+{keywords, []}.
+{summary, "Erlang XMLRPC implementation with SSL, cookies, Authentication"}.
+{abstract, "This is an HTTP 1.1 compliant XML-RPC library for Erlang"}.
+{home, "http://rds13.github.io/xmlrpc/"}.
+{url, "https://github.com/rds13/xmlrpc.git"}.

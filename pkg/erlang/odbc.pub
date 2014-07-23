@@ -1,0 +1,8 @@
+{author, {"Ingela Anderton Andin", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","database","driver"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "An interface to relational SQL-databases built on ODBC"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/odbc/index.html\">odbc Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

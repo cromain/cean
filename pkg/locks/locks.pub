@@ -1,0 +1,9 @@
+{author, {"Ulf Wiger", "ulf at feuerlabs.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A scalable, deadlock-resolving resource locker"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/uwiger/locks"}.
+{url, "https://github.com/uwiger/locks.git"}.

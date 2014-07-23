@@ -1,0 +1,9 @@
+{author, {"Seth Falcon", "http://userprimary.net/"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "A URL Shortening Service Written in Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/seth/sherl"}.
+{url, "https://github.com/seth/sherl.git"}.

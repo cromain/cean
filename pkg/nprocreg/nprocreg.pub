@@ -1,0 +1,9 @@
+{author, {"The Nitrogen Web Framework for Erlang", "http://nitrogenproject.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Process Registry used by Nitrogen."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/nitrogen/nprocreg"}.
+{url, "https://github.com/nitrogen/nprocreg.git"}.

@@ -1,0 +1,20 @@
+pkg_fetch() {
+    pkg_vsn=$CEAN_VERSION
+    [ -d $(_pkg_sources) ] && {
+        _info "($pkg_name) updating local repository..."
+        (_pkg_cd_sources
+         rsync -av --delete $HOME/.cean/lib/cean-${pkg_vsn}/* .
+         git add src/*
+         echo "VSN=$pkg_vsn" > vsn.mk
+         git status | grep -q modified && git commit -a -m "automatic update" || :) 
+    } || {
+        _info "($pkg_name) creating local repository..."
+        mkdir -p $(_pkg_sources)
+        (_pkg_cd_sources
+         git init
+         cp -r $HOME/.cean/lib/cean-${pkg_vsn}/* .
+         echo "VSN=$pkg_vsn" > vsn.mk
+         git add *
+         git commit -m "initial commit")
+    }
+}

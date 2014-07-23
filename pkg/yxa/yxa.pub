@@ -1,0 +1,9 @@
+{author, {"Magnus Ahltorp", "ahltorp at nada.kth.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["server","application","net"]}.
+{depends, ["asn1","crypto","gs","inets","kernel","mnesia","ssl","stdlib","tools","xmerl"]}.
+{keywords, ["voip","voice","phone"]}.
+{summary, "Yxa is both a transaction stateful SIP stack, and a set of SIP server applications"}.
+{abstract, ""}.
+{home, "http://www.stacken.kth.se/project/yxa"}.
+{url, "https://github.com/fredrikt/yxa.git"}.

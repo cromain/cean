@@ -1,0 +1,10 @@
+{author, {"ProcessOne, was Christian Sunesson", "contact at process-one.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["driver","database"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["sql"]}.
+{summary, "Second attempt at writing a PostgreSQL frontend. Connects by plain tcp "
+ "and should be able to perform simple SQL commands."}.
+{abstract, "PostgreSQL for ejabberd"}.
+{home, "https://github.com/processone/pgsql"}.
+{url, "https://github.com/processone/pgsql.git"}.

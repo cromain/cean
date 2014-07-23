@@ -1,0 +1,9 @@
+{author, {"Devin Torres", "devin at devintorr.es"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An emulsifying Erlang SOAP library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/devinus/detergent"}.
+{url, "https://github.com/devinus/detergent.git"}.

@@ -1,0 +1,13 @@
+# Description: Produce native binaries
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: gcc
+# Usage: cross/native
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/native" $* || return $bad_use
+local package=$1
+local flags="-march=native -mtune=native"
+local config=$(echo "" | gcc $flags -v -E - 2>&1 | grep cc1)
+_info "building with: $config"
+_error "not implemented yet"
+return $cancel

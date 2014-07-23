@@ -1,0 +1,5 @@
+pkg_make()
+{
+    cp include/eg.hrl src
+    $MAKE
+}

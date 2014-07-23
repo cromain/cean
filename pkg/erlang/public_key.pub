@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","code"]}.
+{depends, ["crypto","kernel","stdlib"]}.
+{keywords, []}.
+{summary, "This module provides functions to handle public key infrastructure from RFC 3280 - X.509 certificates."}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/public_key/index.html\">public_key Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

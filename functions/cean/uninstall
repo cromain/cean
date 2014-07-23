@@ -1,0 +1,11 @@
+# Description: Uninstall a package on local bootstrap
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: cean/uninstall yaws
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cean/uninstall package [vsn]" $* || return $bad_use
+[[ $1 == $pkg_name ]] || _pkg_read_spec $1
+[ -z $2 ] && pkg_vsn="*" || pkg_vsn=$2
+
+rm -Rf "$CEAN_ROOT/lib/${pkg_name}-${pkg_vsn}"

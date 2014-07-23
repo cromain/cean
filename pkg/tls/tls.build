@@ -1,0 +1,14 @@
+pkg_init() { : }
+pkg_make() {
+    # dirty hack to bypass rebar ignoring configure parameters
+    local lib
+    [ -x /opt/local/bin/port ] && lib="/opt/local"
+    [ -x /usr/local/bin/brew ] && lib=$(brew info openssl | sed -e '/^\//!d;s/ .*//')
+    [ -z $lib ] && lib="/usr"
+    CFLAGS="-I$lib/include" LDFLAGS="-L$lib/lib" $MAKE
+}
+pkg_install() {
+    local dir dist=$(_pkg_dist)
+    mkdir -p $dist
+    for dir in ebin include src c_src priv; [ -d $dir ] && mv $dir $dist || :
+}

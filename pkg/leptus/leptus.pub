@@ -1,0 +1,9 @@
+{author, {"Sina Samavati", "sina.samv@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, ["web","server"]}.
+{depends, ["cowboy","jiffy"]}.
+{keywords, ["rest"]}.
+{summary, "Erlang REST framework that runs on top of cowboy"}.
+{abstract, "Leptus aims at simply creating RESTful APIs."}.
+{home, "https://github.com/s1n4/leptus"}.
+{url, "https://github.com/s1n4/leptus.git"}.

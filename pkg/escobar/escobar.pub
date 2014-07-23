@@ -1,0 +1,9 @@
+{author, {"mats cronqvist", "masse at cronqvi.st"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Erlang source code to html transform"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/massemanet/escobar"}.
+{url, "https://github.com/massemanet/escobar.git"}.

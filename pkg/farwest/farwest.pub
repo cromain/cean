@@ -1,0 +1,9 @@
+{author, {"99s Open Source", "contact at ninenines.eu"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Modern web application development platform"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/extend/farwest"}.
+{url, "https://github.com/extend/farwest.git"}.

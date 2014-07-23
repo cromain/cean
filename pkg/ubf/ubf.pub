@@ -1,0 +1,9 @@
+{author, {"Universal Binary Format 2.1", "ubf.org@gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Universal Binary Format 2.1"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/ubf/ubf"}.
+{url, "https://github.com/ubf/ubf.git"}.

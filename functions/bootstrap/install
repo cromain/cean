@@ -1,0 +1,59 @@
+# Description: Install Erlang bootstrap as a new cean workdir
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: strip sed
+# Usage: bootstrap/install R13B04 $HOME/mycean
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "bootstrap/install otp_version dest_dir [mini|base|full] [arch]" $* || return $bad_use
+local erts lib vsn=$1 destdir=$2 otpdir=otp_src_$1 profile=${3:-mini} arch=${4:-$CEAN_HOSTARCH}
+
+cd $destdir
+destdir=$PWD
+mkdir src bin tmp lib
+cd src/$otpdir || return $missing_sources
+which gmake >/dev/null 2>/dev/null && {
+    gmake install || return $install_error
+} || {
+    make install || return $install_error
+}
+cp bin/*/* $destdir/bin
+cp bootstrap/bin/* $destdir/bin
+erts=$(sed '/^VSN/!d;s/.*= //' erts/vsn.mk)
+for lib in compiler hipe kernel sasl stdlib
+    [ -d bootstrap/lib/$lib ] && cp -r bootstrap/lib/$lib $destdir/lib/${lib}-$(sed -e '/VSN/!d;s/=/ /;s/.* //;q' lib/$lib/vsn.mk)
+for lib in ~/.cean/lib/*
+    cp -r bootstrap/lib/$lib:t $destdir/lib
+rm -Rf dist/lib/erlang/lib/*/priv/obj
+(cd dist/lib/erlang/lib
+ for lib in *; tar zcf $destdir/tmp/$lib.tgz $lib)
+cd $destdir
+ls bin/*(*) | xargs strip -S 2>/dev/null
+(cd lib
+ ln -s kernel-* kernel
+ ln -s stdlib-* stdlib)
+mv src/$otpdir/dist/lib/erlang/usr .
+rm -Rf src/$otpdir
+cat > bin/erl << END
+#!/bin/sh
+ROOTDIR=\`dirname \$0\`
+ROOTDIR=\`cd \$ROOTDIR/..; pwd\`
+BINDIR=\$ROOTDIR/bin
+EMU=beam
+PROGNAME=\`echo \$0 | sed 's/.*\///'\`
+export EMU
+export ROOTDIR
+export BINDIR
+export PROGNAME
+exec \$BINDIR/erlexec \${1+"\$@"}
+END
+
+# then use boostrap generation script on clean install
+for lib in tmp/*tgz; tar -C lib -zxf $lib
+rm -Rf lib/*/{examples,src,c_src}
+ls -d lib/erts*(N) | grep -q erts || mkdir lib/erts-$erts
+echo 'beam_lib:strip_files(filelib:wildcard("lib/*/ebin/*beam")), init:stop().' | bin/erl >/dev/null
+export/bootstrap $vsn $arch
+
+# finally, apply the wanted bootstrap
+rm -Rf lib
+tar zxf ~/.cache/cean/bootstraps/${vsn}_${arch}_${profile}.tar.gz

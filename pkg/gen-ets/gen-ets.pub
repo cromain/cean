@@ -1,0 +1,9 @@
+{author, {"Joseph Wayne Norton", "norton@alum.mit.edu"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "GEN_ETS is an generic wrapper for Erlang Term Storage with a callback interface for a backend implementation."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/norton/gen-ets"}.
+{url, "https://github.com/norton/gen-ets.git"}.

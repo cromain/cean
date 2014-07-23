@@ -1,0 +1,11 @@
+{author, {"Luke Gorrie, Mats Cronqvist", "masse at cronqvi.st"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["misc"]}.
+{depends, ["compiler","debugger","kernel","pman","stdlib","syntax_tools","tools"]}.
+{keywords, ["emacs","ide"]}.
+{summary, "Distributed Emacs Lisp, or, an Emacs-based IDE for Erlang programming"}.
+{abstract, "Distel's core extends Emacs Lisp with the Erlang programming model "
+ "and an interoperable implementation of the Erlang distributed message-passing "
+ "protocol. The package includes Emacs-based development tools written on top of this core."}.
+{home, "https://github.com/massemanet/distel"}.
+{url, "https://github.com/massemanet/distel.git"}.

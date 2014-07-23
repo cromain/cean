@@ -1,0 +1,9 @@
+{author, {"Tim Watson", "http://hyperthunk.wordpress.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Bridge based Logging API"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/hyperthunk/logging_api"}.
+{url, "https://github.com/hyperthunk/logging_api.git"}.

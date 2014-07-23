@@ -1,0 +1,9 @@
+{author, {"Vassil &quot;Vasco&quot; Kolarov", "vasco@vas.io"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "rivus_cep - Complex event processing in Erlang" property="og:description"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/vascokk/rivus_cep"}.
+{url, "https://github.com/vascokk/rivus_cep.git"}.

@@ -1,0 +1,9 @@
+{author, {"Unicode libraries for Erlang", ""}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Unicode eXtention for Erlang (Strings, Collation)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/erlang-unicode/ux"}.
+{url, "https://github.com/erlang-unicode/ux.git"}.

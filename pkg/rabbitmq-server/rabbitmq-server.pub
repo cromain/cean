@@ -1,0 +1,12 @@
+{author,{"Rabbit Technologies Ltd", "info at rabbitmq.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["net"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["amqp","messaging","middleware"]}.
+{summary, "implementation of AMQP, the emerging standard for high performance enterprise messaging"}.
+{abstract, "RabbitMQ is a complete and highly reliable Enterprise Messaging system. The RabbitMQ "
+ "client libraries and broker daemon can be used together to create an AMQP network, or used "
+  "individually to bring the benefits of RabbitMQ to established networks."}.
+  {home, "http://www.rabbitmq.com"}.
+{home, "https://github.com/rabbitmq/rabbitmq-server"}.
+{url, "https://github.com/rabbitmq/rabbitmq-server.git"}.

@@ -1,0 +1,9 @@
+{author, {"Scott Lystig Fritchie", "fritchie at snookles.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["tool","driver"]}.
+{depends, []}.
+{keywords, ["c","cnode"]}.
+{summary, "Erlang Driver Toolkit"}.
+{abstract, "It is used to create an Erlang driver interface for third-party C libraries."}.
+{home, ""}.
+{url, "http://www.snookles.com/erlang/edtk/edtk-1.5.1.tar.gz"}.

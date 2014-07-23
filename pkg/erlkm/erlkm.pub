@@ -1,0 +1,9 @@
+{author, {"Jared Kofron", "http://kofron.tumblr.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Kohonen map implemented in pure Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/kofron/erlkm"}.
+{url, "https://github.com/kofron/erlkm.git"}.

@@ -1,0 +1,9 @@
+{author, {"J. Brisbin", "jon at jbrisbin.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Rebar-friendly fork of rabbitmq-erlang-client."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/jbrisbin/amqp_client"}.
+{url, "https://github.com/jbrisbin/amqp_client.git"}.

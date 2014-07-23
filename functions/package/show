@@ -1,0 +1,9 @@
+# Description: Show package specification
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: package/show ejabberd
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "package/show package" $* || return $bad_use
+
+cat ~/.cean*/pkg/*/$1.pub

@@ -1,0 +1,9 @@
+{author, {"Leandro Silva", "leandrodoze at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Simple tool for building Erlang/OTP projects"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/leandrosilva/ebuilder"}.
+{url, "https://github.com/leandrosilva/ebuilder.git"}.

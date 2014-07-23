@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", "http://basho.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Riak Key/Value Store"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/riak_kv"}.
+{url, "https://github.com/basho/riak_kv.git"}.

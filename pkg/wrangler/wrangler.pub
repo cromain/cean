@@ -1,0 +1,12 @@
+{author, {"Simon Thompson, Huiqing Li, John Derrick","mailto:erlang-refactor at kent.ac.uk"}}. 
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["code"]}.
+{depends, ["compiler","debugger","dialyzer","distel","hipe","kernel","pman","stdlib","syntax_tools","tools","typer"]}.
+{keywords, ["code","refactoring","improve","design"]}.
+{summary, "Erlang refactorer"}.
+{abstract, "Refactoring is the process of changing (improving?) the design of existing "
+ "code without changing the behaviour of the code. Examples range from renamning an "
+ "identifier, to generalising a function or other code artifact and to wholesale changes "
+ "to data structures."}.
+{home, "http://www.cs.kent.ac.uk/projects/forse"}.
+{url, "http://www.cs.kent.ac.uk/projects/forse/wrangler/wrangler-0.9/wrangler-0.9.3.1.tar.gz"}.

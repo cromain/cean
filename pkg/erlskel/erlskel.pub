@@ -1,0 +1,9 @@
+{author, {"David N. Welton", "davidw at dedasys.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Generate quick skeletons of Erlang OTP applications"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/davidw/erlskel"}.
+{url, "https://github.com/davidw/erlskel.git"}.

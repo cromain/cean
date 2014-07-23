@@ -1,0 +1,9 @@
+{author, {"Basho Technologies", "http://basho.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "an Erlang library for storing ordered sets on disk."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/basho/merge_index"}.
+{url, "https://github.com/basho/merge_index.git"}.

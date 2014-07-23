@@ -1,0 +1,9 @@
+{author, {"Dan Gudmundsson, Björn Gustavsson, Patrik Nyblom, Klas Johansson", "dgud at users.sourceforge.net"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["graphic"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["sdl", "opengl", "lib"]}.
+{summary, "Erlang OPENGL/SDL api and utilities"}.
+{abstract, "A library that gives you access to SDL and Opengl functionality in your erlang program"}.
+{home, "http://esdl.sourceforge.net"}.
+{url, "https://github.com/dgud/esdl.git"}.

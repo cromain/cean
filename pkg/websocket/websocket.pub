@@ -1,0 +1,9 @@
+{author, {"Dave Bryson", "debryson at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "WebSocket Server and Client implementation in Erlang/Mochiweb"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/davebryson/erlang_websocket"}.
+{url, "https://github.com/davebryson/erlang_websocket.git"}.

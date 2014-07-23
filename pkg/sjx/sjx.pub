@@ -1,0 +1,9 @@
+{author, {"Tim Watson", "http://hyperthunk.wordpress.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Contribute to sjx development by creating an account on GitHub."}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/hyperthunk/sjx"}.
+{url, "https://github.com/hyperthunk/sjx.git"}.

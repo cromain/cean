@@ -1,0 +1,30 @@
+# Description: Generate Erlang bootstrap from current workdir
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: 
+# Usage: export/bootstrap
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "export/bootstrap [otp] [arch]" $* || return $bad_use
+local vsn=${1:-$ERLANG_VERSION} arch=${2:-$CEAN_HOSTARCH}
+local destdir=~/.cache/cean/bootstraps archive
+mkdir -p $destdir
+
+archive=$destdir/${vsn}_${arch}_mini.tar.gz
+[ -f $archive ] || tar zcf $archive bin usr \
+lib/(cean|hipe|compiler|erts|kernel|parsetools|sasl|stdlib|syntax_tools)*
+
+archive=$destdir/${vsn}_${arch}_base.tar.gz
+[ -f $archive ] || tar zcf $archive bin usr \
+lib/(cean|asn1|common_test|compiler|crypto|debugger|dialyzer|edoc|erl_interface|\
+erts|eunit|hipe|inets|kernel|mnesia|observer|parsetools|public_key|\
+reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|test_server|\
+tools|typer|xmerl)*
+
+archive=$destdir/${vsn}_${arch}_full.tar.gz
+[ -f $archive ] || tar zcf $archive bin usr \
+lib/(cean|appmon|asn1|common_test|compiler|cosEvent|cosEventDomain|cosFileTransfer|\
+cosNotification|cosProperty|cosTime|cosTransactions|crypto|debugger|dialyzer|diameter|\
+docbuilder|edoc|erl_docgen|erl_interface|erts|et|eunit|gs|hipe|ic|inets|inviso|\
+kernel|megaco|mnesia|observer|orber|os_mon|otp_mibs|parsetools|percept|pman|\
+public_key|reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|\
+test_server|toolbar|tools|tv|typer|webtool|wx|xmerl)*

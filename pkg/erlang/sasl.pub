@@ -1,0 +1,8 @@
+{author, {"Erlang/OTP team", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP"]}.
+{depends, ["kernel","stdlib","tools"]}.
+{keywords, []}.
+{summary, "The System Architecture Support Libraries support"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/sasl/index.html\">sasl Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.

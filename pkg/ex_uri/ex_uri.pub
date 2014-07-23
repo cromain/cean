@@ -1,0 +1,9 @@
+{author, {"99s Open Source", "contact at ninenines.eu"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An URI-handling library application for Erlang"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/extend/ex_uri"}.
+{url, "https://github.com/extend/ex_uri.git"}.

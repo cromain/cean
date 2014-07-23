@@ -1,0 +1,9 @@
+{author, {"Russell Brown", ""}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Paypal Express Checkout OTP app"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/russelldb/ppec"}.
+{url, "https://github.com/russelldb/ppec.git"}.

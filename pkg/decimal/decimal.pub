@@ -1,0 +1,9 @@
+{author, {"Tim Fletcher", "http://tfletcher.com/"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "An Erlang decimal arithmetic library"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tim/erlang-decimal"}.
+{url, "https://github.com/tim/erlang-decimal.git"}.

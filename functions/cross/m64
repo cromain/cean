@@ -1,0 +1,24 @@
+# Description: Produce 64bit binaries
+# Author: Christophe Romain <cromain@process-one.net>
+# Depends: gcc
+# Usage: cross/m64
+# vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
+
+_api_check "cross/m64" $* || return $bad_use
+local package=$1
+local flags="-m64 -march=nocona"
+_error "not implemented yet"
+return $cancel
+
+case $package in
+otp)
+case $(uname -s) in
+Darwin) ./configure --enable-darwin-64bit ;;
+*) ./configure --enable-m64-build ;;
+esac
+;;
+*)
+export CFLAGS="-m64"
+export CXXFLAGS="-m64"
+;;
+esac

@@ -1,0 +1,9 @@
+{author, {"Max Lapshin", "info at erlyvideo.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["net","server"]}.
+{depends, ["kernel","stdlib","tools"]}.
+{keywords, ["rtmp","audio","video"]}.
+{summary, "Erlyvideo is an old and outdated version of video streaming server"}.
+{abstract, "All development now is on http://flussonic.com/"}.
+{home, "http://blog.erlyvideo.org/"}.
+{url, "https://github.com/erlyvideo/erlyvideo-old.git"}.

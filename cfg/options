@@ -1,0 +1,3 @@
+setopt autocd autolist automenu autoremoveslash completealiases
+setopt extendedglob listambiguous notify promptsubst
+unsetopt autoparamslash globalrcs

@@ -1,0 +1,9 @@
+{author, {"Tony Rogvall", "tony at rogvall.se"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "proc file system for Erlang (rebarified version)"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/tonyrog/fuserlproc"}.
+{url, "https://github.com/tonyrog/fuserlproc.git"}.

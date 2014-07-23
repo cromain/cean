@@ -1,0 +1,9 @@
+{author, {"Anton Lavrik", "alavrik at piqi.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "RPC-over-HTTP system for Erlang supporting JSON, XML and Protocol Buffers"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/alavrik/piqi-rpc"}.
+{url, "https://github.com/alavrik/piqi-rpc.git"}.

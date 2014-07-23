@@ -1,0 +1,9 @@
+{author, {"Fred Hebert", "http://learnyousomeerlang.com"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "Collection of functions and scripts to debug Erlang in production."}.
+{abstract, "Recon is a library to be dropped into any other Erlang project, to be used to assist DevOps people diagnose problems in production nodes."}.
+{home, "http://ferd.github.io/recon/index.html"}.
+{url, "https://github.com/ferd/recon.git"}.

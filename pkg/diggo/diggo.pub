@@ -1,0 +1,9 @@
+{author, {"Vlad Dumitrescu", "vladdu55 at gmail.com"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["game"]}.
+{depends, ["kernel","stdlib"]}.
+{keywords, ["go"]}.
+{summary, "A simple engine for playing the game of go"}.
+{abstract, ""}.
+{home, "http://code.google.com/p/diggo"}.
+{url, "http://diggo.googlecode.com/svn/trunk"}.

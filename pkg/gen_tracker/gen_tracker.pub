@@ -1,0 +1,9 @@
+{author, {"Erlyvideo", "info@erlyvideo.org"}}.
+{packager, {"Christophe Romain", "christophe.romain@process-one.net"}}.
+{category, []}.  % please edit
+{depends, []}.   % please edit
+{keywords, []}.  % please edit
+{summary, "supervisor with ets handling of children and their metadata"}.
+{abstract, ""}.  % please edit
+{home, "https://github.com/erlyvideo/gen_tracker"}.
+{url, "https://github.com/erlyvideo/gen_tracker.git"}.
