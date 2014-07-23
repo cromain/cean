@@ -14,8 +14,6 @@ Here is minimal instructions to setup a working directory.
   netbsd:
       * pkgin in scmgit tig zsh-4.3.10nb2
 
- if you need to build ejabberd, openssl latex and hevea must be installed as well.
-
 2) get the cean framework
 
  there are 3 profile: mini (default), base, full. when bootstraping your working
@@ -25,65 +23,49 @@ Here is minimal instructions to setup a working directory.
 
 cd $HOME
 git clone git@github.com:cromain/cean.git .cean  ($HOME/.cean is mandatory)
-$HOME/.cean/bin/cean create R14 R14B03 base
+export PATH=$HOME/.cean/bin:$PATH
+cean create R16 R16B03-1 base
 if it complains about missing dependencies you will not use, just force install
-$HOME/.cean/bin/cean force create R14 R14B03 base
-
-setup your environment, and launch CEAN shell
-alias cean='$HOME/.cean/bin/cean shell'
-cean R14
+cean force create R16 R16B03-1 base
+cean shell R16
 
  note: you can check generated archives into
  $HOME/.cache/cean/sources
  $HOME/.cache/cean/bootstraps
 
 3) let's build yaws package and install it in workdir
-R14B03> package yaws
-R14B03> ls src/yaws
-R14B03> ls pub/src/yaws
-R14B03> ls pub/bin/linux-x86_64/R14/yaws
-R14B03> tar tf pub/bin/linux-x86_64/R14/yaws/yaws-1.91.epkg
-R14B04> src/yaws
-R14B03:yaws:master(yaws-1.91-...)> :>dirty
-R14B03:yaws:master(yaws-1.91-...)> git status
-R14B03:yaws:master(yaws-1.91-...)> rm dirty
-R14B03:yaws:master(yaws-1.91-...)> cdr
-R14B03> cean/install yaws
-R14B03> ls lib/yaws-1.91
-R14B03> erl
+R16B03-1: > package yaws
+R16B03-1: > ls src/yaws
+R16B03-1: > ls pub/src/yaws
+R16B03-1: > ls pub/bin/linux-x86_64/R16/yaws
+R16B03-1: > src/otp
+R16B03-1:otp:tags/OTP_R16B03-1^0(OTP_R16B03-1): ?>
+R16B03-1:otp:tags/OTP_R16B03-1^0(OTP_R16B03-1): ?> cdr
+R16B03-1: >
+R16B03-1: > erl
+Erlang R16B03-1 (erts-5.10.4) [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false]
+
+Eshell V5.10.4  (abort with ^G)
 1> cean:is_installed(yaws).
 2> q().
 
 4) let's check what are available commands, get help for one of them and try
-R14B03> help
-R14B03> help package/depends
-R14B03> package/depends yaws
+R16B03-1> help
+R16B03-1> help package/depends
+R16B03-1> package/depends yaws
 
 4) exit the cean shell (ctrl+d)
 
 5) create a new base working environement
-$HOME/.cean/bin/cean force create $HOME/anotherR14 R14B03 full
-cean $HOME/anotherR14
+cean create anotherR16 R16B03-1 full
+cean shell anotherR16
 
 6) build all Erlang OTP packages
-R14B04> package otp
+R16B03-1> package otp
 
---- deeper package handling, example for ejabberd
-
-fetch or update sources: package/fetch ejabberd
-build sources: package/build ejabberd
-generate epkg for packaging: package/install ejabberd
-all that in one shot: package ejabberd
-all that in one shot for a tagged version: package ejabberd v2.1.5
-checkout the master branch of ejabberd: package/fetch ejabberd master
-
-install generated epkg in your local erlang installation: cean/install ejabberd
-check it's installed this way:
-cdr   (this change current directory to workdir root)
-ls lib
-
-list available packages: package/list
-search for server packages: package/search server
+7) check packages
+R16B03-1> package/list
+R16B03-1> package/search web
 
 --- you don't like the prompt ?
 
