@@ -66,6 +66,7 @@ pkg_install() {
      [ -d ../sql ] && mv ../sql/* priv/sql
      [ -d ../tools ] && mv ../tools priv
      [ -d doc ] || mkdir doc
+     mv ../doc/README.txt doc
      mv share/doc/ejabberd/* doc
      rm -Rf lib var db sbin etc share)
 }
