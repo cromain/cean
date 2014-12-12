@@ -8,7 +8,7 @@ pkg_config() {
     conf=("--prefix=$PWD/$(_pkg_dist)" $(echo $pkg_cfg))
     [ -x autogen.sh ] && {
         # rebar version
-        ./autogen.sh
+        # configure already generated on sources tarball
         ./configure $conf
     } || {
         # old configure version
@@ -32,7 +32,6 @@ pkg_make() {
     [ -x autogen.sh ] && {
         # rebar version
         CFLAGS="$cf" LDFLAGS="$lf" $MAKE all || return $make_error
-        tools/set-dep-versions
     } || {
         # old configure version
         (cd src; CFLAGS="$cf" LDFLAGS="$lf" $MAKE) || return $make_error
