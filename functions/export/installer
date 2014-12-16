@@ -8,7 +8,7 @@ _api_check "export/installer package [arch]" $* || return $bad_use
 _api_export $* || return $package_error
 local dist=$(_pkg_dist) epkg=$(_pkg_epkg $2)
 local reltar=$(_pkg_reltar $2) installer=${epkg/.epkg/.sh}
-local include=$(_pkg_spec)
+local include=$(/bin/ls -1d ~/.cean*/pkg/${pkg_name}/installer([1]))
 include=$include:h/installer
 
 [ -f $reltar ] || export/release $* || {
