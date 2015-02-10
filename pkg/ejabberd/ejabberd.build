@@ -7,8 +7,8 @@ pkg_config() {
     local -a conf
     conf=("--prefix=$PWD/$(_pkg_dist)" $(echo $pkg_cfg))
     [ -x autogen.sh ] && {
-        # rebar version
-        # configure already generated on sources tarball
+        # new rebar version
+        ./autogen.sh
         ./configure $conf
     } || {
         # old configure version
