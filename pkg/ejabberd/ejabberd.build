@@ -24,7 +24,7 @@ pkg_make() {
         local lib p
         for lib in openssl expat
         do
-            p=$(brew info $lib | sed -e '/^\//!d;s/ .*//')
+            p=$(brew info $lib | sed -e '/^\//!d;s/ .*//' | tail -n 1)
             cf+=" -I$p/include"
             lf+=" -L$p/lib"
         done
