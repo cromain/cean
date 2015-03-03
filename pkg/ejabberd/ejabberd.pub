@@ -14,4 +14,4 @@
  "and other forms of near-real-time communication based on XML."}.
 {home, "http://www.process-one.net/en/ejabberd"}.
 {url, "https://github.com/processone/ejabberd.git"}.
-{configure, "--enable-mysql --enable-pgsql"}.
+{configure, "--enable-mysql --enable-pgsql --enable-riak"}.
