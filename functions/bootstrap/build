@@ -18,8 +18,8 @@ mkdir dist
 # configure, TODO: handle cross-building
 local -a opts
 opts=("--prefix=$PWD/dist")
-# osx openssl is quite old, allow to build bootstrap with better one
-brew list openssl >/dev/null 2>/dev/null && opts+="--with-ssl=$(brew info openssl | sed -e '/^\//!d;s/ .*//')"
+# osx openssl is quite old, allow to build bootstrap with latest one
+brew list openssl >/dev/null 2>/dev/null && opts+="--with-ssl=$(brew info openssl | sed -e '/^\//!d;s/ .*//' | tail -n 1)"
 case $arch in
 darwin-x86_64) opts+="--enable-darwin-64bit" ;;
 linux-x86_64) opts+="--enable-m64-build" ;;
