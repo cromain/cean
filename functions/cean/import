@@ -38,7 +38,7 @@ END
 }
 epkg() {
     local otp=$1 arch=$2 dir=$3
-    [[ ${ERLANG_VERSION%[A-D]*} == ${otp%[A-D]*} ]] || {
+    [[ ${ERLANG_VERSION%%[A-D.]*} == ${otp%%[A-D.]*} ]] || {
         _error "($pkg_name) can not package for another major erlang version"
         return $bad_use
     }

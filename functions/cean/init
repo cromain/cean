@@ -165,13 +165,13 @@ _pkg_read_spec() {
 }
 _pkg_cd_sources() { cd $(_pkg_sources) 2>/dev/null }
 _pkg_sources() { [ -z $pkg_name ] || echo $CEAN_ROOT/src/$pkg_name }
-_pkg_bin()     { [ -z $pkg_pub ] && echo $CEAN_ROOT/pub/bin/${1:-$CEAN_HOSTARCH}/${ERLANG_VERSION%[A-D]*}/$pkg_name || echo $CEAN_ROOT/pub/$pkg_pub }
+_pkg_bin()     { [ -z $pkg_pub ] && echo $CEAN_ROOT/pub/bin/${1:-$CEAN_HOSTARCH}/${ERLANG_VERSION%%[A-D.]*}/$pkg_name || echo $CEAN_ROOT/pub/$pkg_pub }
 _pkg_src()     { [ -z $pkg_pub ] && echo $CEAN_ROOT/pub/src/$pkg_name || echo $CEAN_ROOT/pub/$pkg_pub }
 _pkg_epkg()    { [ -z $pkg_name ] || echo $(_pkg_bin $1)/$(_pkg_dist).epkg }
 _pkg_tarball() { [ -z $pkg_name ] || echo $(_pkg_src)/$(_pkg_dist).tgz }
 _pkg_reltar()  { [ -z $pkg_name ] || echo $(_pkg_bin $1)/$(_pkg_dist).rel.tgz }
 _pkg_spec()    { [ -z $pkg_name ] || /bin/ls -1d ~/.cean*/pkg/*/${pkg_name}.pub([1]) }
-_pkg_pubspec() { [ -z $pkg_name ] || /bin/ls -1d $CEAN_ROOT/pub/bin/${1:-$CEAN_HOSTARCH}/${ERLANG_VERSION%[A-D]*}/$pkg_name/$pkg_name.pub(N) }
+_pkg_pubspec() { [ -z $pkg_name ] || /bin/ls -1d $(_pkg_bin $1)/$pkg_name.pub(N) }
 _pkg_dist()    { [ -z $pkg_name ] || echo ${pkg_name}-${pkg_vsn} }
 
 # Theme loader and other init stuff

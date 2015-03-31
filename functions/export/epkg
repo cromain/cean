@@ -72,5 +72,5 @@ local buildtar=$CEAN_ROOT/tmp/$dist.tgz
     # Dirty hack to create relative symlink to generic epkg when needed
     (mkdir -p $epkg:h
      cd $epkg:h
-     for gen in ../../../generic/${ERLANG_VERSION%[A-D]*}/$pkg_name/*; [ -e $gen:t ] || ln -s $gen $gen:t)
+     for gen in ../../../generic/${ERLANG_VERSION%%[A-D.]*}/$pkg_name/*; [ -e $gen:t ] || ln -s $gen $gen:t)
 }

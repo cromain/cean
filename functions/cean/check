@@ -9,7 +9,7 @@ local arch package generic real
 
 # Make sur generic packages are made available for all platforms
 cd $CEAN_ROOT/pub/bin
-for package in $(/bin/ls -d generic/${ERLANG_VERSION%[A-D]*}/*)
+for package in $(/bin/ls -d generic/${ERLANG_VERSION%%[A-D.]*}/*)
 do
     for arch in $(/bin/ls -1 | grep -v generic)
     do
@@ -24,7 +24,7 @@ done
 cd $CEAN_ROOT
 
 # Warn about inconsistent packages
-for package in $(find $CEAN_ROOT/pub/bin -type f -name "*epkg" | grep "/${ERLANG_VERSION%[A-D]*}/")
+for package in $(find $CEAN_ROOT/pub/bin -type f -name "*epkg" | grep "/${ERLANG_VERSION%%[A-D.]*}/")
 do
     _cd_workdir
     tar xf $package

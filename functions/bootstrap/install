@@ -32,6 +32,7 @@ ls bin/*(*) | xargs strip -S 2>/dev/null
  ln -s kernel-* kernel
  ln -s stdlib-* stdlib)
 mv src/$otpdir/dist/lib/erlang/usr .
+ln -s usr erts-$erts
 rm -Rf src/$otpdir
 cat > bin/erl << END
 #!/bin/sh
@@ -54,6 +55,6 @@ ls -d lib/erts*(N) | grep -q erts || mkdir lib/erts-$erts
 echo 'beam_lib:strip_files(filelib:wildcard("lib/*/ebin/*beam")), init:stop().' | bin/erl >/dev/null
 export/bootstrap $vsn $arch
 
-# finally, apply the wanted bootstrap
+# apply the wanted bootstrap
 rm -Rf lib
 tar zxf ~/.cache/cean/bootstraps/${vsn}_${arch}_${profile}.tar.gz

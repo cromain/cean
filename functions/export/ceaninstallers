@@ -9,7 +9,7 @@ local arch
 
 # build CEAN base installers
 map package/fetch ibrowse cean
-for arch in $(/bin/ls -d pub/bin/*/${ERLANG_VERSION%[A-D]*} | cut -d/ -f3 | grep -v generic)
+for arch in $(/bin/ls -d pub/bin/*/${ERLANG_VERSION%%[A-D.]*} | cut -d/ -f3 | grep -v generic)
 do
     package/build ibrowse $arch
     package/install ibrowse $arch

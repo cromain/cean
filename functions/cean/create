@@ -52,7 +52,7 @@ fi
 cat >> .ceanrc << END
 ERLANG_VERSION=$vsn
 CEAN_SERVER=cean.process-one.net
-CEAN_REPOSITORY=/bin/\$CEAN_HOSTARCH/${vsn%[A-D]*}
+CEAN_REPOSITORY=/bin/\$CEAN_HOSTARCH/${vsn%%[A-D.]*}
 PROMPT_THEME=cean
 
 # Add your favorite commands bellow

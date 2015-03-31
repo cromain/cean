@@ -1,0 +1,8 @@
+{author, {"Torbjörn Törnkvist", "otp at erlang.org"}}.
+{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
+{category, ["Erlang/OTP","net"]}.
+{depends, ["kernel","stdlib","ssl"]}.
+{keywords, ["ldap","openldap","activedirectory","ad"]}.
+{summary, "Erlang LDAP library"}.
+{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/eldap/index.html\">eldap Erlang/OTP Documentation</a>"}.
+{home, "http://www.erlang.org"}.
