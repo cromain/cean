@@ -64,5 +64,5 @@ dd if=/dev/zero bs=1 count=$((512-b2)) >> $installer 2>/dev/null
     dd if=$reltar bs=512 >> $installer 2>/dev/null
 }
 chmod +x $installer
-md5sum $installer | awk '{print $1}' > $installer.md5
+generate_md5_file $installer
 rm /tmp/$$

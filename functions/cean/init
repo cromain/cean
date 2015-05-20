@@ -56,6 +56,12 @@ _latest_otp_vsn() {
     curl -silent ${ERLANG_MIRROR}.html | grep otp_src | grep readme | head -n1 | sed 's/.*otp_src_\(.*\)\.readme.*/\1/'
 }
 
+# md5 linux/osx helper
+generate_md5_file() {
+    md5 -q $1 > $1.md5
+    [ -f $1.md5 ] || md5sum $1 | awk '{print $1}' > $1.md5
+}
+
 # Logging functions
 _usage() { echo "$sc[usage]usage: $*$sc[reset]"; }
 _error() { echo "$sc[error]$*$sc[reset]"; }
