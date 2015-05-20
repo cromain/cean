@@ -15,3 +15,4 @@
 {home, "http://www.process-one.net/en/ejabberd"}.
 {url, "https://github.com/processone/ejabberd.git"}.
 {configure, "--enable-mysql --enable-pgsql --enable-sqlite --enable-riak --enable-redis --enable-elixir"}.
+{bitrock_export, "rpm,deb"}.

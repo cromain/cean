@@ -36,13 +36,6 @@ pkg_make() {
         # old configure version
         (cd src; CFLAGS="$cf" LDFLAGS="$lf" $MAKE) || return $make_error
     }
-    env hevea -version >/dev/null 2>/dev/null && {
-        (cd doc
-         $MAKE distclean
-         $MAKE all) || return $make_error
-    } || {
-        _warn "(ejabberd) documentation can not be generated"
-    }
 }
 pkg_install() {
     local dist=$(_pkg_dist)
@@ -59,13 +52,13 @@ pkg_install() {
      mv ../src .
      mv lib/ejabberd/* . || mv var/lib/ejabberd/* .
      mv sbin/* priv/bin
-     mkdir priv/cfg priv/sql
+     mkdir -p priv/cfg priv/sql doc
      mv etc/ejabberd/* priv/cfg
      [ -d src/odbc ] && mv src/odbc/*sql priv/sql
      [ -d ../sql ] && mv ../sql/* priv/sql
      [ -d ../tools ] && mv ../tools priv
-     [ -d doc ] || mkdir doc
-     mv ../doc/README.txt doc
+     [ -f ../doc/README.txt ] && mv ../doc/README.txt doc
+     [ -f ../README ] && mv ../README doc/README.txt
      mv share/doc/ejabberd/* doc
      rm -Rf lib var db sbin etc share)
 }
