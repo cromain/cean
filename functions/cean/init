@@ -59,7 +59,7 @@ _latest_otp_vsn() {
 # md5 linux/osx helper
 generate_md5_file() {
     md5 -q $1 > $1.md5 2>/dev/null
-    [ -f $1.md5 ] || md5sum $1 | awk '{print $1}' > $1.md5
+    [ $? -eq 0 ] || md5sum $1 | awk '{print $1}' > $1.md5
 }
 
 # Logging functions
