@@ -8,7 +8,7 @@ pkg_config() {
     conf=("--prefix=$PWD/$(_pkg_dist)" $(echo $pkg_cfg))
     [ -x autogen.sh ] && {
         # new rebar version
-        [ -x configure ] || ./autogen.sh
+        ./autogen.sh
         ./configure $conf
     } || {
         # old configure version
