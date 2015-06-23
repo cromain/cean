@@ -187,4 +187,12 @@ cean/theme
 [ -d ~/.cache/cean ] || mkdir -p ~/.cache/cean
 
 # Make sure we use correct version of OTP sources for packaging
-[ -d src/otp ] && { cd src/otp; git checkout OTP_$ERLANG_VERSION 2>/dev/null; cd $CEAN_ROOT }
+[ -d src/otp ] && {
+    cd src/otp
+    [[ "${ERLANG_VERSION:0:1}" == "R" ]] && {
+        git checkout OTP_$ERLANG_VERSION 2>/dev/null
+    } || {
+        git checkout OTP-$ERLANG_VERSION 2>/dev/null
+    }
+    cd $CEAN_ROOT
+}
