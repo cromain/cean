@@ -2,9 +2,8 @@
 
 # generate configure
 vsn=${2//-/.}
-aclocal -I m4
-autoconf -f -o - | sed "s/0\.0/$vsn/" > configure
-chmod +x configure
+sed -i -e "s/echo 0\.0/echo $vsn/" configure.ac
+./autogen.sh
 
 # generate static deps versions
 ./rebar get-deps
