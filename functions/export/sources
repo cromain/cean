@@ -6,7 +6,9 @@
 
 _api_check "export/sources package" $* || return $bad_use
 _api_export $* || return $bad_use
+local package=$1
 local archive=$(_pkg_tarball) spec=$(_pkg_spec)
+[[ $package == $pkg_name ]] || _pkg_read_spec $package || return $package_error
 
 # define script for custom source changes before packaging
 local prep=undefined
