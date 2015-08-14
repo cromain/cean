@@ -31,6 +31,7 @@ pkg_make() {
     }
     [ -x autogen.sh ] && {
         # rebar version
+        ./rebar get-deps
         CFLAGS="$cf" LDFLAGS="$lf" $MAKE all || return $make_error
     } || {
         # old configure version
