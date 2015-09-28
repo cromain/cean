@@ -1,6 +1,6 @@
 # Description: Pack a given package to epkg
 # Author: Christophe Romain <cromain@process-one.net>
-# Depends: strip tar gzip zip
+# Depends: strip tar gzip zip xargs file
 # Usage: export/epkg ejabberd
 # vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
 
