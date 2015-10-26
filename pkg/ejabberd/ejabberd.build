@@ -5,6 +5,8 @@ pkg_fetch() {
 pkg_init() { : }
 pkg_config() {
     local -a conf
+    [ -x /usr/local/bin/brew -a $pkg_cfg != ${pkg_cfg/sqlite/} ] && \
+        pkg_cfg+=" --with-sqlite3=/usr/local/opt/sqlite"
     conf=("--prefix=$PWD/$(_pkg_dist)" $(echo $pkg_cfg))
     [ -x autogen.sh ] && {
         # new rebar version
@@ -19,20 +21,25 @@ pkg_config() {
 }
 pkg_make() {
     local cf="" lf=""
-    [ -x /opt/local/bin/port ] && { cf="-I/opt/local/include"; lf="-L/opt/local/lib" }
+    [ -x /opt/local/bin/port ] && {
+        cf="-I/opt/local/include"
+        lf="-L/opt/local/lib"
+    }
     [ -x /usr/local/bin/brew ] && {
-        local lib p
+        cf="-I/usr/local/include"
+        lf="-L/usr/local/lib"
+        local lib
         for lib in openssl expat
         do
-            p=$(brew info $lib | sed -e '/^\//!d;s/ .*//' | tail -n 1)
-            cf+=" -I$p/include"
-            lf+=" -L$p/lib"
+            cf+=" -I/usr/local/opt/$lib/include"
+            lf+=" -L/usr/local/opt/$lib/lib"
         done
     }
     [ -x autogen.sh ] && {
         # rebar version
+        export CFLAGS="$cf" CPPFLAGS="$cf" LDFLAGS="$lf"
         ./rebar get-deps
-        CFLAGS="$cf" LDFLAGS="$lf" $MAKE all || return $make_error
+        ./rebar compile || return $make_error
     } || {
         # old configure version
         (cd src; CFLAGS="$cf" LDFLAGS="$lf" $MAKE) || return $make_error
