@@ -10,12 +10,12 @@ local arch=${2:-$CEAN_HOSTARCH}
 [[ $package == $pkg_name ]] || _pkg_read_spec $package || return $package_error
 export/sources $pkg_name || return $missing_sources
 local sources=$(_pkg_tarball)
-local dist=$sources:t:r
+local dist=$(_pkg_dist)
 [ -f $sources ] || return $missing_sources
 
 _info "($pkg_name) extracting ${sources/$CEAN_ROOT/}..."
 (cd $CEAN_ROOT/tmp; tar zxf $sources 2>/dev/null)
-cd $CEAN_ROOT/tmp/$sources:t:r || {
+cd $CEAN_ROOT/tmp/$dist || {
     # this simulates _cd_workdir, and exit if no sources
     _error "($pkg_name) empty sources"
     return $missing_sources
