@@ -39,7 +39,7 @@ pkg_make() {
         # rebar version
         export CFLAGS="$cf" CPPFLAGS="$cf" LDFLAGS="$lf"
         ./rebar get-deps
-        ./rebar compile || return $make_error
+        make || return $make_error
     } || {
         # old configure version
         (cd src; CFLAGS="$cf" LDFLAGS="$lf" $MAKE) || return $make_error
@@ -50,7 +50,6 @@ pkg_install() {
     [ -x autogen.sh ] && {
         # rebar version
         $MAKE install || return $install_error
-        # TODO use $MAKE rel
     } || {
         # old configure version
         (cd src; $MAKE install) || return $install_error
@@ -58,15 +57,26 @@ pkg_install() {
     }
     (cd $dist
      mv ../src .
-     mv lib/ejabberd/* . || mv var/lib/ejabberd/* .
-     mv sbin/* priv/bin
+     [ -d lib ] && {    # handle new installation scheme
+        mkdir ebin include priv
+        for lib in lib/*
+        do
+          [ -d $lib/ebin ] && mv $lib/ebin/* ebin
+          [ -d $lib/include ] && mv $lib/include/* include
+          [ -d $lib/priv ] && (cd $lib/priv; tar -cf - . | tar -C ../../../priv -xf -)
+        done
+        rm priv/edoc.css priv/basho*
+        rm -Rf lib
+        mv ../lib src/elixir
+     } || mv var/lib/ejabberd/* .
+     mv sbin/* bin/* priv/bin
      mkdir -p priv/cfg priv/sql doc
      mv etc/ejabberd/* priv/cfg
+     [ -d ../c_src ] && mv ../c_src .
      [ -d src/odbc ] && mv src/odbc/*sql priv/sql
      [ -d ../sql ] && mv ../sql/* priv/sql
-     [ -d ../tools ] && mv ../tools priv
      [ -f ../doc/README.txt ] && mv ../doc/README.txt doc
      [ -f ../README ] && mv ../README doc/README.txt
      mv share/doc/ejabberd/* doc
-     rm -Rf lib var db sbin etc share)
+     rm -Rf bin sbin var etc share)
 }
