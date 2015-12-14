@@ -28,11 +28,12 @@ pkg_make() {
     [ -x /usr/local/bin/brew ] && {
         cf="-I/usr/local/include"
         lf="-L/usr/local/lib"
-        local lib
+        local lib p
         for lib in openssl expat
         do
-            cf+=" -I/usr/local/opt/$lib/include"
-            lf+=" -L/usr/local/opt/$lib/lib"
+            p=$(brew info $lib | sed -e '/^\//!d;s/ .*//' | tail -n 1)
+            cf+=" -I$p/include"
+            lf+=" -L$p/lib"
         done
     }
     [ -x autogen.sh ] && {
