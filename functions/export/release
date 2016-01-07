@@ -35,6 +35,10 @@ do
          return $cancel
      }) || return $missing_package
 done
+[ -d lib/$dist/deps ] && {
+    mv lib/$dist/deps/* lib
+    rmdir lib/$dist/deps
+}
 rm -Rf lib/*/{src,c_src}
 _info "($pkg_name) building release tarball ${reltar/$CEAN_ROOT/}..."
 tar zcf $reltar .

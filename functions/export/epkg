@@ -23,6 +23,8 @@ local buildtar=$CEAN_ROOT/tmp/$dist.tgz
     # Strip beam and binaries, and define if generic or not
     (cd $dist; for el in bin lib; [ -d $el ] && { mkdir -p priv; cp -r $el priv })
     [ -d $dist/ebin ] && (cd $dist/ebin; echo 'beam_lib:strip_files(filelib:wildcard("*beam")), init:stop().' | erl >/dev/null) || _warn "($pkg_name) no ebin directory"
+    [ -d $dist/deps ] && (cd $dist/deps; echo 'beam_lib:strip_files(filelib:wildcard("*/ebin/*beam")), init:stop().' | erl >/dev/null)
+
     for el in $(/bin/ls -1 $dist/**/* | xargs file | grep -E "ELF|bundle|executable")  # should work for linux osx bsd and windows
     do
         strip -S $el 2>/dev/null # does not cross-strip anyway
@@ -52,6 +54,7 @@ local buildtar=$CEAN_ROOT/tmp/$dist.tgz
         [ -d $dist/lib ] && { zip -9qgr $dist.priv.zip $dist/lib >/dev/null; rm -Rf $dist/lib }
         [ -d $dist/asn1 ] && { zip -9qgr $dist.priv.zip $dist/asn1 >/dev/null; rm -Rf $dist/asn1 }
         [ -d $dist/contribs ] && { zip -9qgr $dist.priv.zip $dist/contribs >/dev/null; rm -Rf $dist/contribs }
+        [ -d $dist/deps ] && { zip -9qr $dist.deps.zip $dist/deps >/dev/null; rm -Rf $dist/deps }
         [ -d $dist/emacs ] && rm -Rf $dist/emacs
         zip -9qr $dist.ez $dist >/dev/null
         # Generate epkg and fill .pub records
