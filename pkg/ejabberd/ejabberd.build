@@ -32,9 +32,10 @@ pkg_config() {
 }
 pkg_install() {
     local dist=$(_pkg_dist)
+    local ejablib=${pkg_name}-$(sed -e '/vsn/!d;s/.*,"//;s/".*//' ebin/ejabberd.app)
     $MAKE install || return $install_error
     (cd $dist
-     mv lib/ejabberd/* .
+     mv lib/$ejablib/* .
      mkdir doc priv/cfg priv/sql
      mv sbin/* bin/* priv/bin
      mv etc/ejabberd/* priv/cfg
@@ -44,12 +45,6 @@ pkg_install() {
      [ -f ../doc/README.txt ] && mv ../doc/README.txt doc
      [ -f ../README ] && mv ../README doc/README.txt
      mv share/doc/ejabberd/* doc
-     rm -Rf bin sbin var etc share lib/ejabberd
-     # we can't make a release with stripped otp, so let's hack a bit :(
-     for lib in lib/*
-     do
-         vsn=$(grep vsn $lib/ebin/$lib:t.app | cut -d'"' -f2)
-         mv $lib $lib-$vsn
-     done
+     rm -Rf bin sbin var etc share lib/$ejablib
      mv lib deps)
 }
