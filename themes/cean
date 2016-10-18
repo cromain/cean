@@ -31,5 +31,3 @@ PR_TEXT=default
 
 # use colors with ls and grep
 ls --color -d . &>/dev/null 2>&1 && alias ls='/bin/ls -FGh --color=auto' || alias ls='/bin/ls -F'
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;33'  # match is Yellow instead of default red
