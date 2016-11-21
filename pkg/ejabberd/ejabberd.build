@@ -33,6 +33,14 @@ pkg_config() {
 pkg_install() {
     local dist=$(_pkg_dist)
     local ejablib=${pkg_name}-$(sed -e '/vsn/!d;s/.*,"//;s/".*//' ebin/ejabberd.app)
+    [ -z ${IGNORE_XREF} ] && {
+      $MAKE xref || {
+        _info "xref error: set IGNORE_XREF if you need to force build anyway"
+        return $make_error
+        }
+    } || {
+      _warn "xref not tested"
+    }
     $MAKE install || return $install_error
     (cd $dist
      mv lib/$ejablib/* .

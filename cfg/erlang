@@ -1,2 +1,3 @@
 ERLANG_MIRROR=http://erlang.org/download
 ERLANG_VERSION=18.3
+#IGNORE_XREF=yes
