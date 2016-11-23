@@ -64,5 +64,5 @@ dd if=/dev/zero bs=1 count=$((512-b2)) >> $installer 2>/dev/null
     dd if=$reltar bs=512 >> $installer 2>/dev/null
 }
 chmod +x $installer
-generate_md5_file $installer
+generate_sum $installer
 rm /tmp/$$

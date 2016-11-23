@@ -56,10 +56,9 @@ _latest_otp_vsn() {
     curl -silent ${ERLANG_MIRROR}.html | grep otp_src | grep readme | head -n1 | sed 's/.*otp_src_\(.*\)\.readme.*/\1/'
 }
 
-# md5 linux/osx helper
-generate_md5_file() {
-    md5 -q $1 > $1.md5 2>/dev/null
-    [ $? -eq 0 ] || md5sum $1 | awk '{print $1}' > $1.md5
+# sum archives with SHA256
+generate_sum() {
+    shasum -a 256 -b $1 | awk '{print $1}' > $1.sum
 }
 
 # Logging functions

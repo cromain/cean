@@ -34,7 +34,7 @@ _pkg_cd_sources && {
      rm .gitignore
      [ -x $prep ] && $prep $pkg_name $pkg_vsn $spec)
     tar zcf $archive *
-    generate_md5_file $archive
+    generate_sum $archive
     _rm_workdir
 } || {
     _error "($pkg_name) no sources repository"
