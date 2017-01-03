@@ -58,7 +58,7 @@ _latest_otp_vsn() {
 
 # sum archives with SHA256
 generate_sum() {
-    shasum -a 256 -b $1 > $1.sum
+    (cd $1:h; shasum -a 256 -b $1:t > $1:t.sum)
 }
 
 # Logging functions
