@@ -1,8 +1,0 @@
-{author, {"Gunilla Arendt", "otp at erlang.org"}}.
-{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
-{category, ["Erlang/OTP","application"]}.
-{depends, ["gs","inets","kernel","stdlib"]}.
-{keywords, ["monitor","application"]}.
-{summary, "A utility used to supervise Applications executing on several Erlang nodes"}.
-{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/appmon/index.html\">appmon Erlang/OTP Documentation</a>"}.
-{home, "http://www.erlang.org"}.

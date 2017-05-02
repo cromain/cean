@@ -1,8 +1,0 @@
-{author, {"Fredrik Gustafson", "otp at erlang.org"}}.
-{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
-{category, ["Erlang/OTP","database","tool"]}.
-{depends, ["gs","kernel","mnesia","pman","stdlib"]}.
-{keywords, ["viewer","database"]}.
-{summary, "An ETS and MNESIA graphical table visualizer"}.
-{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/tv/index.html\">tv Erlang/OTP Documentation</a>"}.
-{home, "http://www.erlang.org"}.

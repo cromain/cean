@@ -1,8 +1,0 @@
-{author, {"Erlang/OTP team", "otp at erlang.org"}}.
-{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
-{category, ["Erlang/OTP","test"]}.
-{depends, ["kernel","observer","runtime_tools","sasl","stdlib","tools"]}.
-{keywords, []}.
-{summary, "portable test server for automated application testing."}.
-{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/test_server/index.html\">test_server Erlang/OTP Documentation</a>"}.
-{home, "http://www.erlang.org"}.

@@ -1,8 +1,0 @@
-{author, {"Erlang/OTP team", "otp at erlang.org"}}.
-{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
-{category, ["Erlang/OTP","code"]}.
-{depends, ["kernel","runtime_tools","stdlib"]}.
-{keywords, []}.
-{summary, "A trace tool for both development and delivered systems"}.
-{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/inviso-/index.html\">snmp Erlang/OTP Documentation</a>"}.
-{home, "http://www.erlang.org"}.
