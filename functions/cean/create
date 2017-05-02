@@ -63,3 +63,9 @@ alias pks='package/search'
 #alias ej='map package exmpp ejabberd'
 END
 source .ceanrc
+
+# let local workdir cope with generic boot loader
+(cd lib
+ ln -s kernel-* kernel
+ ln -s stdlib-* stdlib)
+ln -s usr $(ls -d lib/erts-* | cut -d/ -f2)

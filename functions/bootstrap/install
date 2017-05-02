@@ -28,11 +28,7 @@ rm -Rf dist/lib/erlang/lib/*/priv/obj
  for lib in *; tar zcf $destdir/tmp/$lib.tgz $lib)
 cd $destdir
 ls bin/*(*) | xargs strip -S 2>/dev/null
-(cd lib
- ln -s kernel-* kernel
- ln -s stdlib-* stdlib)
 mv src/$otpdir/dist/lib/erlang/usr .
-ln -s usr erts-$erts
 rm -Rf src/$otpdir
 cat > bin/erl << END
 #!/bin/sh
@@ -52,7 +48,6 @@ END
 for lib in tmp/*tgz; tar -C lib -zxf $lib
 rm -Rf lib/*/{examples,src,c_src}
 ls -d lib/erts*(N) | grep -q erts || mkdir lib/erts-$erts
-echo 'beam_lib:strip_files(filelib:wildcard("lib/*/ebin/*beam")), init:stop().' | bin/erl >/dev/null
 export/bootstrap $vsn $arch
 
 # apply the wanted bootstrap
