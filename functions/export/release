@@ -1,12 +1,12 @@
-# Description: Pack given package to a release tarball
+# Description: Pack given package to a stripped release tarball
 # Author: Christophe Romain <cromain@process-one.net>
-# Depends: tar
+# Depends: strip tar
 # Usage: export/release ejabberd
 # vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
 
 _api_check "export/release package [arch]" $* || return $bad_use
 _api_export $* || return $package_error
-local lib arch=${2:-$CEAN_HOSTARCH}
+local el lib arch=${2:-$CEAN_HOSTARCH}
 local dist epkg
 local reltar=$(_pkg_reltar $arch)
 local bootstrap=~/.cache/cean/bootstraps/${ERLANG_VERSION}_${arch}_mini.tar.gz
@@ -17,14 +17,7 @@ local bootstrap=~/.cache/cean/bootstraps/${ERLANG_VERSION}_${arch}_mini.tar.gz
 }
 _cd_workdir
 tar zxf $bootstrap
-dist=$(_pkg_dist)
-epkg=$(_pkg_epkg $arch)
-[ -f $epkg ] && for zip in $(tar tf $epkg); { tar xf $epkg $zip; unzip -oqq $zip -d lib; rm $zip }
-[ -d lib/$dist ] || {
-    _error "($pkg_name) no binary epkg available"
-    return $cancel
-} || return $missing_package
-for lib in $pkg_deps
+for lib in $pkg_name $pkg_deps
 do
     (_pkg_read_spec $lib
      dist=$(_pkg_dist)
@@ -40,6 +33,11 @@ done
     rmdir lib/$dist/deps
 }
 rm -Rf lib/*/{src,c_src}
+for el in $(/bin/ls -1 **/* | xargs file | grep -E "ELF|bundle|executable" | cut -d: -f1)
+do
+    strip -S $el 2>/dev/null
+done
+echo 'beam_lib:strip_files(filelib:wildcard("lib/*/ebin/*beam")), init:stop().' | erl >/dev/null
 _info "($pkg_name) building release tarball ${reltar/$CEAN_ROOT/}..."
 tar zcf $reltar .
 _rm_workdir

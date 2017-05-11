@@ -34,7 +34,6 @@ which gmake >/dev/null 2>/dev/null && {
 } || {
     make || return $make_error
 }
-cp bin/start_sasl.boot bootstrap/bin
 cd bootstrap
 for lib in ~/.cean/lib/*
 do

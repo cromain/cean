@@ -64,8 +64,4 @@ alias pks='package/search'
 END
 source .ceanrc
 
-# let local workdir cope with generic boot loader
-(cd lib
- ln -s kernel-* kernel
- ln -s stdlib-* stdlib)
 ln -s usr $(ls -d lib/erts-* | cut -d/ -f2)

@@ -1,6 +1,6 @@
 # Description: Install Erlang bootstrap as a new cean workdir
 # Author: Christophe Romain <cromain@process-one.net>
-# Depends: strip sed
+# Depends: sed
 # Usage: bootstrap/install R13B04 $HOME/mycean
 # vim: set foldmarker=#(,#) foldmethod=marker ts=4 sw=4 sts=4 et syntax=zsh:
 
@@ -17,7 +17,7 @@ which gmake >/dev/null 2>/dev/null && {
     make install || return $install_error
 }
 cp bin/*/* $destdir/bin
-cp bootstrap/bin/* $destdir/bin
+cp dist/lib/erlang/bin/*boot $destdir/bin
 erts=$(sed '/^VSN/!d;s/.*= //' erts/vsn.mk)
 for lib in compiler hipe kernel sasl stdlib
     [ -d bootstrap/lib/$lib ] && cp -r bootstrap/lib/$lib $destdir/lib/${lib}-$(sed -e '/VSN/!d;s/=/ /;s/.* //;q' lib/$lib/vsn.mk)
@@ -27,7 +27,6 @@ rm -Rf dist/lib/erlang/lib/*/priv/obj
 (cd dist/lib/erlang/lib
  for lib in *; tar zcf $destdir/tmp/$lib.tgz $lib)
 cd $destdir
-ls bin/*(*) | xargs strip -S 2>/dev/null
 mv src/$otpdir/dist/lib/erlang/usr .
 rm -Rf src/$otpdir
 cat > bin/erl << END
@@ -43,6 +42,7 @@ export BINDIR
 export PROGNAME
 exec \$BINDIR/erlexec \${1+"\$@"}
 END
+chmod +x bin/erl
 
 # then use boostrap generation script on clean install
 for lib in tmp/*tgz; tar -C lib -zxf $lib
