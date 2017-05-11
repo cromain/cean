@@ -17,14 +17,14 @@ archive=$destdir/${vsn}_${arch}_base.tar.gz
 [ -f $archive ] || tar zcf $archive bin usr \
 lib/(cean|asn1|common_test|compiler|crypto|debugger|dialyzer|edoc|erl_interface|\
 erts|eunit|hipe|inets|kernel|mnesia|observer|parsetools|public_key|\
-reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|test_server|\
+reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|\
 tools|typer|xmerl)*
 
 archive=$destdir/${vsn}_${arch}_full.tar.gz
 [ -f $archive ] || tar zcf $archive bin usr \
-lib/(cean|appmon|asn1|common_test|compiler|cosEvent|cosEventDomain|cosFileTransfer|\
+lib/(cean|asn1|common_test|compiler|cosEvent|cosEventDomain|cosFileTransfer|\
 cosNotification|cosProperty|cosTime|cosTransactions|crypto|debugger|dialyzer|diameter|\
-docbuilder|edoc|erl_docgen|erl_interface|erts|et|eunit|gs|hipe|ic|inets|inviso|\
-kernel|megaco|mnesia|observer|orber|os_mon|otp_mibs|parsetools|percept|pman|\
+edoc|erl_docgen|erl_interface|erts|et|eunit|gs|hipe|ic|inets|\
+kernel|megaco|mnesia|observer|orber|os_mon|otp_mibs|parsetools|percept|\
 public_key|reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|\
-test_server|toolbar|tools|tv|typer|webtool|wx|xmerl)*
+tools|typer|wx|xmerl)*
