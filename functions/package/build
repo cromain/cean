@@ -14,12 +14,14 @@ local dist=$(_pkg_dist)
 [ -f $sources ] || return $missing_sources
 
 _info "($pkg_name) extracting ${sources/$CEAN_ROOT/}..."
-(cd $CEAN_ROOT/tmp; tar zxf $sources 2>/dev/null)
-cd $CEAN_ROOT/tmp/$dist || {
-    # this simulates _cd_workdir, and exit if no sources
+_cd_workdir
+tar zxf $sources 2>/dev/null
+[ -d $dist ] || {
+    _rm_workdir
     _error "($pkg_name) empty sources"
     return $missing_sources
 }
+cd $dist
 rm .gitignore **/.empty(N) 2>/dev/null
 mkdir -p $dist
 _info "($pkg_name) sources formatting..."

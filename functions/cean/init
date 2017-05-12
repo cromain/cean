@@ -89,9 +89,19 @@ export_error=14
 repository_error=15
 
 # Workdir helpers
-_cd_workdir() { local tmp=$CEAN_ROOT/tmp/${$(_pkg_dist):-$(date +%H%M%S).$$}; mkdir -p $tmp; cd $tmp; }
-_rm_workdir() { local old=$PWD:t; cd $CEAN_ROOT; rm -Rf tmp/$old; }
-_clean_tmpdir() { rm -Rf $CEAN_ROOT/tmp/*; }
+_cd_workdir() {
+    local tmp=${$(_pkg_dist):-$(date +%H%M%S).$$}
+    mkdir -p /tmp/$tmp && tmp=/tmp/$tmp || {
+        tmp=$CEAN_ROOT/tmp/$tmp
+        mkdir -p $tmp
+    }
+    cd $tmp
+}
+_rm_workdir() {
+    local old=$PWD
+    cd $CEAN_ROOT
+    rm -Rf $old
+}
 
 # Functions API helpers
 _api_check() {
