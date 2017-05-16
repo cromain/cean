@@ -11,11 +11,8 @@ cd $destdir
 destdir=$PWD
 mkdir src bin tmp lib
 cd src/$otpdir || return $missing_sources
-which gmake >/dev/null 2>/dev/null && {
-    gmake install || return $install_error
-} || {
-    make install || return $install_error
-}
+which gmake >/dev/null 2>/dev/null && gmake install || make install
+[ $? -eq 0 ] || return $install_error
 cp bin/*/* $destdir/bin
 cp dist/lib/erlang/bin/*boot $destdir/bin
 erts=$(sed '/^VSN/!d;s/.*= //' erts/vsn.mk)
