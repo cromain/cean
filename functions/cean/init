@@ -90,7 +90,7 @@ repository_error=15
 
 # Workdir helpers
 _cd_workdir() {
-    local tmp=${$(_pkg_dist):-$(date +%H%M%S).$$}
+    local tmp=$(_pkg_dist)-$(date +%H%M%S).$$
     mkdir -p /tmp/$tmp && tmp=/tmp/$tmp || {
         tmp=$CEAN_ROOT/tmp/$tmp
         mkdir -p $tmp
