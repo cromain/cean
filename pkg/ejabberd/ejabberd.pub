@@ -14,5 +14,5 @@
  "and other forms of near-real-time communication based on XML."}.
 {home, "http://www.process-one.net/en/ejabberd"}.
 {url, "https://github.com/processone/ejabberd.git"}.
-{configure, "--enable-mysql --enable-pgsql --enable-sqlite --enable-riak --enable-redis --enable-elixir"}.
+{configure, "--enable-mysql --enable-pgsql --enable-sqlite --enable-riak --enable-redis --enable-elixir --enable-sip --enable-stun"}.
 {bitrock_export, "rpm,deb"}.
