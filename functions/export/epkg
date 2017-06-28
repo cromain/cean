@@ -25,11 +25,13 @@ local buildtar=$CEAN_ROOT/tmp/$dist.tgz
     [ -d $dist/ebin ] && (cd $dist/ebin; echo 'beam_lib:strip_files(filelib:wildcard("*beam")), init:stop().' | erl >/dev/null) || _warn "($pkg_name) no ebin directory"
     [ -d $dist/deps ] && (cd $dist/deps; echo 'beam_lib:strip_files(filelib:wildcard("*/ebin/*beam")), init:stop().' | erl >/dev/null)
 
-    for el in $(/bin/ls -1 $dist/**/* | xargs file | grep -E "ELF|bundle|executable" | cut -d: -f1)
-    do
-        strip -S $el 2>/dev/null
-        destepkg=$epkg # package is platform specific
-    done
+    [[ $arch == $CEAN_HOSTARCH ]] && {
+        for el in $(/bin/ls -1 $dist/**/* | xargs file | grep -E "ELF|bundle|executable" | cut -d: -f1)
+        do
+            strip -S $el 2>/dev/null
+            destepkg=$epkg # package is platform specific
+        done
+    }
     [ -e $destepkg ] && {
         _info "($pkg_name) using generic package"
     } || {
