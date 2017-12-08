@@ -8,4 +8,12 @@ _api_check "bootstrap/fetch otp_version" $* || return $bad_use
 local vsn=$1 archive=otp_src_$1.tar.gz srcdir=~/.cache/cean/sources
 
 [ -d $srcdir ] || mkdir -p $srcdir
-[ -e $srcdir/$archive ] || curl $ERLANG_MIRROR/$archive > $srcdir/$archive
+[ -e $srcdir/$archive ] || {
+    curl $ERLANG_MIRROR/$archive > $srcdir/$archive
+    file $srcdir/$archive | grep -q HTML && {
+        curl https://github.com/erlang/otp/archive/OTP-$vsn.tar.gz | tar -zxf -
+        mv otp-OTP-$vsn otp_src_$vsn
+        tar -zcf $srcdir/$archive otp_src_$vsn
+        rm -Rf otp_src_$vsn
+    }
+}

@@ -30,6 +30,7 @@ case $(uname -s) in
     Linux) [ -d /usr/local/openssl ] && opts+="--with-ssl=/usr/local/openssl" ;;
     *) : ;; # assume configure will find openssl
 esac
+[ -x ./configure ] || ./otp_build autoconf
 ./configure $opts || return $config_error
 
 # compile
