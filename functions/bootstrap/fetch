@@ -11,7 +11,7 @@ local vsn=$1 archive=otp_src_$1.tar.gz srcdir=~/.cache/cean/sources
 [ -e $srcdir/$archive ] || {
     curl $ERLANG_MIRROR/$archive > $srcdir/$archive
     file $srcdir/$archive | grep -q HTML && {
-        curl https://github.com/erlang/otp/archive/OTP-$vsn.tar.gz | tar -zxf -
+        curl https://codeload.github.com/erlang/otp/tar.gz/OTP-$vsn | tar -zxf -
         mv otp-OTP-$vsn otp_src_$vsn
         tar -zcf $srcdir/$archive otp_src_$vsn
         rm -Rf otp_src_$vsn
