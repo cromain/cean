@@ -15,5 +15,5 @@ local vsn=$1 archive=otp_src_$1.tar.gz srcdir=~/.cache/cean/sources
         mv otp-OTP-$vsn otp_src_$vsn
         tar -zcf $srcdir/$archive otp_src_$vsn
         rm -Rf otp_src_$vsn
-    }
+    } || true
 }
