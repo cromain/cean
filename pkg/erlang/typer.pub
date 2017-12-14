@@ -1,8 +1,0 @@
-{author, {"Bingwen He","Bingwen.He at gmail.com"}}.
-{packager, {"Christophe Romain", "christophe.romain at process-one.net"}}.
-{category, ["Erlang/OTP","code"]}.
-{depends, ["compiler","dialyzer","hipe","kernel","stdlib"]}.
-{keywords, []}.
-{summary, "The main driver of the TypEr application"}.
-{abstract, "See official <a href=\"http://www.erlang.org/doc/apps/typer/index.html\">typer Erlang/OTP Documentation</a>"}.
-{home, "http://www.erlang.org"}.
