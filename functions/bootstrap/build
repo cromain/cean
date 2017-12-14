@@ -24,7 +24,7 @@ mkdir dist
 
 # configure
 local -a opts
-opts=("--prefix=$PWD/dist" "--enable-builtin-zlib")
+opts=("--prefix=$PWD/dist" "--enable-plain-emulator")
 case $(uname -s) in
     Darwin) [ -d /usr/local/opt/openssl ] && opts+="--with-ssl=/usr/local/opt/openssl" ;;
     Linux) [ -d /usr/local/openssl ] && opts+="--with-ssl=/usr/local/openssl" ;;
