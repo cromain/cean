@@ -5,10 +5,15 @@
     exit 1
 }
 
-export ZDOTDIR=$HOME/.cean
+export ZDOTDIR="$HOME/.cean"
 work=$1; shift
 call=$1; shift
 args=$*
 
-cd $work
-[ "$call" = "" ] && zsh || zsh -i "$HOME/.cean/functions/$call" $args
+cd "$work" || exit
+
+case $call in
+    "") zsh;;
+    "shell") zsh;;
+    *) zsh -i "$HOME/.cean/functions/$call" $args;;
+esac
