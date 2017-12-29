@@ -1,13 +1,14 @@
 #!/bin/sh
 
-[ $# -ge 2 ] || {
-    echo "usage: cean_call workdir function args"
+[ $# -ge 1 ] || {
+    echo "usage: cean_call workdir [function args]"
     exit 1
 }
 
+export ZDOTDIR=$HOME/.cean
 work=$1; shift
 call=$1; shift
 args=$*
 
 cd $work
-ZDOTDIR=$HOME/.cean zsh -i ~/.cean/functions/$call $args
+[ "$call" = ""] && zsh || zsh -i ~/.cean/functions/$call $args
