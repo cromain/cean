@@ -11,4 +11,4 @@ call=$1; shift
 args=$*
 
 cd $work
-[ "$call" = ""] && zsh || zsh -i ~/.cean/functions/$call $args
+[ "$call" = "" ] && zsh || zsh -i "$HOME/.cean/functions/$call" $args
