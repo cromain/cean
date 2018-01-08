@@ -15,16 +15,16 @@ lib/(cean|hipe|compiler|erts|kernel|parsetools|sasl|stdlib|syntax_tools)*
 
 archive=$destdir/${vsn}_${arch}_base.tar.gz
 [ -f $archive ] || tar zcf $archive bin usr \
-lib/(cean|asn1|common_test|compiler|crypto|debugger|dialyzer|edoc|erl_interface|\
+lib/(cean|asn1|common_test|compiler|crypto|debugger|dialyzer|edoc|eldap|erl_interface|\
 erts|eunit|hipe|inets|kernel|mnesia|observer|parsetools|public_key|\
 reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|\
-tools|typer|xmerl)*
+tools|xmerl)*
 
 archive=$destdir/${vsn}_${arch}_full.tar.gz
 [ -f $archive ] || tar zcf $archive bin usr \
 lib/(cean|asn1|common_test|compiler|cosEvent|cosEventDomain|cosFileTransfer|\
 cosNotification|cosProperty|cosTime|cosTransactions|crypto|debugger|dialyzer|diameter|\
-edoc|erl_docgen|erl_interface|erts|et|eunit|gs|hipe|ic|inets|\
-kernel|megaco|mnesia|observer|orber|os_mon|otp_mibs|parsetools|percept|\
+edoc|eldap|erl_docgen|erl_interface|erts|et|eunit|gs|hipe|ic|inets|\
+kernel|megaco|mnesia|observer|orber|os_mon|otp_mibs|parsetools|\
 public_key|reltool|runtime_tools|sasl|snmp|ssh|ssl|stdlib|syntax_tools|\
-tools|typer|wx|xmerl)*
+tools|wx|xmerl)*
