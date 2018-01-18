@@ -25,9 +25,9 @@ if [ -e $destdir/.ceanrc ]; then
 fi
 [ -d $destdir ] || mkdir -p $destdir
 cd $destdir
-mkdir bin lib test tmp src
+mkdir bin lib test tmp
 local subdir
-for subdir in pub tools
+for subdir in pub src tools
     [ -d ../$subdir ] && ln -s ../$subdir || mkdir $subdir
 if [ -f $archive ]; then
     _info "install CEAN bootstrap from $archive"
