@@ -20,7 +20,8 @@ tar zxf $sources 2>/dev/null
     _error "($pkg_name) empty sources"
     return $missing_sources
 }
-mv $dist/.* $dist/* .
+mv $dist/* .
+mv $dist/.* .
 rm .gitignore **/.empty(N) 2>/dev/null
 _info "($pkg_name) sources formatting..."
 pkg_init || {
