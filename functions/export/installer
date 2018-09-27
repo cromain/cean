@@ -6,8 +6,9 @@
 
 _api_check "export/installer package [arch]" $* || return $bad_use
 _api_export $* || return $package_error
+local arch=${2:-$CEAN_HOSTARCH}
 local dist=$(_pkg_dist) epkg=$(_pkg_epkg $2)
-local reltar=$(_pkg_reltar $2) installer=${epkg/.epkg/.sh}
+local reltar=$(_pkg_reltar $2) installer=${epkg/.epkg/-$arch.run}
 local include=$(dirname $(_pkg_spec))/installer 
 
 [ -d $include ] || {
