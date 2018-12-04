@@ -44,7 +44,7 @@ pkg_install() {
      mv ../lib src/elixir
      mv ../sql/* priv/sql
      [ -f ../doc/README.txt ] && mv ../doc/README.txt doc
-     [ -f ../README ] && mv ../README doc/README.txt
+     [ -f ../README.md ] && mv ../README.md doc/README.txt
      mv share/doc/ejabberd/* doc
      rm -Rf bin sbin var etc share lib/$ejablib
      mv lib deps)
