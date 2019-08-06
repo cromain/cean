@@ -4,7 +4,11 @@ export ZDOTDIR=$HOME/.cean
 fpath=$HOME/.cean/functions
 
 [ "$1" = "force" ] && { force=true; shift; }
-action=$1; shift; args=$*
+[ $# -gt 0 ] && {
+    action=$1; shift; args=$*
+} || {
+    action=help
+}
 ok=1
 
 nodep()
